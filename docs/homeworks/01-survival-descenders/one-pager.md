@@ -1,0 +1,68 @@
+# Descenders: Kurýr – survival vrstva pro kampaň
+
+- **Hra:** Descenders (MTB, RageSquid / No More Robots)
+- **Zadání:** DÚ č. 1, varianta Survival
+- **Stav:** kostra
+
+> Pracovní verze. Fakta o současné hře označená *ověřit* jsou moje přesvědčení, ne ověřený stav; před odevzdáním je potvrdit ve hře.
+
+## 1. Problém, který design řeší
+
+*K dopsání.* Descenders jsou sled izolovaných jízd. Jízda nemá cíl mimo sebe samu a krajina je jen kulisa sjezdu. Survival vrstva dává cestě důvod a krajině váhu: biom, počasí a denní doba mění, *jak* a *kdy* je rozumné jet, ne jen jak rychle.
+
+## 2. Hranice: proč z toho není survival hra
+
+*K dopsání.* Žádný hlad, žádný crafting, žádné stavění základny. Survival tlak je vždy modifikátor jízdy a volby trasy, nikdy samostatná herní smyčka. Hráč, který jede dobře, se survival systémem skoro nezabývá; hráč, který riskuje, ho cítí.
+
+## 2a. Proč je to pořád survival
+
+*K dopsání a obhajobě.* Survival tu neznamená „hráč může umřít“, ale „prostředí neustále ohrožuje něco živého a hráč s tím hospodaří“. Ohrožení jsou dva: roj (horko, mráz, otřesy) a jezdec (únava, chlad). Oba jsou provázané: unavený nebo prochladlý jezdec hůř ovládá kolo, víc padá a pády stresují roj. Jezdcovo přežití je tak nástrojem přežití roje. Pozor na riziko, že bez té vazby by z návrhu byla jen eskortní mise s nákladem, ne survival systém.
+
+## 3. Režim a struktura
+
+- Jedna souvislá oblast se čtyřmi biomy, mezi nimi safe zóny (vesnice, chaty).
+- Mezi safe zónami víc tras s různým profilem: rychlá a exponovaná vs. delší a chráněná.
+- Cíl: dovézt včelí královny do osady v údolí, dokud kvetou sady.
+
+## 4. Tři ukazatele
+
+| Ukazatel | Co ho zhoršuje | Co ho zlepšuje |
+|---|---|---|
+| Únava jezdce | dlouhá jízda, stoupání, tlačení a nesení kola, chlad, nesení boxu pod bundou | odpočinek v safe zóně nebo ve stínu |
+| Vitalita roje | horko, mráz (pásmo, ne jeden směr), otřesy a pády | stín, noc v horku, zahřátí na těle v mrazu, chladicí náplně |
+| Čas do odkvětu | čekání, objížďky, odpočinek | rychlost, kratší trasa |
+
+*K rozhodnutí:* přesná podoba UI a zda je vitalita jedno číslo, nebo dva podukazatele (teplota a stres).
+
+## 5. Biomy, tlaky a protitahy
+
+| Biom | Hlavní tlak | Terén (z lekce) | Protitahy | Cena protitahu |
+|---|---|---|---|---|
+| Highlands | déšť, vítr | hladká cesta, stoupání | *k dopsání* | *k dopsání* |
+| Forest | tma, bláto | kořeny, říčka | *k dopsání* | *k dopsání* |
+| Canyon | horko | kameny, řeka, klesání | rychlost, jízda v noci, stinná rokle, chladicí náplně, odpočinek ve stínu | riziko pádu, tma, delší trasa, omezené náplně, čas |
+| Peaks | mráz, sníh, výška | led, stoupání | nést box pod bundou, krátká trasa přes hřeben | vlastní teplo a únava, exponovanost |
+
+*Ověřit:* názvy a počet kariérních biomů v Descenders.
+
+## 6. Klíčové napětí: rychlost vs. opatrnost
+
+Rychlost chrání před horkem a šetří čas, ale zvyšuje riziko pádu a pád stresuje roj. Survival vrstva tak přidává k risk/reward jádru Descenders druhou osu, nevymýšlí nové.
+
+## 7. Způsoby průjezdu překážky
+
+*K dopsání.* Jet, tlačit, nést kolo, brodit, přečkat, objet. Každý stojí něco jiného (únavu, čas, vitalitu roje). Překážky z lekce: padlý kmen, řeka.
+
+## 8. Den a noc
+
+Denní doba ve hře existuje (potvrzeno uživatelem). Návrh přidává její vliv: noc v Canyonu je chladná a pro roj dobrá, ale tmavá; noc v Peaks je mráz. *K dopsání:* světlo jako výbava.
+
+## 9. Výbava v safe zóně
+
+*K dopsání.* Nová vrstva (výbava v Descenders je podle mě kosmetická, *ověřit*): pláště podle povrchu, světlo, teplé oblečení, chladicí náplně. Omezená nosnost, takže výběr je volba.
+
+## 10. Otevřené otázky
+
+- Co se stane, když roj zahyne? Konec kampaně, nebo návrat do poslední safe zóny pro nové královny?
+- Co přesně znamená pozdní příjezd po odkvětu – snížená odměna, horší konec, nebo prodloužení o další rok?
+- Bouřková fronta jako „pronásledovatel“ – patří do Highlands, nebo vynechat?
