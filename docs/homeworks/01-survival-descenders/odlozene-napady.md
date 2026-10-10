@@ -39,3 +39,15 @@ Mininávrh dostal na Discordu kurzu čtvrtou část „Náhoda“ a komentář o
 - **Konkurenční frakce kurýrů.** Rivalové jedou pro stejné královny nebo stejnou zakázku. *Odloženo:* táhne návrh k rivalitě a pronásledování, které jsme z kampaně vyřadili. *Návrat:* multiplayerová varianta nebo multisportová hra z lekce.
 - **Náhodná porucha vozítka.** *Odloženo:* náhoda bez předchozí informace (out-luck) by u živého nákladu působila nefér; hráč by ztrácel roj bez možnosti reagovat. *Návrat:* pokud by byla porucha ohlášená předem, třeba opotřebením, které hráč vidí.
 - **Procedurálně generovaný terén.** *Odloženo:* otevřený svět stojí na pevné mapě, kterou se hráč učí a ve které volí trasy. Procedurální zůstává jen počasí. *Návrat:* režim pro opakované hraní po dokončení kampaně.
+
+## Vyškrtnuto při zjednodušení po oponentuře (2026-10-10)
+
+Oponentura ukázala, že návrh měl zhruba sedm stavů a pět kusů výbavy, což by z kampaně dělalo survival hru. Tohle vypadlo. *Návrat pro všechno níže:* pokud by se ukázalo, že kampaň je naopak příliš jednoduchá, nebo pro hardcore obtížnost.
+
+- **Třetí ukazatel „čas do odkvětu“** na obrazovce. Termín zůstal, ale jako počet dní v safe zóně a na mapě.
+- **Vitalita jako dva podukazatele** (teplota a stres roje). Zůstalo jedno číslo a šipka trendu teploty.
+- **Promoknutí jako samostatný stav.** Déšť teď jen přidává únavu a chladí box.
+- **Nepromokavý obal a pláště na bláto nebo led.** Výbava zúžená na světlo, teplou vrstvu a chladicí vložku.
+- **Chladicí náplně s doplňováním sněhem nebo ledovou vodou v Peaks.** Nahradila je jednorázová vložka, nová v safe zóně; doplňování bylo klasickou survival smyčkou.
+- **Křehkost panelů na cestě tam.** Cesta tam učí jen únavu; pád stojí čas.
+- **Šest způsobů průjezdu.** Sloučeno na čtyři (projet, tlačit nebo přenést, přečkat, objet); brod je projetí s cenou chladu.

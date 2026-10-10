@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** kostra, rozhodnutí z brainstormingu zapsaná, obsah se dopisuje
+- **Stav:** pracovní návrh kompletní a prošel oponenturou ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); zbývá premisa, odevzdávaný one-pager a příloha
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -30,9 +30,19 @@ Navrhnout survival systém pro open-world hru dle vlastního výběru. Survival 
 - **Cesta tam je kratší a převážně do kopce**, hráč hodně šlape (Descenders šlapání umí, potvrzeno uživatelem). Cesta zpět je delší a převážně z kopce. Kontrast dělá ze sjezdu odměnu.
 - **Z lekce 2026-10-06** ([lesson-game-proposal-2026-10-06.md](../../lesson-game-proposal-2026-10-06.md)) přebíráme katalog terénů, princip „konflikt nutí volit způsob průjezdu“ a překážky vázané na výbavu.
 
+## Rozhodnutí po oponentuře (2026-10-10)
+
+- **Dva ukazatele:** únava jezdce a vitalita roje. Termín je počet dní, ne ukazatel.
+- **Hráč rozhoduje jen v safe zóně a na rozcestí**, mezi tím jede. Dovednost survival tlak snižuje.
+- **Otevřený svět má vlastní sekci s mapou:** čtyři biomy, safe zóny, tři propojené koridory dolů, volné pořadí, průzkum.
+- **Počasí jako pre-luck** (pojem z lekce): předpověď v safe zóně, vyhlídky, události viditelné předem.
+- **Životy z kariéry nahrazuje vitalita roje**, pád cestou zpět stojí roj, ne jezdce.
+- **Selhání bez ztráty postupu:** únava znamená odpočinek, smrt roje návrat pro náhradní královny, pozdní příjezd skromnější epilog.
+- **Výbava:** tři druhy, cestou tam jeden slot, cestou zpět dva.
+
 ## Další kroky
 
-1. Ověřit ve hře fakta označená v one-pageru jako *ověřit*.
-2. Dopsat one-pager do čitelné podoby a zkrátit na jednu stranu.
+1. Zeptat se lektora, zda projde nový open-world režim v Descenders (záloha: Riders Republic).
+2. Ověřit ve hře, zda je výbava čistě kosmetická.
 3. Dopsat premisu a setting.
-4. Rozhodnout výstupní formát (PDF z Markdownu, slidy, nebo grafický one-pager).
+4. Vytvořit odevzdávaný one-pager (A4, PDF) a přílohu s AI ilustracemi a upozorněním, že jsou mimo hodnocení.

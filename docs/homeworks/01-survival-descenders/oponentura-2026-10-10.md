@@ -2,7 +2,7 @@
 
 - **Předmět:** pracovní `one-pager.md` a `premisa-a-setting.md` proti zadání 1 (Survival)
 - **Oponent:** nezávislý subagent v čistém kontextu, dostal jen dokumenty a zadání, s úkolem návrh vyvrátit
-- **Stav:** výtky vyhodnocené, opravy čekají na schválení
+- **Stav:** všechny opravy zapracované do `one-pager.md` 2026-10-10; vyškrtnuté prvky jsou v `odlozene-napady.md`
 
 ## Výtky a vyhodnocení
 
