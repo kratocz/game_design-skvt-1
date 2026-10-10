@@ -22,6 +22,16 @@ Z kanálu *úkol-1-onepager* na Discordu kurzu (zprávy z 2026-09-17 až 2026-09
 
 Důsledky pro odevzdávaný one-pager: vynechat vysvětlování Descenders (životy, roguelite struktura), vynechat čísla označená *cíl ladění*, držet logický tok od problému k řešení a písmo nejméně 10 bodů.
 
+## Vzor z kurzu: Valheim – Riding Animals
+
+Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager Ride Animals.pdf` (ignorovaný v gitu, repo je veřejné). Co z něj plyne:
+
+- **Jedna strana A4:** velký obrázek nahoře (zhruba dvě pětiny strany), pod ním titulek a asi 400 slov souvislé prózy. Žádné tabulky, žádná čísla.
+- **Tok:** problém (jízda na zvířatech neobstojí proti plavbě, běhu a portálům) → kontext ve světě hry → tři konkrétní změny → závěrečná věta, která všechny tři změny přiváže zpět k problému.
+- **Každá změna stojí na existujícím prvku hry** (kamenné portály, útok stomp, skok asksvina, láva); hru čtenáři nevysvětluje.
+- **Klíčové mechaniky zvýrazněné barvou**, dvě specializace jako odrážky s ikonou a podnadpisem.
+- **Vizuál ladí s hrou** (severské ornamenty, runový podtitul).
+
 ## Dokumenty
 
 - [one-pager.md](one-pager.md) – hlavní odevzdávaný výstup: survival systém, biomy, ukazatele, protitahy
