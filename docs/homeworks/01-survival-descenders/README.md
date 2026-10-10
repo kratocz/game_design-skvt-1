@@ -43,6 +43,6 @@ Navrhnout survival systém pro open-world hru dle vlastního výběru. Survival 
 ## Další kroky
 
 1. Zeptat se lektora, zda projde nový open-world režim v Descenders (záloha: Riders Republic).
-2. Ověřit ve hře, zda je výbava čistě kosmetická.
-3. Dopsat premisu a setting.
+2. Dopsat premisu a setting.
+3. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md).
 4. Vytvořit odevzdávaný one-pager (A4, PDF) a přílohu s AI ilustracemi a upozorněním, že jsou mimo hodnocení.

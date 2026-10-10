@@ -115,7 +115,7 @@ Příklady z lekce: **padlý kmen** (přeskočit, přenést, objet), **řeka** (
 
 ## 11. Výbava v safe zóně
 
-Tři druhy výbavy s funkcí (dnešní výbava v Descenders je podle autora kosmetická, *ověřit*). Cestou tam se vejde jeden kus, cestou zpět dva, takže jeden vždy chybí. Výbavu jde měnit jen v safe zóně.
+Tři druhy výbavy s funkcí. Dnes má v Descenders vliv na jízdu jen volba kola; dres, helma a doplňky na kole jsou kosmetické (podle autora, který hru zná). Cestou tam se vejde jeden kus, cestou zpět dva, takže jeden vždy chybí. Výbavu jde měnit jen v safe zóně.
 
 | Výbava | Pomáhá | Nevýhoda |
 |---|---|---|
@@ -139,4 +139,3 @@ Zadání radí zvážit, které informace jsou klíčové. Návrh drží na obra
 ## 14. Otevřené otázky
 
 - Projde u lektora nový open-world režim v hře, která sama open-world není? Doporučeno zeptat se před odevzdáním. Záloha: přenést návrh na Riders Republic, která open-world je.
-- Ověřit ve hře, zda je výbava v Descenders čistě kosmetická.
