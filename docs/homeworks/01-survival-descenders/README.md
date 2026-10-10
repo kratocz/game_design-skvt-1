@@ -10,6 +10,18 @@
 
 Navrhnout survival systém pro open-world hru dle vlastního výběru. Survival prvky mají hru obohatit, ale nesmí z ní udělat survival hru. Design má zahrnout i to, jak se hráč s překážkami vypořádá. Výstup je menší formát (prezentace nebo one-pager); u vlastní hry nebo vlastního režimu se premisa a setting popisují v separátním dokumentu.
 
+## Upřesnění z Discordu kurzu
+
+Z kanálu *úkol-1-onepager* na Discordu kurzu (zprávy z 2026-09-17 až 2026-09-20, přečteno 2026-10-10). Odpovídala uživatelka Asheara, podle tónu odpovědí nejspíš lektorka (*odhad, neověřeno*).
+
+- **Písmo** nejméně 10 bodů, styl je volný, hlavně aby se dalo číst.
+- **Prezentace se počítá, ale neznamená hezký vizuál.** One-pager se „nechá někomu na stole“ a čtenář z něj musí vytáhnout všechno bez možnosti dovysvětlení. Rozhoduje, jak dobře informace plynou; i obyčejný Word dokument může být dobrý design.
+- **Čtenář hru zná**, takže základy hry do one-pageru nepatří. Co je potřeba vysvětlit navíc (vlastní hra), patří do separátního dokumentu.
+- **High-level, bez čísel a hloubkových detailů**, ale víc než jen vize; jako vzor odkazuje na příklad, který studenti dostali.
+- **Příloha** se třemi stranami obrázků je v pořádku.
+
+Důsledky pro odevzdávaný one-pager: vynechat vysvětlování Descenders (životy, roguelite struktura), vynechat čísla označená *cíl ladění*, držet logický tok od problému k řešení a písmo nejméně 10 bodů.
+
 ## Dokumenty
 
 - [one-pager.md](one-pager.md) – hlavní odevzdávaný výstup: survival systém, biomy, ukazatele, protitahy
