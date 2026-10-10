@@ -36,19 +36,19 @@ Mezi nimi hráč prostě jede Descenders. Okamžité volby na trati, třeba pře
 
 ## 4. Otevřený svět
 
-Descenders dnes open-world nejsou: stojí na uzlech a procedurálně generovaných tratích. Kampaň je nový režim s **ručně postavenou souvislou mapou** ze čtyř kariérních biomů hry (Highlands, Forest, Canyon, Peaks; [Descenders Wiki](https://descenders.fandom.com/wiki/Peaks)). Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky.
+Descenders dnes open-world nejsou: stojí na uzlech a procedurálně generovaných tratích. Kampaň je nový režim s **ručně postavenou souvislou mapou** ze čtyř hlavních biomů kariéry (Highlands, Forest, Canyon, Peaks; [Descenders Wiki](https://descenders.fandom.com/wiki/Peaks)). Tajný Volcano a biomy Career Plus kampaň nevyužívá ([PlayStation Blog](https://blog.playstation.com/?p=333559)). Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky. Pevná mapa místo procedurálních tratí je nutná, protože předpověď, zkratky a volba trasy potřebují stálou krajinu, kterou se hráč naučí.
 
 **Topologie:**
 
 - **Osada v údolí** (Highlands): start i cíl.
 - **Horská včelí stanice** (Peaks): cíl cesty tam, viditelná z osady na obzoru.
-- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), opuštěná čerpací stanice (Canyon), horská bouda pod Peaks.
+- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), opuštěná čerpací stanice (Canyon), horská bouda pod Peaks. Vycházejí z medic campů kariéry, kde se doplňují životy; v kampani v nich jezdec odpočívá, čte předpověď a mění výbavu.
 - **Tři hlavní koridory dolů ze včelí stanice**, propojené příčnými stezkami, takže je hráč může kombinovat:
   - *Hřebenová zkratka:* nejrychlejší, prudká a kamenitá, nejvíc otřesů, v mrazu.
   - *Přes Canyon:* rychlá, ale v horku.
   - *Přes Forest:* nejdelší, ve stínu, ale tma a kořeny.
 
-**Volnost:** pořadí safe zón ani trasa nejsou předepsané. Pevný je jen cíl.
+**Volnost:** trasa není předepsaná a jezdit se dá i mimo stezky. Pevný je jen cíl.
 
 **Průzkum se vyplácí:** vyhlídky upřesní předpověď počasí pro okolní biom, objevené zkratky zkracují příští průjezd. *Volitelně:* drobné zakázky mezi safe zónami odměňují průzkum výbavou.
 
@@ -133,7 +133,7 @@ Zadání radí zvážit, které informace jsou klíčové. Návrh drží na obra
 ## 13. Selhání
 
 - **Únava na maximu:** jezdec sesedne a musí si odpočinout. Ztratí čas, ne postup.
-- **Roj zahyne:** kurýr se vrací do včelí stanice pro náhradní královny. Ztratí čas, ne postup. Stanice má jen dvě náhrady, takže riskovat jde, ale ne donekonečna.
+- **Roj zahyne:** kurýr se vrací do včelí stanice pro náhradní královny. Ztratí čas, ne postup. Náhrad je dost, aby kampaň šla dohrát vždy; limitem je čas, protože každý návrat do stanice stojí cestu nahoru a znovu dolů.
 - **Pozdní příjezd po odkvětu:** osada přežije, ale epilog je skromnější. Kampaň jde dohrát vždy.
 
 ## 14. Otevřené otázky

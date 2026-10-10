@@ -39,3 +39,21 @@ Nezávislý oponent dostal jen PDF one-pageru, vzor z kurzu, zadání a upřesn�
 Nezapracováno: výtka, že kampaň bez změny kariéry je jen přívěsek (nový režim je legitimní obohacení hry), a výtka, že selhání nemá zuby (stojí čas a termín je měkký záměrně, aby hra netrestala jako survival).
 
 Tvrzení o současné hře v úvodu („biom mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet“) čeká na potvrzení autorem, který hru zná.
+
+## Třetí kolo: premisa, setting a úpravy hry (2026-10-10)
+
+Nezávislý oponent dostal jen zadání, PDF one-pageru a návrh `premisa-a-setting.md`. Tvrzení o hře ověřená z [PlayStation Blogu](https://blog.playstation.com/?p=333559): kariéra má čtyři hlavní biomy, tajný Volcano a Career Plus (poušť, džungle, ledovce, favela); životy doplňují medic campy. Zapracováno:
+
+- Skrytý game over: „stanice má jen dvě náhrady“ vypadlo, náhrad je dost a limitem je čas (i v pracovním návrhu, §13).
+- „Jízdní model beze změny“ upřesněno: do ovládání v kampani zasahuje jen únava.
+- Co kurýr ví: ví, že veze včely, nezná jejich křehkost, protože v údolí už generaci nikdo včely nechoval. Odpadl slabý motiv „rada mlčela“.
+- Termín: je jaro, sady se chystají kvést, kurýr má přivézt včely, než odkvetou.
+- „Čtyři biomy hry“ opraveno na čtyři hlavní biomy kariéry; „střídání dne a noci“ na „jízdu v noci“; řádek „Čas a počasí“ neutrálně „dané tratí“.
+- Text proti mapě: vypadlo „pořadí safe zón není předepsané“ (všechny koridory vedou přes boudu), „učí se mapu“ na cestě tam i „fronty od západu“.
+- Kdo vysílá předpověď: včelí stanice, protože včelaři sledují počasí kvůli včelám.
+- Kotva ve hře: safe zóny vycházejí z medic campů kariéry; pevná mapa je zdůvodněná tím, že předpověď, zkratky a volba trasy potřebují stálou krajinu.
+- Škrty: interní poznámka o Perk tree z dokumentu (je v README), duplicitní krok „epilog“ v průběhu, odrážka „žádná válka“ opakující tón.
+
+Nezapracováno: ruční opylování (čtenáře nejspíš nenapadne a další věta by premisu jen natahovala), vedro a mráz zkracující odkvět (nová mechanika navíc), škrt „nákazy z nížin“ (vysvětluje, proč včely přežily právě v horách).
+
+Pro one-pager z kola plynou tři opravy čekající na souhlas autora: rozpor „nepřečká zimu“ proti skromnějšímu epilogu, „čtyři biomy hry“ a „pořadí safe zón není předepsané“.

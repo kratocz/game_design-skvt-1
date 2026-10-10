@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** pracovní návrh kompletní a prošel oponenturou ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); zbývá premisa, odevzdávaný one-pager a příloha
+- **Stav:** odevzdávaný one-pager hotový; premisa, setting a úpravy hry v návrhu po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)), čekají na schválení a PDF; zbývá příloha
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -36,7 +36,7 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 - [odevzdani/one-pager.pdf](odevzdani/one-pager.pdf) – **odevzdávaný one-pager** (A4), zdroj [odevzdani/one-pager.html](odevzdani/one-pager.html); PDF se vyrábí příkazem `weasyprint one-pager.html one-pager.pdf` ve složce `odevzdani`
 - [one-pager.md](one-pager.md) – pracovní návrh s podrobnostmi a čísly pro ladění; z něj one-pager vychází
-- [premisa-a-setting.md](premisa-a-setting.md) – separátní dokument s premisou a settingem režimu, jak zadání požaduje
+- [premisa-a-setting.md](premisa-a-setting.md) – separátní dokument s premisou, settingem a úpravami hry, jak zadání požaduje
 - [odlozene-napady.md](odlozene-napady.md) – nápady, které jsme zatím nevybrali, i s důvodem a podmínkou návratu
 
 ## Rozhodnutí z brainstormingu (2026-10-06 až 2026-10-10)
@@ -63,9 +63,15 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 - **Selhání bez ztráty postupu:** únava znamená odpočinek, smrt roje návrat pro náhradní královny, pozdní příjezd skromnější epilog.
 - **Výbava:** tři druhy, cestou tam jeden slot, cestou zpět dva.
 
+## Rozhodnutí k premise a settingu (2026-10-10)
+
+- **Separátní dokument obsahuje i úpravy hry.** Zadání u varianty Perk tree dovoluje částečně redesignovat existující hru a úpravy popsat v separátním dokumentu. U varianty Survival to výslovně nestojí, takže je to jen analogie. Nový režim kampaně je přesně taková úprava, proto ho dokument popisuje vedle premisy a settingu.
+- **Tichý kolaps:** bez války, svět rozložilo extrémní počasí, rozpadlá síť a došlé palivo. Každý prvek světa ospravedlňuje jednu mechaniku.
+- **Kurýr ví, že veze včely, ale ne jak křehké jsou**, protože v údolí už generaci nikdo včely nechoval.
+- **Safe zóny vycházejí z medic campů kariéry**, které dnes doplňují životy.
+
 ## Další kroky
 
-1. Zeptat se lektora, zda projde nový open-world režim v Descenders (záloha: Riders Republic).
-2. Dopsat premisu a setting.
-3. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md).
-4. Vytvořit odevzdávaný one-pager (A4, PDF) a přílohu s AI ilustracemi a upozorněním, že jsou mimo hodnocení.
+1. Počkat na odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10; záloha: Riders Republic).
+2. Schválit text premisy, settingu a úprav hry a vyrobit z něj PDF ve stylu one-pageru.
+3. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s upozorněním, že jsou mimo hodnocení.
