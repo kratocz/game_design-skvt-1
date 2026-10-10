@@ -5,7 +5,7 @@
 
 ## Premisa
 
-*K dopsání.* Svět po apokalypse, ve kterém vymřeli opylovači. Osada v údolí obnovuje sady, ale bez včel nedají úrodu. Hráč jako kurýr na horském kole veze včelí královny přes hory do osady. Sady kvetou jen pár dní: když královny dorazí po odkvětu, osada přijde o rok.
+*K dopsání.* Svět po apokalypse, ve kterém vymřeli opylovači. Osada v údolí obnovuje sady, ale bez včel nedají úrodu a bez úrody nepřečká zimu. Hráč je kurýr na horském kole. Dostane zdánlivě nudnou zakázku: odvézt solární panely a akumulátory do horské včelí stanice, kde jimi včelaři v zimě vyhřívají úly. Teprve při předání se dozví, co veze zpátky: včelí královny pro osadu, výměnou za panely. A jak jsou křehké. Sady kvetou jen pár dní; když královny dorazí po odkvětu, osada přijde o rok.
 
 ## Setting
 

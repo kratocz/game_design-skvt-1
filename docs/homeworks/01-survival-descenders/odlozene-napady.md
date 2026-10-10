@@ -14,7 +14,7 @@ Ke každému je důvod odložení a podmínka, za které by se vyplatilo se k n�
 ## Varianty kurýrní kampaně
 
 - **Válečná fronta jako cíl cesty.** *Odloženo:* chceme postapokalyptický svět bez války. *Návrat:* pokud by kampaň potřebovala ostřejší konflikt.
-- **Druhá etapa s ukořistěným pevným diskem** a krátkou cinematikou při předání. *Odloženo:* stála na válce a na one-pager se dvě etapy nevejdou. *Návrat:* rozšíření kampaně nebo DLC.
+- **Druhá etapa s ukořistěným pevným diskem** a krátkou cinematikou při předání. *Odloženo:* stála na válce. Dvě etapy v návrhu zůstaly, jen druhou nese obchod s včelí stanicí místo války. *Návrat:* rozšíření kampaně nebo DLC.
 - **Pistole a pronásledování nepřáteli.** *Odloženo:* táhne design k combatu a stealthu místo survivalu a honička nutí jet naplno, čímž ruší survival volby (odpočinek, přečkání, objížďka). *Návrat:* akční režim mimo survival zadání.
 - **Bouřková fronta jako pronásledovatel.** Vizuálně honička, systémově počasí. *Stav:* zatím otevřené, viz otevřené otázky v one-pageru.
 - **Tvrdý timer místo měkkého termínu.** *Odloženo:* stres nutí ignorovat svět. *Návrat:* speciální výzva pro zkušené hráče.

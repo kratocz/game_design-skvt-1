@@ -22,7 +22,9 @@
 
 - Jedna souvislá oblast se čtyřmi biomy, mezi nimi safe zóny (vesnice, chaty).
 - Mezi safe zónami víc tras s různým profilem: rychlá a exponovaná vs. delší a chráněná.
-- Cíl: dovézt včelí královny do osady v údolí, dokud kvetou sady.
+- **Cesta tam:** obchodní zakázka, panely a akumulátory do horské včelí stanice. Těžký a křehký náklad, sázka nízká. Aktivní je jen únava jezdce a citlivost nákladu na pády; učí základ systému.
+- **Zvrat ve včelí stanici:** hráč přebírá královny a teprve tady se dozví, jak jsou citlivé na teplotu a otřesy. UI odemkne ukazatel vitality roje.
+- **Cesta zpět:** sjezd do osady v údolí, dokud kvetou sady. Aktivní jsou všechny tři ukazatele. Stejná krajina klade jiné otázky: Canyon v poledne je pro panely jen horká jízda, pro královny smrt.
 
 ## 4. Tři ukazatele
 
@@ -66,3 +68,5 @@ Denní doba ve hře existuje (potvrzeno uživatelem). Návrh přidává její vl
 - Co se stane, když roj zahyne? Konec kampaně, nebo návrat do poslední safe zóny pro nové královny?
 - Co přesně znamená pozdní příjezd po odkvětu – snížená odměna, horší konec, nebo prodloužení o další rok?
 - Bouřková fronta jako „pronásledovatel“ – patří do Highlands, nebo vynechat?
+- Cesta tam vede nahoru, ale Descenders stojí na sjezdu (šlapání do kopce je podle mě okrajové, *ověřit*). Varianty: krátký úsek přes hřebeny s tlačením do stoupání, nebo cesta tam jako cutscéna. Doporučení: hřebeny, pokud to fyzika hry snese.
+- Jak udělat, aby cesta tam *působila* rutinně, ale nebyla pro hráče nudná? Jízda sama je zábavná; rutinní má být jen zakázka, ne zážitek.
