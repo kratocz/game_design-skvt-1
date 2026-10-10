@@ -72,3 +72,11 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# macOS junk
+.DS_Store
+._*
+
+# Studijní materiály kurzu (zadání, vzorové práce) držet jen lokálně,
+# repo je veřejné. Vlastní výstupy úkolů jsou v podsložkách.
+docs/homeworks/*.pdf
