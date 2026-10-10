@@ -45,10 +45,12 @@
 
 | Biom | Hlavní tlak | Terén (z lekce) | Protitahy | Cena protitahu |
 |---|---|---|---|---|
-| Highlands | déšť, vítr | hladká cesta, stoupání | *k dopsání* | *k dopsání* |
-| Forest | tma, bláto | kořeny, říčka | *k dopsání* | *k dopsání* |
+| Highlands | déšť (kluzký povrch, promoknutí, chlad pro jezdce i roj), vítr (protivítr do kopce, boční poryvy na hřebeni) | hladká cesta, stoupání | přečkat déšť v chatě nebo pod převisem, jet závětrnou stranou údolím místo po hřebeni, nepromokavý obal na náklad, krýt se za skalami | čas, delší trasa, místo v nosnosti, pomalejší jízda |
+| Forest | tma (pod korunami i ve dne horší viditelnost), bláto (trakce, únava), kořeny (otřesy stresují roj) | kořeny, říčka | světlo, projet za dne, technicky pomalu přes kořeny, nést kolo přes nejhorší úsek, objet po lesní cestě, přebrodit říčku nebo hledat lávku | místo v nosnosti, čekání, čas, únava, delší trasa, mokro a chlad po brodu |
 | Canyon | horko | kameny, řeka, klesání | rychlost, jízda v noci, stinná rokle, chladicí náplně, odpočinek ve stínu | riziko pádu, tma, delší trasa, omezené náplně, čas |
 | Peaks | mráz, sníh, výška | led, stoupání | nést box pod bundou, krátká trasa přes hřeben | vlastní teplo a únava, exponovanost |
+
+Forest je i úkryt: ve stínu korun je chladno, takže v horku je les pro roj bezpečnějším místem k odpočinku než otevřený Canyon. Stejný biom tak jednou škodí a jindy pomáhá, podle toho, odkud hráč přijíždí.
 
 *Ověřit:* názvy a počet kariérních biomů v Descenders.
 
