@@ -19,7 +19,7 @@
     margin: 0;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-size: 10.5pt;
-    line-height: 1.33;
+    line-height: 1.3;
     color: var(--ink);
     hyphens: auto;
   }
@@ -31,7 +31,7 @@
   figure.map { margin: 0 0 2.2mm 0; }
   figure.map svg.world { display: block; width: 100%; height: auto; border-radius: 2mm; }
   figure.map svg.legend { display: block; width: 100%; height: auto; margin-top: 1.2mm; }
-  p { margin: 0 0 1.9mm 0; }
+  p { margin: 0 0 1.6mm 0; }
   .k { color: var(--honey); font-weight: 700; }
   .lead { font-size: 11pt; }
   .pillars { display: flex; gap: 4mm; margin: 2mm 0 2mm 0; }
@@ -42,7 +42,8 @@
   .example { background: #f4f1e6; border-left: 2.5pt solid var(--honey-light); padding: 1.6mm 3mm; margin: 0 0 1.9mm 0; }
   .example b { color: var(--teal); }
   .closing { font-weight: 500; margin: 0; }
-  footer { margin-top: 2.2mm; display: flex; justify-content: space-between; font-size: 10pt; color: var(--muted); border-top: 0.6pt solid #c9d3d5; padding-top: 1.2mm; }
+  footer { margin-top: 2.2mm; font-size: 10pt; line-height: 1.3; color: var(--muted); border-top: 0.6pt solid #c9d3d5; padding-top: 1.2mm; hyphens: none; }
+  footer p { margin: 0; }
 </style>
 </head>
 <body>
@@ -213,8 +214,8 @@
 
 
 <footer>
-  <span>Mapa je vlastní diagram. Premisa, setting a úpravy hry: samostatný dokument.</span>
-  <span>Ilustrace v příloze: AI, mimo hodnocení.</span>
+  <p>Premisa, setting a úpravy hry jsou v samostatném dokumentu.</p>
+  <p>Použití AI: nápad, směr a všechna rozhodnutí jsou moje. AI (Claude) navrhovala varianty, oponovala, formulovala texty a nakreslila mapu podle mých zadání. Ilustrace v příloze vygenerovala AI (ChatGPT).</p>
 </footer>
 
 </body>

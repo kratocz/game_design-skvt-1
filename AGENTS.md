@@ -10,6 +10,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 - Zadání (PDF z lekcí) leží v `docs/homeworks/`, každý úkol má vlastní složku `docs/homeworks/NN-<téma>/` s `README.md` (zadání, deadline, rozhodnutí, další kroky).
 - Zápisy z cvičení na lekcích jsou v `docs/lesson-*.md`.
 - Nevybrané nápady se nemažou, ukládají se do `odlozene-napady.md` v dané složce i s podmínkou návratu.
+- Použití AI je v kurzu povolené, pokud student uvede, co vytvořil s pomocí AI a co sám. Odevzdávané výstupy proto obsahují krátké věcné přiznání použití AI, ne omluvu ani žádost o vyřazení z hodnocení.
 
 ### Termíny
 

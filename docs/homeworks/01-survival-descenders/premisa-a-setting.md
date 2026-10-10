@@ -63,3 +63,7 @@ Každý prvek světa ospravedlňuje jednu mechaniku survival vrstvy:
 - **Extrémní počasí:** biomy a počasí jsou tlak a předpověď je nejcennější informace.
 - **Krátké kvetení sadů:** termín má ve světě důvod, není to libovolný časovač.
 - **Péče o něco živého:** hráč má citový důvod jet opatrně. Pád nebolí jezdce, ale roj.
+
+---
+
+Použití AI: nápad, směr a všechna rozhodnutí jsou moje. AI (Claude) navrhovala varianty, oponovala, formulovala texty a nakreslila mapu podle mých zadání. Ilustrace v příloze vygenerovala AI (ChatGPT).

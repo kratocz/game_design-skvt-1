@@ -40,4 +40,4 @@ Semi-realistic video game concept art, landscape 3:2. A small rebuilt settlement
 
 ## Upozornění do přílohy
 
-> Ilustrace v této příloze jsou vygenerované pomocí AI (ChatGPT), nejsou to moje vlastnoruční práce. Berte je prosím jako bonus mimo hodnocení. Přidal jsem je, protože mi přišly velmi vhodné pro ilustraci záměru: tónu světa, biomů a toho, jak by měl náklad a jeho péče ve hře působit.
+> Ilustrace v této příloze vygenerovala AI (ChatGPT). Přidal jsem je, protože dobře ukazují záměr: tón světa, biomy a to, jak má náklad a péče o něj ve hře působit.

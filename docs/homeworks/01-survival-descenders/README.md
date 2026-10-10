@@ -70,8 +70,9 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 - **Tichý kolaps:** bez války, svět rozložilo extrémní počasí, rozpadlá síť a došlé palivo. Každý prvek světa ospravedlňuje jednu mechaniku.
 - **Kurýr ví, že veze včely, ale ne jak křehké jsou**, protože v údolí už generaci nikdo včely nechoval.
 - **Safe zóny vycházejí z medic campů kariéry**, které dnes doplňují životy.
+- **Přiznání AI** je v patičce one-pageru i dokumentu s premisou, znění schválil autor 2026-10-11 (pravidlo kurzu viz `AGENTS.md`). Text k ilustracím je v [priloha-prompty.md](priloha-prompty.md).
 
 ## Další kroky
 
 1. Počkat na odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10; záloha: Riders Republic).
-2. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s upozorněním, že jsou mimo hodnocení.
+2. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s přiznáním, že ilustrace vygenerovala AI.
