@@ -23,3 +23,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 - Odstavec je jeden řádek, žádné pevné zalomení uprostřed věty.
 - Metadata na začátku dokumentu jako odrážkový seznam (`- **Klíč:** hodnota`).
 - Tvrzení o současném stavu existující hry, která nejsou ověřená ve hře, označit *ověřit*.
+
+## Veřejné repo
+
+Fork i repozitář kurzu jsou na GitHubu **veřejné**. Do gitu proto nepatří studijní materiály kurzu (zadání, vzorové práce; `docs/homeworks/*.pdf` je v `.gitignore`), jména ani obsah zpráv z neveřejného Discordu kurzu, ani nic, co by student nepublikoval sám.
