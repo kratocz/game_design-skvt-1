@@ -38,4 +38,4 @@ Nezávislý oponent dostal jen PDF one-pageru, vzor z kurzu, zadání a upřesn�
 
 Nezapracováno: výtka, že kampaň bez změny kariéry je jen přívěsek (nový režim je legitimní obohacení hry), a výtka, že selhání nemá zuby (stojí čas a termín je měkký záměrně, aby hra netrestala jako survival).
 
-Tvrzení o současné hře v úvodu („biom mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet“) potvrzuje autor, který hru zná.
+Tvrzení o současné hře v úvodu („biom mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet“) čeká na potvrzení autorem, který hru zná.
