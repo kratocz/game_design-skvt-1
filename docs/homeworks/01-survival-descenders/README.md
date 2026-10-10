@@ -34,7 +34,8 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 ## Dokumenty
 
-- [one-pager.md](one-pager.md) – hlavní odevzdávaný výstup: survival systém, biomy, ukazatele, protitahy
+- [odevzdani/one-pager.pdf](odevzdani/one-pager.pdf) – **odevzdávaný one-pager** (A4), zdroj [odevzdani/one-pager.html](odevzdani/one-pager.html); PDF se vyrábí příkazem `weasyprint one-pager.html one-pager.pdf` ve složce `odevzdani`
+- [one-pager.md](one-pager.md) – pracovní návrh s podrobnostmi a čísly pro ladění; z něj one-pager vychází
 - [premisa-a-setting.md](premisa-a-setting.md) – separátní dokument s premisou a settingem režimu, jak zadání požaduje
 - [odlozene-napady.md](odlozene-napady.md) – nápady, které jsme zatím nevybrali, i s důvodem a podmínkou návratu
 

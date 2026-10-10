@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Descenders: Kurýr – one-pager</title>
+<style>
+  @page { size: A4; margin: 11mm 12mm 10mm 12mm; }
+  :root {
+    --ink: #1d2a2e;
+    --muted: #4a5a5e;
+    --teal: #0f5c63;
+    --honey: #b87a06;
+    --honey-light: #f2b632;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    color: var(--ink);
+    hyphens: auto;
+  }
+  header { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 2.5pt solid var(--honey-light); padding-bottom: 2.2mm; margin-bottom: 3mm; }
+  h1 { margin: 0; font-weight: 900; font-size: 25pt; letter-spacing: 0.4pt; line-height: 1; color: var(--teal); text-transform: uppercase; }
+  h1 span { color: var(--honey); }
+  .subtitle { margin: 1.2mm 0 0 0; font-size: 11pt; font-weight: 500; color: var(--ink); }
+  .meta { text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.35; }
+  figure.map { margin: 0 0 2.6mm 0; }
+  figure.map svg { display: block; width: 100%; height: auto; border-radius: 2mm; }
+  p { margin: 0 0 2.1mm 0; }
+  .k { color: var(--honey); font-weight: 700; }
+  .lead { font-size: 11.5pt; }
+  .pillars { display: flex; gap: 4mm; margin: 2.8mm 0 2.8mm 0; }
+  .pillar { flex: 1; border-top: 1.6pt solid var(--teal); padding-top: 1.6mm; }
+  .pillar h2 { display: flex; align-items: center; gap: 1.8mm; margin: 0 0 1.2mm 0; font-size: 11pt; font-weight: 900; text-transform: uppercase; color: var(--teal); letter-spacing: 0.2pt; }
+  .pillar h2 svg { width: 6.2mm; height: 6.2mm; flex: none; }
+  .pillar p { margin: 0; }
+  .closing { border-left: 2.5pt solid var(--honey-light); padding-left: 3mm; font-weight: 500; margin-top: 2.6mm; }
+  footer { margin-top: 2.6mm; display: flex; justify-content: space-between; font-size: 9pt; color: var(--muted); border-top: 0.6pt solid #c9d3d5; padding-top: 1.4mm; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Descenders: <span>Kurýr</span></h1>
+    <p class="subtitle">Survival vrstva pro nový režim kampaně</p>
+  </div>
+  <div class="meta">Domácí úkol č. 1, zadání Survival<br>Game Design pro začátečníky, SKVT<br>Petr Kratochvíl, říjen 2026</div>
+</header>
+
+<figure class="map">
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" font-family="Roboto, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <symbol id="safe" viewBox="-12 -12 24 24">
+      <polygon points="-11,-1 0,-11 11,-1" fill="#ffffff" stroke="#1d2a2e" stroke-width="2" stroke-linejoin="round"/>
+      <rect x="-8" y="-1" width="16" height="11" fill="#ffffff" stroke="#1d2a2e" stroke-width="2"/>
+      <rect x="-2.5" y="3" width="5" height="7" fill="#1d2a2e"/>
+    </symbol>
+    <symbol id="view" viewBox="-12 -8 24 16">
+      <path d="M-11,0 Q0,-9 11,0 Q0,9 -11,0 Z" fill="#ffffff" stroke="#1d2a2e" stroke-width="2"/>
+      <circle cx="0" cy="0" r="3.6" fill="#1d2a2e"/>
+    </symbol>
+    <pattern id="snow" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#dbe4ec"/>
+      <circle cx="3" cy="4" r="1" fill="#ffffff"/>
+      <circle cx="10" cy="10" r="1" fill="#ffffff"/>
+    </pattern>
+  </defs>
+
+  <!-- biomy -->
+  <rect x="0" y="0" width="1000" height="400" fill="#a9c97a"/>
+  <path d="M0,0 H1000 V112 Q900,128 800,110 Q700,96 620,118 Q560,132 500,120 Q440,108 380,122 Q300,138 200,114 Q100,96 0,116 Z" fill="#dbe4ec"/>
+  <path d="M0,116 Q100,96 200,114 Q300,138 380,122 Q400,200 395,262 Q330,300 240,292 Q120,286 0,300 Z" fill="#3f6b45"/>
+  <path d="M1000,112 Q900,128 800,110 Q700,96 620,118 Q600,200 606,262 Q680,300 770,292 Q880,284 1000,300 Z" fill="#c8744a"/>
+  <path d="M380,122 Q440,108 500,120 Q560,132 620,118 Q600,200 606,262 Q500,280 395,262 Q400,200 380,122 Z" fill="#94b46a"/>
+
+  <!-- hory v Peaks -->
+  <path d="M40,104 L110,30 L180,104 Z M150,108 L240,18 L330,108 Z M640,104 L730,22 L820,104 Z M780,106 L870,34 L950,106 Z" fill="#b6c4d1"/>
+  <path d="M93,48 L110,30 L127,48 L118,52 L110,46 L101,52 Z M222,36 L240,18 L258,36 L248,40 L240,33 L232,40 Z M712,40 L730,22 L748,40 L738,44 L730,37 L722,44 Z M853,51 L870,34 L887,51 L878,55 L870,48 L862,55 Z" fill="#ffffff"/>
+  <!-- stromy ve Forestu -->
+  <g fill="#2c5233">
+    <polygon points="60,190 72,160 84,190"/><polygon points="96,222 108,192 120,222"/><polygon points="140,180 152,150 164,180"/>
+    <polygon points="70,262 82,232 94,262"/><polygon points="300,170 312,140 324,170"/><polygon points="330,240 342,210 354,240"/>
+    <polygon points="160,262 172,232 184,262"/>
+  </g>
+  <!-- skály v Canyonu -->
+  <g fill="#a85a35">
+    <rect x="890" y="160" width="40" height="34" rx="4"/><rect x="930" y="230" width="34" height="30" rx="4"/><rect x="660" y="236" width="30" height="24" rx="4"/>
+  </g>
+
+  <!-- popisky biomů -->
+  <g font-size="19" font-weight="900" letter-spacing="2" fill="#ffffff" opacity="0.95">
+    <text x="58" y="290" fill="#e9f1ea">FOREST</text>
+    <text x="842" y="290" fill="#fbe9df">CANYON</text>
+    <text x="24" y="60" fill="#5d7183">PEAKS</text>
+    <text x="40" y="382" fill="#4f6a35">HIGHLANDS</text>
+  </g>
+
+  <!-- příčné stezky -->
+  <g fill="none" stroke="#0f5c63" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round" opacity="0.85">
+    <path d="M232,232 Q380,230 520,228"/>
+    <path d="M790,222 Q650,232 520,228"/>
+  </g>
+
+  <!-- cesta zpět: tři koridory -->
+  <g fill="none" stroke="#0f5c63" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M500,82 Q540,98 560,138"/>
+    <path d="M560,138 Q526,220 504,312 L500,360"/>
+    <path d="M560,138 C460,142 318,170 232,232 C196,292 380,330 500,360"/>
+    <path d="M560,138 C650,150 760,170 790,222 C822,292 640,334 500,360"/>
+  </g>
+  <!-- cesta tam -->
+  <path d="M488,360 L478,300 Q452,206 468,132 Q478,98 492,84" fill="none" stroke="#b87a06" stroke-width="4.5" stroke-dasharray="11 7" stroke-linecap="round"/>
+
+  <!-- popisky koridorů -->
+  <g font-size="16" fill="#1d2a2e">
+    <rect x="524" y="242" width="196" height="45" rx="5" fill="#ffffff" opacity="0.9"/>
+    <text x="532" y="261" font-weight="700">hřebenová zkratka</text>
+    <text x="532" y="281">rychlá, nejvíc otřesů</text>
+    <rect x="242" y="304" width="230" height="45" rx="5" fill="#ffffff" opacity="0.9"/>
+    <text x="250" y="323" font-weight="700">přes Forest</text>
+    <text x="250" y="343">dlouhá, stín, tma, kořeny</text>
+    <rect x="632" y="304" width="164" height="45" rx="5" fill="#ffffff" opacity="0.9"/>
+    <text x="640" y="323" font-weight="700">přes Canyon</text>
+    <text x="640" y="343">rychlá, ale horko</text>
+    <rect x="322" y="78" width="150" height="45" rx="5" fill="#ffffff" opacity="0.9"/>
+    <text x="330" y="97" font-weight="700" fill="#8a5a04">cesta tam</text>
+    <text x="330" y="117" fill="#8a5a04">do kopce, panely</text>
+  </g>
+
+  <!-- safe zóny -->
+  <use href="#safe" x="547" y="125" width="26" height="26"/>
+  <use href="#safe" x="219" y="219" width="26" height="26"/>
+  <use href="#safe" x="777" y="209" width="26" height="26"/>
+  <use href="#safe" x="491" y="299" width="26" height="26"/>
+  <!-- vyhlídky -->
+  <use href="#view" x="368" y="168" width="26" height="17"/>
+  <use href="#view" x="660" y="160" width="26" height="17"/>
+
+  <!-- včelí stanice -->
+  <g transform="translate(500,66)">
+    <polygon points="0,-18 15.6,-9 15.6,9 0,18 -15.6,9 -15.6,-9" fill="#f2b632" stroke="#1d2a2e" stroke-width="2.5"/>
+    <polygon points="0,-8 6.9,-4 6.9,4 0,8 -6.9,4 -6.9,-4" fill="#1d2a2e"/>
+  </g>
+  <rect x="522" y="42" width="196" height="46" rx="5" fill="#ffffff" opacity="0.9"/>
+  <text x="530" y="61" font-size="16" font-weight="900" fill="#1d2a2e">VČELÍ STANICE</text>
+  <text x="530" y="79" font-size="14" fill="#1d2a2e">královny za solární panely</text>
+
+  <!-- osada -->
+  <g transform="translate(500,372)">
+    <circle cx="-26" cy="0" r="9" fill="#f7c6d4" stroke="#1d2a2e" stroke-width="1.8"/>
+    <circle cx="26" cy="0" r="9" fill="#ffffff" stroke="#1d2a2e" stroke-width="1.8"/>
+    <rect x="-12" y="-11" width="24" height="18" fill="#ffffff" stroke="#1d2a2e" stroke-width="2"/>
+    <polygon points="-15,-10 0,-22 15,-10" fill="#1d2a2e"/>
+  </g>
+  <rect x="534" y="356" width="284" height="43" rx="5" fill="#ffffff" opacity="0.9"/>
+  <text x="542" y="374" font-size="16" font-weight="900" fill="#1d2a2e">OSADA V ÚDOLÍ</text>
+  <text x="542" y="392" font-size="14" fill="#1d2a2e">start i cíl, sady kvetou jen pár dní</text>
+
+  <!-- bouřková fronta -->
+  <g transform="translate(910,316)">
+    <path d="M-36,8 Q-40,-8 -24,-10 Q-20,-26 -2,-22 Q10,-34 24,-20 Q40,-20 38,-4 Q46,8 32,12 L-30,12 Q-40,12 -36,8 Z" fill="#5c6b78" stroke="#1d2a2e" stroke-width="2"/>
+    <polygon points="0,10 -8,26 0,26 -5,40 10,20 2,20 8,10" fill="#f2b632" stroke="#1d2a2e" stroke-width="1.5"/>
+  </g>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1d2a2e"/></marker></defs>
+  <path d="M866,322 L812,340" stroke="#1d2a2e" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="836" y="361" width="144" height="28" rx="5" fill="#ffffff" opacity="0.9"/>
+  <text x="844" y="380" font-size="14" font-weight="700" fill="#1d2a2e">bouřková fronta</text>
+
+  <!-- legenda -->
+  <g transform="translate(730,16)" font-size="13.5" fill="#1d2a2e">
+    <rect x="-8" y="-6" width="270" height="86" rx="6" fill="#ffffff" opacity="0.9"/>
+    <line x1="0" y1="8" x2="30" y2="8" stroke="#0f5c63" stroke-width="5.5" stroke-linecap="round"/>
+    <text x="40" y="12">cesta zpět, tři koridory</text>
+    <line x1="0" y1="28" x2="30" y2="28" stroke="#b87a06" stroke-width="4.5" stroke-dasharray="11 7"/>
+    <text x="40" y="32">cesta tam</text>
+    <line x1="0" y1="48" x2="30" y2="48" stroke="#0f5c63" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round"/>
+    <text x="40" y="52">příčné stezky</text>
+    <use href="#safe" x="4" y="59" width="18" height="18"/>
+    <text x="40" y="72">safe zóna</text>
+    <use href="#view" x="140" y="62" width="20" height="13"/>
+    <text x="168" y="72">vyhlídka</text>
+  </g>
+</svg>
+</figure>
+
+<p class="lead">Krajina je v Descenders jen kulisou sjezdu. Počasí ani noc nemění, jak se jede, únava ani teplota neexistují a jízda nemá cíl mimo sebe samu. Survival vrstva dává cestě důvod a krajině váhu: <span class="k">biom, počasí a denní doba rozhodují, kudy a kdy je rozumné jet</span>, ne jen jak rychle.</p>
+
+<p>V novém režimu kampaně veze kurýr přes hory včelí královny, na kterých závisí přežití osady v údolí. Prostředí opotřebovává dva živé tvory, jezdce a roj, a ti jsou provázaní: únava ze stoupání a chladu zhoršuje ovládání a <span class="k">kdo se nešetří, víc padá</span>, takže péče o sebe je péčí o roj. Hráč na to ale reaguje jen ve dvou místech: <span class="k">v safe zóně</span> volí výbavu a čas odjezdu, třeba počká na noc, která Canyon ochladí, ale ukrojí z termínu. <span class="k">Na rozcestí</span> volí trasu. Mezi tím prostě jede. Rychlá a čistá jízda je nejlepší ochrana roje, takže dobrý jezdec survival tlak skoro necítí.</p>
+
+<div class="pillars">
+  <div class="pillar">
+    <h2><svg viewBox="-20 -20 40 40"><polygon points="0,-18 15.6,-9 15.6,9 0,18 -15.6,9 -15.6,-9" fill="#f2b632" stroke="#0f5c63" stroke-width="3"/><circle r="5" fill="#0f5c63"/></svg>Náklad, který žije</h2>
+    <p>Roj potřebuje mírnou teplotu. Škodí mu horko, mráz i otřesy. <span class="k">Pád cestou zpět nestojí život jezdce, ale vitalitu roje</span>, takže riziko sjezdu dostává tvář. Cesta tam s těžkými solárními panely pro horskou včelí stanici vede do kopce a učí jen únavu. Jak křehké královny jsou, se hráč dozví až při předání.</p>
+  </div>
+  <div class="pillar">
+    <h2><svg viewBox="-20 -20 40 40"><path d="M-18,14 L-6,-10 L2,4 L8,-4 L18,14 Z" fill="#0f5c63"/><circle cx="10" cy="-12" r="5" fill="#f2b632"/></svg>Krajina, která tlačí</h2>
+    <p>Každý biom klade jinou otázku: Highlands déšť a vítr, Forest tma a kořeny, Canyon horko, Peaks mráz. Noc je v Canyonu pro roj úlevou, v Peaks nejhorší chvílí. <span class="k">Počasí je náhodné, ale vždy ohlášené předem</span>: předpověď v safe zóně, upřesnění z vyhlídek, bouřková fronta na obzoru, které jde ujet, nebo ji přečkat.</p>
+  </div>
+  <div class="pillar">
+    <h2><svg viewBox="-20 -20 40 40"><path d="M0,18 L0,2 M0,2 L-14,-14 M0,2 L14,-14" stroke="#0f5c63" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="0" cy="2" r="4.5" fill="#f2b632"/></svg>Volba trasy a výbavy</h2>
+    <p>Ze včelí stanice vedou dolů <span class="k">tři propojené koridory</span> a pořadí ani trasa nejsou předepsané. Výbava má dva sloty pro tři možnosti, světlo, teplou vrstvu a chladicí vložku, takže jedna vždy chybí. Překážku jde projet, přenést kolo, přečkat, nebo objet. Každá volba stojí únavu, čas, nebo klid roje.</p>
+  </div>
+</div>
+
+<p>Z Descenders se tím nestává survival hra. Nepřibývá hlad, crafting ani stavění, jen <span class="k">dva ukazatele</span>, únava jezdce a vitalita roje, a termín odkvětu sadů, který hráč vidí v safe zóně, ne na trati. <span class="k">Selhání nestojí postup</span>: vyčerpaný jezdec musí odpočívat, mrtvý roj znamená návrat do stanice pro náhradu a pozdní příjezd jen skromnější epilog. Kariéra a bike parky zůstávají beze změny.</p>
+
+<p class="closing">Návrh tak dává krajině váhu třemi cestami: živý náklad dává riziku sjezdu novou cenu, biomy a počasí ohlášené předem dělají z cesty plánování a otevřená mapa nechává rozhodnutí na hráči.</p>
+
+<footer>
+  <span>Premisa a setting: samostatný dokument.</span>
+  <span>Příloha: ilustrace vygenerované AI, mimo hodnocení.</span>
+</footer>
+
+</body>
+</html>
