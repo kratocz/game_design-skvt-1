@@ -24,7 +24,7 @@ Navrhnout survival systém pro open-world hru dle vlastního výběru. Survival 
 - **Bez zbraní, bez pronásledování lidským nepřítelem, bez války.** Postapokalyptický svět, ne válečná fronta.
 - **Tlak je čas, ne nepřítel.** Měkký termín (odkvět sadů), ne tvrdý odpočet.
 - **Náklad jsou včelí královny.** Péče o něco živého, roztomilé, bez medicínských asociací (krev a léky jsme vyřadili, protože při sportu připomínají zranění).
-- **Dvě cesty, tam a zpět.** Tam veze kurýr obchodní náklad do horské včelí stanice (návrh: solární panely a akumulátory, kterými včelaři v zimě vyhřívají úly). Zpět veze královny, které dostal výměnou, sjezdem do údolí. Původní válečná druhá etapa (ukořistěná data, útěk) zůstává odložená.
+- **Dvě cesty, tam a zpět.** Tam veze kurýr obchodní náklad do horské včelí stanice (solární panely a akumulátory, kterými včelaři v zimě vyhřívají úly). Zpět veze královny, které dostal výměnou, sjezdem do údolí. Původní válečná druhá etapa (ukořistěná data, útěk) zůstává odložená.
 - **Zvrat při předání.** Cesta tam má působit jako rutinní zakázka. Jak křehké královny jsou, se hráč dozví až ve včelí stanici, kde je přebírá. Cesta tam tím slouží jako tutoriál (únava, pády) a cesta zpět odemkne teplotu a vitalitu roje.
 - **Včely jsou podmínka přežití osady**, ne zisku: bez opylení nesklidí úrodu a nepřečká zimu.
 - **Z lekce 2026-10-06** ([lesson-game-proposal-2026-10-06.md](../../lesson-game-proposal-2026-10-06.md)) přebíráme katalog terénů, princip „konflikt nutí volit způsob průjezdu“ a překážky vázané na výbavu.
