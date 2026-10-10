@@ -18,6 +18,10 @@
 
 *K dopsání a obhajobě.* Survival tu neznamená „hráč může umřít“, ale „prostředí neustále ohrožuje něco živého a hráč s tím hospodaří“. Ohrožení jsou dva: roj (horko, mráz, otřesy) a jezdec (únava, chlad). Oba jsou provázané: unavený nebo prochladlý jezdec hůř ovládá kolo, víc padá a pády stresují roj. Jezdcovo přežití je tak nástrojem přežití roje. Pozor na riziko, že bez té vazby by z návrhu byla jen eskortní mise s nákladem, ne survival systém.
 
+*K dopsání a obhajobě.* **Descenders dnes survival hra nejsou.** Jsou roguelite: pády ubírají zdraví a jeho ztráta ukončí run (*ověřit* přesnou mechaniku). To je fail state, ne survival systém, protože hra nemá zdroj, který by krajina ubírala v čase. Únava ani teplota neexistují, počasí a noc jsou kulisa. Survival začíná tam, kde tě krajina opotřebovává, i když nepadáš; to návrh přidává.
+
+**Kampaň a survival jsou různé osy.** Kampaň je struktura (mise, příběh, postup), survival je vrstva mechanik (prostředí ubírá zdroje, hráč hospodaří). Kampaň je nosič: dává důvod k cestě, náklad, termín a otevřený svět s volbou trasy. Survival vrstva žije jen v ní; kariéra a bike parky zůstávají beze změny.
+
 ## 3. Režim a struktura
 
 - Jedna souvislá oblast se čtyřmi biomy, mezi nimi safe zóny (vesnice, chaty).
