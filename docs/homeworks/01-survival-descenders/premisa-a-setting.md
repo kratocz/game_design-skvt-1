@@ -1,7 +1,7 @@
 # Descenders: Kurýr – premisa, setting a úpravy hry
 
 - **Účel:** separátní dokument k one-pageru: premisa a setting nového režimu kampaně a úpravy Descenders, na kterých survival vrstva stojí
-- **Stav:** návrh textu po oponentuře 2026-10-10, čeká na schválení autorem; odevzdávaná verze vznikne jako PDF ve složce `odevzdani`
+- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce); odevzdávaná verze je [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf), zdroj `odevzdani/premisa-a-setting.html`
 
 ## Premisa
 
@@ -40,10 +40,10 @@ Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh pro
 |---|---|---|
 | Svět | samostatné procedurálně generované tratě | jedna souvislá, ručně postavená mapa ze čtyř biomů kariéry |
 | Cíl jízdy | dojet trať | dovézt náklad |
-| Volba | další trať na větvené mapě *ověřit* | trasa, čas odjezdu a výbava |
+| Volba | další trať na větvené mapě | trasa, čas odjezdu a výbava |
 | Pád | stojí život | cestou zpět ubírá vitalitu roje |
 | Zastávky | medic campy doplňují životy | safe zóny: odpočinek, předpověď, výměna výbavy |
-| Čas a počasí | dané tratí *ověřit* | plynou, mají předpověď a hráč volí, kdy jet |
+| Čas a počasí | dané tratí | plynou, mají předpověď a hráč volí, kdy jet |
 
 **Otevřený svět.** Ručně postavená mapa nahrazuje procedurální tratě proto, že předpověď, zkratky a volba trasy potřebují stálou krajinu, kterou se hráč naučí. Osada leží v údolí v Highlands, včelí stanice na hřebeni Peaks a je z osady vidět na obzoru. Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky. Ze stanice vedou dolů tři koridory (hřebenová zkratka, přes Canyon, přes Forest), propojené příčnými stezkami, takže je jde kombinovat. Trasa není předepsaná a jezdit se dá i mimo stezky. Vyhlídky upřesní předpověď pro okolní biom, objevené zkratky zrychlí příští průjezd.
 

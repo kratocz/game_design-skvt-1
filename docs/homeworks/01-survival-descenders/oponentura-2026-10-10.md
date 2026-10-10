@@ -56,4 +56,4 @@ Nezávislý oponent dostal jen zadání, PDF one-pageru a návrh `premisa-a-sett
 
 Nezapracováno: ruční opylování (čtenáře nejspíš nenapadne a další věta by premisu jen natahovala), vedro a mráz zkracující odkvět (nová mechanika navíc), škrt „nákazy z nížin“ (vysvětluje, proč včely přežily právě v horách).
 
-Pro one-pager z kola plynou tři opravy čekající na souhlas autora: rozpor „nepřečká zimu“ proti skromnějšímu epilogu, „čtyři biomy hry“ a „pořadí safe zón není předepsané“.
+Do one-pageru se se souhlasem autora promítly tři opravy z tohoto kola: rozpor „nepřečká zimu“ proti skromnějšímu epilogu (teď „osada dlouho nepřežije“), „čtyři biomy hry“ (teď „čtyři hlavní biomy kariéry“) a „pořadí safe zón není předepsané“ (teď „trasa není předepsaná“). Navíc zmínka, že safe zóny jsou přestavěné medic campy z kariéry. Autor potvrdil i tvrzení o kariéře ve srovnávací tabulce (větvená mapa tratí, denní doba a počasí dané tratí).

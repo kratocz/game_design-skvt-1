@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** odevzdávaný one-pager hotový; premisa, setting a úpravy hry v návrhu po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)), čekají na schválení a PDF; zbývá příloha
+- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); zbývá příloha s ilustracemi a odpověď lektorek k open-world
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -36,7 +36,8 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 - [odevzdani/one-pager.pdf](odevzdani/one-pager.pdf) – **odevzdávaný one-pager** (A4), zdroj [odevzdani/one-pager.html](odevzdani/one-pager.html); PDF se vyrábí příkazem `weasyprint one-pager.html one-pager.pdf` ve složce `odevzdani`
 - [one-pager.md](one-pager.md) – pracovní návrh s podrobnostmi a čísly pro ladění; z něj one-pager vychází
-- [premisa-a-setting.md](premisa-a-setting.md) – separátní dokument s premisou, settingem a úpravami hry, jak zadání požaduje
+- [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf) – **odevzdávaný separátní dokument** s premisou, settingem a úpravami hry (2 strany A4), zdroj [odevzdani/premisa-a-setting.html](odevzdani/premisa-a-setting.html); PDF se vyrábí příkazem `weasyprint premisa-a-setting.html premisa-a-setting.pdf` ve složce `odevzdani`
+- [premisa-a-setting.md](premisa-a-setting.md) – tentýž text v Markdownu; při změně upravit oba soubory
 - [odlozene-napady.md](odlozene-napady.md) – nápady, které jsme zatím nevybrali, i s důvodem a podmínkou návratu
 
 ## Rozhodnutí z brainstormingu (2026-10-06 až 2026-10-10)
@@ -73,5 +74,4 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 ## Další kroky
 
 1. Počkat na odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10; záloha: Riders Republic).
-2. Schválit text premisy, settingu a úprav hry a vyrobit z něj PDF ve stylu one-pageru.
-3. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s upozorněním, že jsou mimo hodnocení.
+2. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s upozorněním, že jsou mimo hodnocení.

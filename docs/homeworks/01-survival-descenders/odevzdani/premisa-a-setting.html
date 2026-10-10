@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Descenders: Kurýr – premisa, setting a úpravy hry</title>
+<style>
+  @page {
+    size: A4; margin: 11mm 14mm 13mm 14mm;
+    @bottom-right { content: "Strana " counter(page) " z " counter(pages); font-family: "Roboto", Arial, sans-serif; font-size: 10pt; color: #4a5a5e; }
+  }
+  :root {
+    --ink: #1d2a2e;
+    --muted: #4a5a5e;
+    --teal: #0f5c63;
+    --honey: #b87a06;
+    --honey-light: #f2b632;
+    --paper: #ffffff;
+    --sand: #f4f1e6;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.38;
+    color: var(--ink);
+    hyphens: auto;
+  }
+  header { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 2.5pt solid var(--honey-light); padding-bottom: 2mm; margin-bottom: 4mm; }
+  h1 { margin: 0; font-weight: 900; font-size: 25pt; letter-spacing: 0.4pt; line-height: 1; color: var(--teal); text-transform: uppercase; }
+  h1 span { color: var(--honey); }
+  .subtitle { margin: 1.2mm 0 0 0; font-size: 11pt; font-weight: 500; }
+  .meta { text-align: right; font-size: 10pt; color: var(--muted); line-height: 1.3; }
+  h2 { margin: 4.5mm 0 2mm 0; font-size: 12pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3pt; color: var(--teal); border-top: 1.6pt solid var(--teal); padding-top: 1.6mm; }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 2.2mm 0; }
+  .k { color: var(--honey); font-weight: 700; }
+  b.t { color: var(--teal); }
+  .premise p { font-size: 11pt; }
+  .biomes { display: grid; grid-template-columns: 1fr 1fr; gap: 2.2mm 4mm; margin: 0 0 2.6mm 0; }
+  .biome { display: flex; gap: 2.4mm; align-items: flex-start; }
+  .chip { flex: none; width: 4.2mm; height: 4.2mm; border-radius: 1mm; margin-top: 0.5mm; border: 0.6pt solid #7d8b8f; }
+  .biome p { margin: 0; }
+  .cols { display: flex; gap: 6mm; }
+  .cols > div { flex: 1; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 3mm 0; font-size: 10.5pt; }
+  th { text-align: left; background: var(--teal); color: #ffffff; font-weight: 700; padding: 1.4mm 2.2mm; }
+  td { padding: 1.3mm 2.2mm; vertical-align: top; border-bottom: 0.6pt solid #c9d3d5; }
+  td:first-child { font-weight: 700; color: var(--teal); width: 22%; }
+  td:nth-child(2) { color: var(--muted); width: 33%; }
+  .flow { display: flex; align-items: stretch; gap: 0; margin: 0 0 3mm 0; }
+  .step { flex: 1; background: var(--sand); border-top: 2.5pt solid var(--honey-light); padding: 1.8mm 2.6mm; }
+  .step h3 { margin: 0 0 0.8mm 0; font-size: 10.5pt; font-weight: 900; color: var(--teal); text-transform: uppercase; letter-spacing: 0.2pt; }
+  .step p { margin: 0; }
+  .arrow { flex: none; width: 6mm; display: flex; align-items: center; justify-content: center; color: var(--honey); font-size: 14pt; font-weight: 900; }
+  ul.why { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+  ul.why li { padding-left: 4mm; position: relative; }
+  ul.why li::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 2mm; height: 2mm; background: var(--honey-light); transform: rotate(45deg); }
+  .page-break { break-before: page; }
+  footer { margin-top: 4mm; display: flex; justify-content: space-between; font-size: 10pt; color: var(--muted); border-top: 0.6pt solid #c9d3d5; padding-top: 1.2mm; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Descenders: <span>Kurýr</span></h1>
+    <p class="subtitle">Premisa, setting a úpravy hry · samostatný dokument k one-pageru</p>
+  </div>
+  <div class="meta">Domácí úkol č. 1, zadání Survival<br>Game Design pro začátečníky, SKVT<br>Petr Kratochvíl, říjen 2026</div>
+</header>
+
+<h2>Premisa</h2>
+<div class="premise">
+<p>Svět se nezhroutil v jednom dni. Léta extrémního počasí, rozpadlá síť a došlé palivo ho rozkládaly pomalu a v nížinách nakonec vymřeli i opylovači. O generaci později žijí lidé v malých osadách a obnovují, co jde. Osada v údolí vysadila sady, ale <span class="k">bez včel nedají úrodu</span> a bez úrody osada dlouho nepřežije.</p>
+<p>Hráč je <span class="k">kurýr na horském kole</span>, jedno z mála spojení mezi osadami. Je jaro a sady se chystají kvést. Kurýr dostane zakázku, která vypadá jako rutina: vyvézt solární panely a akumulátory do horské včelí stanice a výměnou přivézt včely, než sady odkvetou. V údolí už celou generaci nikdo včely nechoval, takže nikdo neví, co to obnáší.</p>
+<p>Teprve ve včelí stanici se kurýr dozví, jak křehký náklad poveze: <span class="k">roj včelích královen</span> v malém zatepleném boxu. Královny nesnesou horko, mráz ani otřesy. Rutinní zakázka se mění v závod s počasím a časem. Jde v něm o život, jen ne o kurýrův.</p>
+<p>Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu postaráno. Když dorazí po odkvětu, osada dostane včely až pro příští rok a čeká ji hubená zima. Když roj cestou zahyne, kurýr se pro náhradu vrací do stanice a ztrácí čas. Kampaň jde dohrát vždy, jen epilog je skromnější.</p>
+</div>
+
+<h2>Setting</h2>
+<div class="cols">
+  <div>
+    <p><b class="t">Tón: naděje, ne válka.</b> Nebezpečí je krajina a počasí, ne lidé. Nikdo kurýra nepronásleduje a nikdo nemá zbraň. Svět po kolapsu je tichý a zarůstá, ale lidé v něm znovu staví.</p>
+    <p><b class="t">Proč kolo.</b> Palivo došlo a silnice přerušily sesuvy a povodně. Kolo projede, kudy auto ne, a kde nejde jet, jezdec ho přenese. Kurýři na kolech proto drží pohromadě osady, které by jinak byly odříznuté.</p>
+  </div>
+  <div>
+    <p><b class="t">Horská včelí stanice.</b> Poslední místo v kraji, kde včely přežily, protože je izolace hor uchránila před nákazou z nížin. Včelaři tu líhnou královny, ale jen pár za rok. Panely a akumulátory potřebují, aby příští zimu <span style="hyphens:none">udrželi</span> líheň v teple. Počasí sledují, protože na něm včely závisí, a předpověď vysílají do útulen podél tras.</p>
+  </div>
+</div>
+
+<p><b class="t">Krajina.</b> Čtyři hlavní biomy kariéry Descenders, jak vypadají po kolapsu:</p>
+<div class="biomes">
+  <div class="biome"><span class="chip" style="background:#a9c97a"></span><p><b>Highlands:</b> zelené údolí s osadou a mladými sady na terasách, pastviny a staré polní cesty. Ženou se sem bouřkové fronty.</p></div>
+  <div class="biome"><span class="chip" style="background:#3f6b45"></span><p><b>Forest:</b> lesy, které zarostly staré lesní cesty, kmeny popadané po vichřicích, pod korunami šero i ve dne.</p></div>
+  <div class="biome"><span class="chip" style="background:#c8744a"></span><p><b>Canyon:</b> vyprahlá skalní pánev se starou silnicí a opuštěnou čerpací stanicí. Ve dne výheň, v noci chlad.</p></div>
+  <div class="biome"><span class="chip" style="background:#dbe4ec"></span><p><b>Peaks:</b> hřebeny se sněhem a ledem, horská bouda a nejvýš včelí stanice.</p></div>
+</div>
+
+<p><b class="t">Safe zóny.</b> Útulny podél tras udržují kurýři a pár lidí, kteří v nich zůstali: chata nad osadou, hájovna ve Forestu, čerpací stanice v Canyonu a horská bouda pod Peaks. V každé je pryčna, rádio s předpovědí ze včelí stanice a sklad výbavy.</p>
+<p><b class="t">Vizuál.</b> Stylizovaný vzhled Descenders zůstává. Kolaps je vidět jen v detailech: zarostlé silnice, rezavé stožáry vedení, prázdné vesnice, sesuvy přes cesty. Barevně nejvýraznější jsou kvetoucí sady, kterými končí včasný příjezd.</p>
+
+<h2 class="page-break">Úpravy hry</h2>
+<p>Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh proto přidává vedle kariéry <span class="k">nový režim kampaně</span>. Kariéra, bike parky i jízdní model zůstávají; v kampani do ovládání zasahuje jen únava. Šlapání i jízdu v noci hra už zná, kampaň z nich dělá stoupání s nákladem a plynoucí čas.</p>
+
+<table>
+  <thead><tr><th></th><th>Kariéra dnes</th><th>Kampaň Kurýr</th></tr></thead>
+  <tbody>
+    <tr><td>Svět</td><td>samostatné procedurálně generované tratě</td><td>jedna souvislá, ručně postavená mapa ze čtyř biomů kariéry</td></tr>
+    <tr><td>Cíl jízdy</td><td>dojet trať</td><td>dovézt náklad</td></tr>
+    <tr><td>Volba</td><td>další trať na větvené mapě</td><td>trasa, čas odjezdu a výbava</td></tr>
+    <tr><td>Pád</td><td>stojí život</td><td>cestou zpět ubírá vitalitu roje</td></tr>
+    <tr><td>Zastávky</td><td>medic campy doplňují životy</td><td>safe zóny: odpočinek, předpověď, výměna výbavy</td></tr>
+    <tr><td>Čas a počasí</td><td>dané tratí</td><td>plynou, mají předpověď a hráč volí, kdy jet</td></tr>
+  </tbody>
+</table>
+
+<p><b class="t">Otevřený svět.</b> Ručně postavená mapa nahrazuje procedurální tratě proto, že předpověď, zkratky a volba trasy potřebují <span class="k">stálou krajinu, kterou se hráč naučí</span>. Osada leží v údolí v Highlands, včelí stanice na hřebeni Peaks a je z osady vidět na obzoru. Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky. Ze stanice vedou dolů tři koridory (hřebenová zkratka, přes Canyon, přes Forest), propojené příčnými stezkami, takže je jde kombinovat. Trasa není předepsaná a jezdit se dá i mimo stezky. Vyhlídky upřesní předpověď pro okolní biom, objevené zkratky zrychlí příští průjezd.</p>
+
+<p><b class="t">Průběh kampaně.</b></p>
+<div class="flow">
+  <div class="step"><h3>1 · Cesta tam</h3><p>Krátká, převážně do kopce, s těžkými panely. Hráč hodně šlape a učí se hospodařit s únavou. Krátké sjezdy mezi stoupáními jsou odměna.</p></div>
+  <div class="arrow">›</div>
+  <div class="step"><h3>2 · Zvrat ve stanici</h3><p>Kurýr přebírá roj a dozví se, jak je křehký. Přibude ukazatel vitality roje.</p></div>
+  <div class="arrow">›</div>
+  <div class="step"><h3>3 · Cesta zpět</h3><p>Delší, převážně z kopce. Nejcitlivější náklad jede právě tam, kde je nejvíc rychlosti a pádů.</p></div>
+</div>
+
+<h2>Proč tahle premisa</h2>
+<p>Každý prvek světa ospravedlňuje jednu mechaniku survival vrstvy:</p>
+<ul class="why">
+  <li><b>Došlé palivo a zničené silnice:</b> kolo je jediný dopravní prostředek a přenesení kola je legitimní způsob průjezdu.</li>
+  <li><b>Rozpadlá síť:</b> solární panely jsou cenné zboží, takže cesta tam má důvod.</li>
+  <li><b>Vymřelí opylovači a zapomenuté včelaření:</b> královny jsou vzácné a o jejich křehkosti se kurýr dozví až při předání.</li>
+  <li><b>Extrémní počasí:</b> biomy a počasí jsou tlak a předpověď je nejcennější informace.</li>
+  <li><b>Krátké kvetení sadů:</b> termín má ve světě důvod, není to libovolný časovač.</li>
+  <li><b>Péče o něco živého:</b> hráč má citový důvod jet opatrně. Pád nebolí jezdce, ale roj.</li>
+</ul>
+
+<footer>
+  <span>Survival systém popisuje one-pager. Tento dokument popisuje svět a režim, ve kterém žije.</span>
+
+</footer>
+
+</body>
+</html>
