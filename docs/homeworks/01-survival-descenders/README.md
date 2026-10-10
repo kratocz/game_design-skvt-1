@@ -27,6 +27,7 @@ Navrhnout survival systém pro open-world hru dle vlastního výběru. Survival 
 - **Dvě cesty, tam a zpět.** Tam veze kurýr obchodní náklad do horské včelí stanice (solární panely a akumulátory, kterými včelaři v zimě vyhřívají úly). Zpět veze královny, které dostal výměnou, sjezdem do údolí. Původní válečná druhá etapa (ukořistěná data, útěk) zůstává odložená.
 - **Zvrat při předání.** Cesta tam má působit jako rutinní zakázka. Jak křehké královny jsou, se hráč dozví až ve včelí stanici, kde je přebírá. Cesta tam tím slouží jako tutoriál (únava, pády) a cesta zpět odemkne teplotu a vitalitu roje.
 - **Včely jsou podmínka přežití osady**, ne zisku: bez opylení nesklidí úrodu a nepřečká zimu.
+- **Cesta tam je kratší a převážně do kopce**, hráč hodně šlape (Descenders šlapání umí, potvrzeno uživatelem). Cesta zpět je delší a převážně z kopce. Kontrast dělá ze sjezdu odměnu.
 - **Z lekce 2026-10-06** ([lesson-game-proposal-2026-10-06.md](../../lesson-game-proposal-2026-10-06.md)) přebíráme katalog terénů, princip „konflikt nutí volit způsob průjezdu“ a překážky vázané na výbavu.
 
 ## Další kroky
