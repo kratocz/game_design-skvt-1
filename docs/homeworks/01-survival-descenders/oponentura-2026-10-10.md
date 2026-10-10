@@ -18,3 +18,7 @@
 | Chybí fail state. | Platí. | Roj zahyne: návrat do včelí stanice pro náhradní královny, ztráta času, ne postupu. Pozdní příjezd: osada přežije, epilog je skromnější. |
 | One-pager má 1 393 slov a 6 tabulek, není to menší formát. | Neplatí pro odevzdání. `one-pager.md` je pracovní dokument, odevzdávaná verze bude zhuštěná. | Beze změny; hlídat při tvorbě výstupu. |
 | §3 „zpět z kopce“ nesedí s terénem „stoupání“ v Highlands a Peaks. | Drobnost. | Upřesnit: zpět převážně z kopce s krátkými stoupáními. |
+
+## Doplněk z mininávrhu z lekce
+
+Část „Náhoda“ z [mininávrhu](../../lesson-game-proposal-2026-10-06.md) podporuje opravu počasí: počasí a padající strom jsou v ní *pre-luck*, tedy náhoda, kterou hráč vidí dřív, než se rozhoduje. Přesně tak má fungovat předpověď v safe zóně a padlý strom viditelný z dálky. Náhodnou poruchu vozítka (náhoda bez varování) do kampaně nebereme, viz odložené nápady.

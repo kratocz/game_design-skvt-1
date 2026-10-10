@@ -31,3 +31,11 @@ Ke každému je důvod odložení a podmínka, za které by se vyplatilo se k n�
 ## Arkádové mechaniky z lekce 2026-10-06
 
 Z [návrhu závodní hry z lekce](../../lesson-game-proposal-2026-10-06.md): více vozítek (OneWheel a další), úseky po vodě a vzduchem, kolmo vedoucí cyklistický závod, posílení zatáčky, házení skokánku před sebe, odhmotnění na sekundu. *Odloženo:* arkádové prvky by survival vrstvě Descenders vzaly uvěřitelnost; poskok už Descenders mají jako bunny hop. *Návrat:* arkádová závodní hra, tedy přesně ta z lekce.
+
+## Z mininávrhu z lekce a reakcí na Discordu (2026-10-10)
+
+Mininávrh dostal na Discordu kurzu čtvrtou část „Náhoda“ a komentář od spolužáka, že by zajímavá byla i „nevraživost“ konkurenčních frakcí.
+
+- **Konkurenční frakce kurýrů.** Rivalové jedou pro stejné královny nebo stejnou zakázku. *Odloženo:* táhne návrh k rivalitě a pronásledování, které jsme z kampaně vyřadili. *Návrat:* multiplayerová varianta nebo multisportová hra z lekce.
+- **Náhodná porucha vozítka.** *Odloženo:* náhoda bez předchozí informace (out-luck) by u živého nákladu působila nefér; hráč by ztrácel roj bez možnosti reagovat. *Návrat:* pokud by byla porucha ohlášená předem, třeba opotřebením, které hráč vidí.
+- **Procedurálně generovaný terén.** *Odloženo:* otevřený svět stojí na pevné mapě, kterou se hráč učí a ve které volí trasy. Procedurální zůstává jen počasí. *Návrat:* režim pro opakované hraní po dokončení kampaně.
