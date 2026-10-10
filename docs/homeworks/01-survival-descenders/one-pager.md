@@ -18,7 +18,7 @@
 
 *K dopsání a obhajobě.* Survival tu neznamená „hráč může umřít“, ale „prostředí neustále ohrožuje něco živého a hráč s tím hospodaří“. Ohrožení jsou dva: roj (horko, mráz, otřesy) a jezdec (únava, chlad). Oba jsou provázané: unavený nebo prochladlý jezdec hůř ovládá kolo, víc padá a pády stresují roj. Jezdcovo přežití je tak nástrojem přežití roje. Pozor na riziko, že bez té vazby by z návrhu byla jen eskortní mise s nákladem, ne survival systém.
 
-*K dopsání a obhajobě.* **Descenders dnes survival hra nejsou.** Jsou roguelite: pády ubírají zdraví a jeho ztráta ukončí run (*ověřit* přesnou mechaniku). To je fail state, ne survival systém, protože hra nemá zdroj, který by krajina ubírala v čase. Únava ani teplota neexistují, počasí a noc jsou kulisa. Survival začíná tam, kde tě krajina opotřebovává, i když nepadáš; to návrh přidává.
+*K dopsání a obhajobě.* **Descenders dnes survival hra nejsou.** Jsou roguelite: v kariéře hráč začíná se čtyřmi životy a pád stojí život (ověřeno na [Descenders Wiki](https://descenders.fandom.com/wiki/How_to_play_guide_for_Descenders)). To je fail state, ne survival systém, protože hra nemá zdroj, který by krajina ubírala v čase. Únava ani teplota neexistují, počasí a noc jsou kulisa. Survival začíná tam, kde tě krajina opotřebovává, i když nepadáš; to návrh přidává.
 
 **Kampaň a survival jsou různé osy.** Kampaň je struktura (mise, příběh, postup), survival je vrstva mechanik (prostředí ubírá zdroje, hráč hospodaří). Kampaň je nosič: dává důvod k cestě, náklad, termín a otevřený svět s volbou trasy. Survival vrstva žije jen v ní; kariéra a bike parky zůstávají beze změny.
 
@@ -52,7 +52,7 @@
 
 Forest je i úkryt: ve stínu korun je chladno, takže v horku je les pro roj bezpečnějším místem k odpočinku než otevřený Canyon. Stejný biom tak jednou škodí a jindy pomáhá, podle toho, odkud hráč přijíždí.
 
-*Ověřit:* názvy a počet kariérních biomů v Descenders.
+Biomy jsou čtyři kariérní světy hry v pořadí Highlands, Forest, Canyon a Peaks (ověřeno na [Descenders Wiki](https://descenders.fandom.com/wiki/Peaks)).
 
 ## 6. Klíčové napětí: rychlost vs. opatrnost
 
@@ -60,7 +60,21 @@ Rychlost chrání před horkem a šetří čas, ale zvyšuje riziko pádu a pád
 
 ## 7. Způsoby průjezdu překážky
 
-*K dopsání.* Jet, tlačit, nést kolo, brodit, přečkat, objet. Každý stojí něco jiného (únavu, čas, vitalitu roje). Překážky z lekce: padlý kmen, řeka.
+Každou překážku jde projet víc způsoby. Žádný není zadarmo: každý stojí únavu, čas, nebo vitalitu roje. Hráč tak u každé překážky volí, kterým zdrojem zaplatí.
+
+| Způsob | Kdy dává smysl | Cena pro jezdce | Dopad na roj |
+|---|---|---|---|
+| Jet | výchozí, většina terénu | riziko pádu | otřesy, při pádu velký stres |
+| Tlačit | prudké stoupání, hluboké bláto | únava, pomalý postup | klid |
+| Nést kolo | kořeny, kameny, padlý kmen | velká únava, velmi pomalý postup | žádné otřesy |
+| Brodit | říčka, řeka | mokro a chlad; v Peaks únava dvojnásobná | voda nesmí do boxu, jinak roj prochladne |
+| Přečkat | bouře, poledne v Canyonu, noc v Peaks | čas; jezdec si přitom odpočine | roj se stabilizuje, pokud je ve stínu nebo v teple |
+| Objet | když je překážka moc riskantní | delší trasa, čas | obvykle bezpečnější |
+
+Příklady překážek z lekce:
+
+- **Padlý kmen:** přeskočit bunny hopem (rychlé, ale otřes a riziko pádu), přenést kolo (únava), nebo objet (čas).
+- **Řeka:** přebrodit (chlad a riziko pro box), hledat lávku (objížďka), nebo v Canyonu najít vyschlé koryto (delší, ale suché).
 
 ## 8. Den a noc
 
@@ -68,7 +82,17 @@ Denní doba ve hře existuje (potvrzeno uživatelem). Návrh přidává její vl
 
 ## 9. Výbava v safe zóně
 
-*K dopsání.* Nová vrstva (výbava v Descenders je podle mě kosmetická, *ověřit*): pláště podle povrchu, světlo, teplé oblečení, chladicí náplně. Omezená nosnost, takže výběr je volba.
+Nová vrstva výbavy, která má funkci (dnešní výbava v Descenders je podle mě kosmetická, *ověřit*). Výbava se bere v safe zóně a nosnost je omezená, takže výběr je volba, ne sběr všeho. Každý kus navíc zrychluje únavu do kopce.
+
+| Výbava | Pomáhá | Nevýhoda |
+|---|---|---|
+| Světlo | noc, tma pod korunami ve Forestu | místo v nosnosti |
+| Nepromokavý obal | déšť v Highlands, brod | místo v nosnosti |
+| Chladicí náplně | horko v Canyonu | omezený počet; doplnit jdou jen sněhem nebo ledovou vodou v Peaks |
+| Teplé oblečení | mráz v Peaks, noc | v horku jezdce přehřívá a zrychluje únavu |
+| Pláště na bláto, nebo na led | trakce v daném terénu | jen jedna sada najednou; na jiném povrchu jsou horší |
+
+**Nosnost svazuje obě cesty.** Cestou tam zabírají většinu nosnosti panely a akumulátory, takže si hráč vezme minimum výbavy a učí se bez ní. Cestou zpět je box s královnami lehký a nosnost se uvolní. Hráč teď výbavu potřebuje a poprvé ji skutečně skládá.
 
 ## 10. Otevřené otázky
 
