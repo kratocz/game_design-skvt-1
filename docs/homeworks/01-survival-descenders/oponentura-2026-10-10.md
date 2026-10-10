@@ -22,3 +22,20 @@
 ## Doplněk z mininávrhu z lekce
 
 Část „Náhoda“ z [mininávrhu](../../lesson-game-proposal-2026-10-06.md) podporuje opravu počasí: počasí a padající strom jsou v ní *pre-luck*, tedy náhoda, kterou hráč vidí dřív, než se rozhoduje. Přesně tak má fungovat předpověď v safe zóně a padlý strom viditelný z dálky. Náhodnou poruchu vozítka (náhoda bez varování) do kampaně nebereme, viz odložené nápady.
+
+## Druhé kolo: odevzdávaný one-pager (2026-10-10)
+
+Nezávislý oponent dostal jen PDF one-pageru, vzor z kurzu, zadání a upřesnění z Discordu. Zapracováno:
+
+- Řetěz premisy (roj, opylení sadů, přežití osady, krátké kvetení) je v textu, ne jen v mapě.
+- Písmo v mapě a legendě zvětšené na zhruba 10 bodů; vlastnosti koridorů přesunuté z mapy do textu.
+- Rozpor „jen dvě místa rozhodování“ vs. překážky za jízdy: velká rozhodnutí v safe zóně a na rozcestí, za jízdy jen volba stopy jako v Descenders dnes.
+- Hřebenová zkratka vede přes Peaks (střed mapy je teď hřeben Peaks), takže mráz a teplá vrstva mají kde působit.
+- Otevřený svět řečen hned v úvodu: jedna souvislá mapa, jízda i mimo stezky, volné pořadí; v mapě přibyla značka rozcestí.
+- Počasí má účinek (chladí, přehřívá), únava má obnovu (odpočinek v safe zóně).
+- Přidaný konkrétní příklad rozhodnutí; závěrečná věta, která jen opakovala pilíře, vypadla.
+- Sjednocený slovník (roj, vitalita roje), opravené „dozví až ve včelí stanici“, čárka před „nebo“ jen u výlučných voleb.
+
+Nezapracováno: výtka, že kampaň bez změny kariéry je jen přívěsek (nový režim je legitimní obohacení hry), a výtka, že selhání nemá zuby (stojí čas a termín je měkký záměrně, aby hra netrestala jako survival).
+
+Tvrzení o současné hře v úvodu („biom mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet“) potvrzuje autor, který hru zná.
