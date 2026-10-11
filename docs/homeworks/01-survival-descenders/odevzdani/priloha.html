@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Descenders: Kurýr – příloha s ilustracemi</title>
+<style>
+  @page {
+    size: A4; margin: 11mm 14mm 13mm 14mm;
+    @bottom-right { content: "Strana " counter(page) " z " counter(pages); font-family: "Roboto", Arial, sans-serif; font-size: 10pt; color: #4a5a5e; }
+  }
+  :root {
+    --ink: #1d2a2e;
+    --muted: #4a5a5e;
+    --teal: #0f5c63;
+    --honey: #b87a06;
+    --honey-light: #f2b632;
+    --paper: #ffffff;
+    --sand: #f4f1e6;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.38;
+    color: var(--ink);
+    hyphens: auto;
+  }
+  header { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 2.5pt solid var(--honey-light); padding-bottom: 2mm; margin-bottom: 3mm; }
+  h1 { margin: 0; font-weight: 900; font-size: 25pt; letter-spacing: 0.4pt; line-height: 1; color: var(--teal); text-transform: uppercase; }
+  h1 span { color: var(--honey); }
+  .subtitle { margin: 1.2mm 0 0 0; font-size: 11pt; font-weight: 500; }
+  .meta { text-align: right; font-size: 10pt; color: var(--muted); line-height: 1.3; }
+  .ai { background: var(--sand); border-left: 2.5pt solid var(--honey-light); padding: 1.6mm 3mm; margin: 0 0 3mm 0; }
+  figure { margin: 0 0 4mm 0; break-inside: avoid; }
+  figure img { display: block; width: 100%; height: 121mm; object-fit: cover; border-radius: 2mm; background: #dfe5e6; }
+  .pair { display: flex; gap: 5mm; }
+  .pair figure { flex: 1; }
+  .pair figure img { height: 59mm; }
+  figcaption { margin-top: 1.4mm; }
+  figcaption b { color: var(--teal); text-transform: uppercase; font-weight: 900; letter-spacing: 0.2pt; margin-right: 1.2mm; }
+  .page-break { break-before: page; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Descenders: <span>Kurýr</span></h1>
+    <p class="subtitle">Příloha: ilustrace k one-pageru</p>
+  </div>
+  <div class="meta">Domácí úkol č. 1, zadání Survival<br>Game Design pro začátečníky, SKVT<br>Petr Kratochvíl, říjen 2026</div>
+</header>
+
+<p class="ai">Ilustrace v této příloze vygenerovala AI (ChatGPT). Přidal jsem je, protože dobře ukazují záměr: tón světa, biomy a to, jak má náklad a péče o něj ve hře působit.</p>
+
+<figure>
+  <img src="obrazky/01-sjezd.jpg" alt="Kurýr sjíždí s boxem královen nad údolím s kvetoucími sady">
+  <figcaption><b>Cesta zpět</b> Nejcitlivější náklad jede tam, kde je nejvíc rychlosti a pádů. Pád nebolí jezdce, ale roj.</figcaption>
+</figure>
+
+<div class="pair">
+<figure>
+  <img src="obrazky/02-stanice.jpg" alt="Včelaři předávají kurýrovi box s královnami u horské včelí stanice">
+  <figcaption><b>Zvrat ve včelí stanici</b> Panely za královny. Tady se kurýr dozví, jak křehký náklad poveze, a přibude ukazatel vitality roje.</figcaption>
+</figure>
+
+<figure>
+  <img src="obrazky/03-canyon-noc.jpg" alt="Kurýr jede nočním kaňonem, v dálce svítí čerpací stanice">
+  <figcaption><b>Canyon v noci</b> Ve dne je kaňon pro roj nebezpečná výheň, v noci chladno, ale tma. Světlo zabere místo ve výbavě. V dálce svítí čerpací stanice, safe zóna.</figcaption>
+</figure>
+</div>
+
+<figure class="page-break">
+  <img src="obrazky/04-bourka.jpg" alt="Kurýr ujíždí po hřebeni před bouřkovou frontou">
+  <figcaption><b>Bouřková fronta</b> Předpověď v safe zóně ji ohlásí předem. Hráč se rozhodne, jestli jí ujede, nebo ji přečká v chatě a ztratí čas.</figcaption>
+</figure>
+
+<figure>
+  <img src="obrazky/05-osada.jpg" alt="Kurýr předává box s královnami lidem z osady u kvetoucích sadů">
+  <figcaption><b>Včasný příjezd</b> Roj dorazil, dokud sady kvetou. Kvetoucí sady jsou nejbarevnější místo hry a odměna za celou cestu.</figcaption>
+</figure>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); zbývá příloha s ilustracemi a odpověď lektorek k open-world
+- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); příloha má hotovou šablonu na dvě strany a čeká na ilustrace; odpověď lektorek k open-world zatím nepřišla (2026-10-11), práce pokračuje se současným návrhem a případně se upraví
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -38,6 +38,8 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 - [one-pager.md](one-pager.md) – pracovní návrh s podrobnostmi a čísly pro ladění; z něj one-pager vychází
 - [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf) – **odevzdávaný separátní dokument** s premisou, settingem a úpravami hry (2 strany A4), zdroj [odevzdani/premisa-a-setting.html](odevzdani/premisa-a-setting.html); PDF se vyrábí příkazem `weasyprint premisa-a-setting.html premisa-a-setting.pdf` ve složce `odevzdani`
 - [premisa-a-setting.md](premisa-a-setting.md) – tentýž text v Markdownu; při změně upravit oba soubory
+- [odevzdani/priloha.html](odevzdani/priloha.html) – **příloha s ilustracemi** (2 strany A4): přiznání AI, pět obrázků s popisky, které je vážou na mechaniky. Obrázky čte z `odevzdani/obrazky/*.jpg`. Převod PNG z ChatGPT ve složce `obrazky`: `for f in *.png; do sips -s format jpeg -s formatOptions 85 "$f" --out "${f%.png}.jpg"; done`; PDF pak `weasyprint priloha.html priloha.pdf` ve složce `odevzdani`
+- [priloha-prompty.md](priloha-prompty.md) – prompty pro ilustrace a jména souborů
 - [odlozene-napady.md](odlozene-napady.md) – nápady, které jsme zatím nevybrali, i s důvodem a podmínkou návratu
 
 ## Rozhodnutí z brainstormingu (2026-10-06 až 2026-10-10)
@@ -74,5 +76,6 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 ## Další kroky
 
-1. Počkat na odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10; záloha: Riders Republic).
-2. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md) a vytvořit přílohu s přiznáním, že ilustrace vygenerovala AI.
+1. Vygenerovat ilustrace v ChatGPT podle [priloha-prompty.md](priloha-prompty.md), uložit je do `odevzdani/obrazky/`, zkontrolovat, že sedí s popisky v příloze, a sestavit `odevzdani/priloha.pdf`.
+2. Potvrdit nebo opravit tvrzení v úvodu one-pageru, že biom v Descenders mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet (viz [oponentura-2026-10-10.md](oponentura-2026-10-10.md)).
+3. Odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10): dokud nepřijde, platí současný návrh; kdyby režim neprošel, záloha je Riders Republic.

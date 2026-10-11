@@ -2,6 +2,7 @@
 
 - **Účel:** obrázky do přílohy k one-pageru; generují se v ChatGPT
 - **Formát:** na šířku 3:2, jeden obrázek na prompt
+- **Soubory:** do složky `odevzdani/obrazky/` pod jmény `01-sjezd`, `02-stanice`, `03-canyon-noc`, `04-bourka`, `05-osada` podle čísla promptu; PNG z ChatGPT stačí, převod na JPEG a sestavení PDF popisuje [README.md](README.md)
 - **Upozornění do přílohy:** viz konec dokumentu
 
 Všechny prompty sdílejí stejný popis postavy, boxu a stylu, aby obrázky působily jako jedna sada. Když ChatGPT postavu mezi obrázky mění, pomůže ho požádat: „keep the same courier and box as in the previous image“.
