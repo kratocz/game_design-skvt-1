@@ -34,7 +34,7 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 ## Dokumenty
 
-- [odevzdani/one-pager.pdf](odevzdani/one-pager.pdf) – **odevzdávaný one-pager** (A4), zdroj [odevzdani/one-pager.html](odevzdani/one-pager.html); PDF se vyrábí příkazem `weasyprint one-pager.html one-pager.pdf` ve složce `odevzdani`
+- [odevzdani/one-pager.pdf](odevzdani/one-pager.pdf) – **odevzdávaný one-pager** (A4), zdroj [odevzdani/one-pager.html](odevzdani/one-pager.html); PDF se vyrábí příkazem `weasyprint one-pager.html one-pager.pdf` ve složce `odevzdani`. Strana je plná do posledního řádku: po každé změně textu zkontrolovat `pdfinfo one-pager.pdf`, že má jednu stranu. Anglické názvy biomů v textu jsou v `<span class="en">`, aby je české dělení nelámalo („Pe‐aks“); celoplošné omezení dělení stránku přelije
 - [one-pager.md](one-pager.md) – pracovní návrh s podrobnostmi a čísly pro ladění; z něj one-pager vychází
 - [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf) – **odevzdávaný separátní dokument** s premisou, settingem a úpravami hry (2 strany A4), zdroj [odevzdani/premisa-a-setting.html](odevzdani/premisa-a-setting.html); PDF se vyrábí příkazem `weasyprint premisa-a-setting.html premisa-a-setting.pdf` ve složce `odevzdani`
 - [premisa-a-setting.md](premisa-a-setting.md) – tentýž text v Markdownu; při změně upravit oba soubory
@@ -73,6 +73,13 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 - **Kurýr ví, že veze včely, ale ne jak křehké jsou**, protože v údolí už generaci nikdo včely nechoval.
 - **Safe zóny vycházejí z medic campů kariéry**, které dnes doplňují životy.
 - **Přiznání AI** je v patičce one-pageru i dokumentu s premisou, znění schválil autor 2026-10-11 (pravidlo kurzu viz `AGENTS.md`). Text k ilustracím je v [priloha-prompty.md](priloha-prompty.md).
+
+## Jazyková revize (2026-10-11)
+
+- **Texty mají znít lidsky, ne jako překlad z angličtiny.** Pryč jsou kalky jako „tlak“ (pressure), „ospravedlňuje mechaniku“ (justifies) nebo „riziko dostává tvář“. Pilíře one-pageru jsou „Náklad, který žije“, „Krajina, která má co říct“ a „Kudy a s čím“.
+- **Věty musí platit doslova.** Místo „Pád nebolí jezdce, ale roj“ stojí ve všech třech dokumentech „Pád nestojí život jezdce, ale vitalitu roje“.
+- **Náklad je včelí roj s mladou královnou.** „Roj královen“ včelařsky neexistuje, roj je jedna královna s dělnicemi. Starší zápisy výše mluví o královnách, platí tento.
+- **Čerpací stanice v Canyonu je bývalá, ne opuštěná**, protože je to safe zóna, ve které lidé zůstali.
 
 ## Další kroky
 

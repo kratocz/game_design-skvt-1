@@ -1,15 +1,15 @@
 # Descenders: Kurýr – premisa, setting a úpravy hry
 
 - **Účel:** separátní dokument k one-pageru: premisa a setting nového režimu kampaně a úpravy Descenders, na kterých survival vrstva stojí
-- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce); odevzdávaná verze je [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf), zdroj `odevzdani/premisa-a-setting.html`
+- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce), jazyková revize schválená 2026-10-11; odevzdávaná verze je [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf), zdroj `odevzdani/premisa-a-setting.html`
 
 ## Premisa
 
-Svět se nezhroutil v jednom dni. Léta extrémního počasí, rozpadlá síť a došlé palivo ho rozkládaly pomalu a v nížinách nakonec vymřeli i opylovači. O generaci později žijí lidé v malých osadách a obnovují, co jde. Osada v údolí vysadila sady, ale bez včel nedají úrodu a bez úrody osada dlouho nepřežije.
+Svět se nezhroutil ze dne na den. Léta extrémního počasí, rozpad elektrické sítě a nedostatek paliva ho rozkládaly pomalu a v nížinách nakonec vymřeli i opylovači. O generaci později žijí lidé v malých osadách a obnovují, co jde. Osada v údolí vysadila sady, ale bez včel nedají úrodu a bez úrody osada dlouho nepřežije.
 
 Hráč je kurýr na horském kole, jedno z mála spojení mezi osadami. Je jaro a sady se chystají kvést. Kurýr dostane zakázku, která vypadá jako rutina: vyvézt solární panely a akumulátory do horské včelí stanice a výměnou přivézt včely, než sady odkvetou. V údolí už celou generaci nikdo včely nechoval, takže nikdo neví, co to obnáší.
 
-Teprve ve včelí stanici se kurýr dozví, jak křehký náklad poveze: roj včelích královen v malém zatepleném boxu. Královny nesnesou horko, mráz ani otřesy. Rutinní zakázka se mění v závod s počasím a časem. Jde v něm o život, jen ne o kurýrův.
+Teprve ve včelí stanici se kurýr dozví, jak křehký náklad poveze: včelí roj s mladou královnou v malém zatepleném boxu. Včely nesnesou horko, mráz ani otřesy. Rutinní zakázka se mění v závod s počasím a časem. Jde v něm o život, jen ne o kurýrův.
 
 Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu postaráno. Když dorazí po odkvětu, osada dostane včely až pro příští rok a čeká ji hubená zima. Když roj cestou zahyne, kurýr se pro náhradu vrací do stanice a ztrácí čas. Kampaň jde dohrát vždy, jen epilog je skromnější.
 
@@ -25,7 +25,7 @@ Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu post
 
 - **Highlands:** zelené údolí s osadou a mladými sady na terasách, pastviny a staré polní cesty. Ženou se sem bouřkové fronty.
 - **Forest:** lesy, které zarostly staré lesní cesty, kmeny popadané po vichřicích, pod korunami šero i ve dne.
-- **Canyon:** vyprahlá skalní pánev se starou silnicí a opuštěnou čerpací stanicí. Ve dne výheň, v noci chlad.
+- **Canyon:** vyprahlá skalní pánev se starou silnicí a bývalou čerpací stanicí. Ve dne výheň, v noci chlad.
 - **Peaks:** hřebeny se sněhem a ledem, horská bouda a nejvýš včelí stanice.
 
 **Safe zóny.** Útulny podél tras udržují kurýři a pár lidí, kteří v nich zůstali: chata nad osadou, hájovna ve Forestu, čerpací stanice v Canyonu a horská bouda pod Peaks. V každé je pryčna, rádio s předpovědí ze včelí stanice a sklad výbavy.
@@ -34,7 +34,7 @@ Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu post
 
 ## Úpravy hry
 
-Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh proto přidává vedle kariéry nový režim kampaně. Kariéra, bike parky i jízdní model zůstávají; v kampani do ovládání zasahuje jen únava. Šlapání i jízdu v noci hra už zná, kampaň z nich dělá stoupání s nákladem a plynoucí čas.
+Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh proto přidává vedle kariéry nový režim kampaně. Kariéra, bike parky i jízdní model zůstávají; v kampani do ovládání zasahuje jen únava. Šlapání i noční jízdu hra už zná, kampaň k nim přidává těžký náklad do kopce a plynoucí čas.
 
 | | Kariéra dnes | Kampaň Kurýr |
 |---|---|---|
@@ -51,18 +51,18 @@ Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh pro
 
 1. **Cesta tam:** krátká, převážně do kopce, s těžkými panely. Hráč hodně šlape a učí se hospodařit s únavou. Krátké sjezdy mezi stoupáními jsou odměna.
 2. **Zvrat ve včelí stanici:** kurýr přebírá roj a dozví se, jak je křehký. Přibude ukazatel vitality roje.
-3. **Cesta zpět:** delší, převážně z kopce. Nejcitlivější náklad jede právě tam, kde je nejvíc rychlosti a pádů.
+3. **Cesta zpět:** delší, převážně z kopce. Nejcitlivější náklad veze kurýr právě tudy, kudy se jede nejrychleji a nejčastěji padá.
 
 ## Proč tahle premisa
 
-Každý prvek světa ospravedlňuje jednu mechaniku survival vrstvy:
+Každý prvek světa zdůvodňuje jednu mechaniku survival vrstvy:
 
-- **Došlé palivo a zničené silnice:** kolo je jediný dopravní prostředek a přenesení kola je legitimní způsob průjezdu.
-- **Rozpadlá síť:** solární panely jsou cenné zboží, takže cesta tam má důvod.
-- **Vymřelí opylovači a zapomenuté včelaření:** královny jsou vzácné a o jejich křehkosti se kurýr dozví až při předání.
-- **Extrémní počasí:** biomy a počasí jsou tlak a předpověď je nejcennější informace.
-- **Krátké kvetení sadů:** termín má ve světě důvod, není to libovolný časovač.
-- **Péče o něco živého:** hráč má citový důvod jet opatrně. Pád nebolí jezdce, ale roj.
+- **Nedostatek paliva a zničené silnice:** kolo je jediný dopravní prostředek a přenést kolo je běžný způsob, jak se dostat dál.
+- **Rozpadlá elektrická síť:** solární panely jsou cenné zboží, takže cesta tam má důvod.
+- **Vymřelí opylovači a zapomenuté včelaření:** roje jsou vzácné a o jejich křehkosti se kurýr dozví až při předání.
+- **Extrémní počasí:** biomy a počasí jsou hlavní nebezpečí a předpověď je nejcennější informace.
+- **Krátké kvetení sadů:** termín má ve světě důvod, není to umělý odpočet.
+- **Péče o něco živého:** hráč má citový důvod jet opatrně. Pád nestojí život jezdce, ale vitalitu roje.
 
 ---
 

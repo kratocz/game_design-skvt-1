@@ -14,7 +14,7 @@ Návrh dává cestě důvod a krajině váhu. Biom, počasí a denní doba mají
 
 ## 2. Princip: prostředí tlačí stále, hráč rozhoduje občas
 
-Survival tu neznamená, že hráč může umřít. Znamená, že prostředí opotřebovává dva živé tvory: jezdce (únava) a roj včelích královen (vitalita). Tlak působí stále, ale **hráč na něj reaguje jen ve dvou místech:**
+Survival tu neznamená, že hráč může umřít. Znamená, že prostředí vyčerpává dva živé tvory: jezdce (únava) a včelí roj s mladou královnou (vitalita). Tlak působí stále, ale **hráč na něj reaguje jen ve dvou místech:**
 
 - **v safe zóně:** výbava, čas odjezdu podle předpovědi, odpočinek;
 - **na rozcestí:** volba trasy.
@@ -42,7 +42,7 @@ Descenders dnes open-world nejsou: stojí na uzlech a procedurálně generovaný
 
 - **Osada v údolí** (Highlands): start i cíl.
 - **Horská včelí stanice** (Peaks): cíl cesty tam, viditelná z osady na obzoru.
-- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), opuštěná čerpací stanice (Canyon), horská bouda pod Peaks. Vycházejí z medic campů kariéry, kde se doplňují životy; v kampani v nich jezdec odpočívá, čte předpověď a mění výbavu.
+- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), bývalá čerpací stanice (Canyon), horská bouda pod Peaks. Vycházejí z medic campů kariéry, kde se doplňují životy; v kampani v nich jezdec odpočívá, čte předpověď a mění výbavu.
 - **Tři hlavní koridory dolů ze včelí stanice**, propojené příčnými stezkami, takže je hráč může kombinovat:
   - *Hřebenová zkratka:* nejrychlejší, prudká a kamenitá, nejvíc otřesů, v mrazu.
   - *Přes Canyon:* rychlá, ale v horku.
@@ -55,7 +55,7 @@ Descenders dnes open-world nejsou: stojí na uzlech a procedurálně generovaný
 ## 5. Struktura kampaně
 
 1. **Cesta tam, rutinní zakázka.** Kurýr veze solární panely a akumulátory do horské včelí stanice. Cesta je krátká (*cíl ladění:* asi 15 % kampaně) a vede převážně do kopce, takže hráč hodně šlape (šlapání Descenders umí). Aktivní je jen únava. Hráč se učí mapu a únavu, krátké sjezdy mezi stoupáními fungují jako odměna. Náklad je těžký, takže se vejde jen jeden kus výbavy. Pád stojí jen čas.
-2. **Zvrat ve včelí stanici.** Výměnou za panely kurýr přebírá včelí královny. Teprve tady se dozví, jak jsou křehké. Odemkne se ukazatel vitality roje.
+2. **Zvrat ve včelí stanici.** Výměnou za panely kurýr přebírá včelí roj s mladou královnou. Teprve tady se dozví, jak je křehký. Odemkne se ukazatel vitality roje.
 3. **Cesta zpět.** Delší, převážně z kopce s krátkými stoupáními, do osady v údolí, dokud kvetou sady. Aktivní jsou oba ukazatele. Box je lehký, takže se vejdou dva kusy výbavy. Po namáhavém stoupání hráč sjezd ocení o to víc, a právě na sjezdu, kde je nejvíc rychlosti a pádů, veze nejcitlivější náklad.
 
 ## 6. Dva ukazatele a termín
@@ -133,7 +133,7 @@ Zadání radí zvážit, které informace jsou klíčové. Návrh drží na obra
 ## 13. Selhání
 
 - **Únava na maximu:** jezdec sesedne a musí si odpočinout. Ztratí čas, ne postup.
-- **Roj zahyne:** kurýr se vrací do včelí stanice pro náhradní královny. Ztratí čas, ne postup. Náhrad je dost, aby kampaň šla dohrát vždy; limitem je čas, protože každý návrat do stanice stojí cestu nahoru a znovu dolů.
+- **Roj zahyne:** kurýr se vrací do včelí stanice pro náhradní roj. Ztratí čas, ne postup. Náhrad je dost, aby kampaň šla dohrát vždy; limitem je čas, protože každý návrat do stanice stojí cestu nahoru a znovu dolů.
 - **Pozdní příjezd po odkvětu:** osada přežije, ale epilog je skromnější. Kampaň jde dohrát vždy.
 
 ## 14. Otevřené otázky
