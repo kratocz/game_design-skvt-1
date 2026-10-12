@@ -84,3 +84,6 @@ docs/homeworks/*.pdf
 # Originály ilustrací z ChatGPT (PNG, ~3 MB kus); v gitu jsou jen JPEGy,
 # ze kterých se skládá příloha.
 docs/homeworks/*/odevzdani/obrazky/*.png
+
+# JetBrains IDE (IntelliJ IDEA, Rider)
+.idea/
