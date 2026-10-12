@@ -51,3 +51,8 @@ Oponentura ukázala, že návrh měl zhruba sedm stavů a pět kusů výbavy, co
 - **Chladicí náplně s doplňováním sněhem nebo ledovou vodou v Peaks.** Nahradila je jednorázová vložka, nová v safe zóně; doplňování bylo klasickou survival smyčkou.
 - **Křehkost panelů na cestě tam.** Cesta tam učí jen únavu; pád stojí čas.
 - **Šest způsobů průjezdu.** Sloučeno na čtyři (projet, tlačit nebo přenést, přečkat, objet); brod je projetí s cenou chladu.
+
+## Po dokončení odevzdávané verze (2026-10-12)
+
+- **Prasklý box s rojem.** Tvrdý pád box poškodí a roj pak pomalu slábne, dokud ho kurýr neopraví: zastaví a ztratí čas, nebo riskuje cestu do nejbližší safe zóny. Pád by tak měl následek, který trvá, podobně jako krvácení v survival hrách. Oprava je rozhodnutí o čase, ne crafting ze surovin. *Odloženo:* one-pager je plný do posledního řádku, změna by zasáhla všechny tři odevzdávané dokumenty tři dny před termínem a návrh má survival prvků dost. *Návrat:* zpětná vazba, že survival vrstvě chybí hloubka nebo že pád nemá dost citelný následek.
+- **Crafting.** *Odloženo:* je to prvek, podle kterého se survival hry poznají, takže by šel proti zadání (survival prvky nesmí udělat ze hry survival hru); one-pager navíc výslovně slibuje, že crafting nepřibude. *Návrat:* zadání, které survival hru přímo chce.
