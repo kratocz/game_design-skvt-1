@@ -83,5 +83,4 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 ## Další kroky
 
-1. Potvrdit nebo opravit tvrzení v úvodu one-pageru, že biom v Descenders mění vzhled a terén, ale ne to, kudy a kdy je rozumné jet (viz [oponentura-2026-10-10.md](oponentura-2026-10-10.md)).
-2. Odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10): dokud nepřijde, platí současný návrh; kdyby režim neprošel, záloha je Riders Republic.
+1. Odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10): dokud nepřijde, platí současný návrh; kdyby režim neprošel, záloha je Riders Republic.
