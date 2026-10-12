@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); příloha s ilustracemi hotová jako PDF (2026-10-11); odpověď lektorek k open-world zatím nepřišla (2026-10-11), práce pokračuje se současným návrhem a případně se upraví
+- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); příloha s ilustracemi hotová jako PDF (2026-10-11); odpověď z Discordu z 2026-10-12 se týkala jiné věci (hra, která už survival je, míjí účel zadání; Descenders survival nejsou) a k open-world režimu se nevyjádřila, takže platí současný návrh
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -83,4 +83,4 @@ Vzorový one-pager z kurzu leží lokálně v `docs/homeworks/Valheim Onepager R
 
 ## Další kroky
 
-1. Odpověď lektorek k open-world režimu (dotaz odeslaný na Discord 2026-10-10): dokud nepřijde, platí současný návrh; kdyby režim neprošel, záloha je Riders Republic.
+1. Open-world režim: odpověď z 2026-10-12 se k němu nevyjádřila. Dokud nikdo z lektorek výslovně nenapíše, že nový režim nestačí, platí současný návrh; záloha Riders Republic by do termínu znamenala koupit a naučit se novou hru a návrh přepsat.
