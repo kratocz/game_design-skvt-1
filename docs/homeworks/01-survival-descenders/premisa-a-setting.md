@@ -1,7 +1,7 @@
 # Descenders: Kurýr – premisa, setting a úpravy hry
 
 - **Účel:** separátní dokument k one-pageru: premisa a setting nového režimu kampaně a úpravy Descenders, na kterých survival vrstva stojí
-- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce), jazyková revize schválená 2026-10-11; odevzdávaná verze je [odevzdani/premisa-a-setting.pdf](odevzdani/premisa-a-setting.pdf), zdroj `odevzdani/premisa-a-setting.html`
+- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce), jazyková revize schválená 2026-10-11; odevzdávaná verze je [odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf](odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf), zdroj `odevzdani/Kratochvil-DU1-2-premisa-a-setting.html`
 
 ## Premisa
 
