@@ -16,7 +16,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 
 | Úkol | Deadline | Interní cíl | Stav |
 |---|---|---|---|
-| DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 18:00 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
+| DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 23:59:59 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
 
 ## Psaní dokumentů
 
