@@ -49,7 +49,7 @@ Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh pro
 
 **Průběh kampaně.**
 
-1. **Cesta tam:** krátká, převážně do kopce, s těžkými panely. Hráč hodně šlape a učí se hospodařit s únavou. Krátké sjezdy mezi stoupáními jsou odměna.
+1. **Cesta tam:** krátká, převážně do kopce, s těžkými panely. Slouží jako tutoriál: hráč hodně šlape a učí se hospodařit s únavou. Krátké sjezdy mezi stoupáními jsou odměna.
 2. **Zvrat ve včelí stanici:** kurýr přebírá roj a dozví se, jak je křehký. Přibude ukazatel vitality roje.
 3. **Cesta zpět:** delší, převážně z kopce. Nejcitlivější náklad veze kurýr právě tudy, kudy se jede nejrychleji a nejčastěji padá.
 
