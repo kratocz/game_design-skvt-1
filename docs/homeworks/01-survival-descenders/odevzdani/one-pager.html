@@ -132,6 +132,21 @@
   <use href="#safe" x="219" y="219" width="26" height="26"/>
   <use href="#safe" x="777" y="209" width="26" height="26"/>
   <use href="#safe" x="491" y="299" width="26" height="26"/>
+  <!-- nebezpečí koridorů: mráz na hřebeni, výheň v Canyonu -->
+  <g transform="translate(517,266)">
+    <circle r="16" fill="#ffffff" stroke="#1d2a2e" stroke-width="2"/>
+    <g stroke="#3b6e9e" stroke-width="2.6" stroke-linecap="round">
+      <path d="M0,-10 V10 M-8.7,-5 L8.7,5 M-8.7,5 L8.7,-5"/>
+      <path d="M-3,-8 L0,-5 L3,-8 M-3,8 L0,5 L3,8"/>
+    </g>
+  </g>
+  <g transform="translate(740,246)">
+    <circle r="16" fill="#ffffff" stroke="#1d2a2e" stroke-width="2"/>
+    <circle r="5.5" fill="#e0892a"/>
+    <g stroke="#e0892a" stroke-width="2.4" stroke-linecap="round">
+      <path d="M0,-9 V-12 M0,9 V12 M-9,0 H-12 M9,0 H12 M-6.4,-6.4 L-8.5,-8.5 M6.4,6.4 L8.5,8.5 M-6.4,6.4 L-8.5,8.5 M6.4,-6.4 L8.5,-8.5"/>
+    </g>
+  </g>
   <!-- vyhlídky -->
   <use href="#view" x="368" y="168" width="26" height="17"/>
   <use href="#view" x="660" y="160" width="26" height="17"/>
@@ -149,11 +164,19 @@
   </g>
 
   <!-- bouřková fronta -->
-  <g transform="translate(910,322)">
-    <path d="M-36,8 Q-40,-8 -24,-10 Q-20,-26 -2,-22 Q10,-34 24,-20 Q40,-20 38,-4 Q46,8 32,12 L-30,12 Q-40,12 -36,8 Z" fill="#5c6b78" stroke="#1d2a2e" stroke-width="2"/>
-    <polygon points="0,10 -8,26 0,26 -5,40 10,20 2,20 8,10" fill="#f2b632" stroke="#1d2a2e" stroke-width="1.5"/>
+  <g>
+    <!-- pás mraků s deštěm, sahá za okraj mapy: fronta, ne jedna bouřka -->
+    <g stroke="#5c6b78" stroke-width="3" stroke-linecap="round" opacity="0.85">
+      <path d="M846,336 l-6,16 M862,338 l-6,16 M878,336 l-6,16 M930,322 l-6,16 M946,324 l-6,16 M962,322 l-6,16 M984,338 l-6,16 M1000,336 l-6,16"/>
+    </g>
+    <path transform="translate(866,316) scale(0.8)" d="M-36,8 Q-40,-8 -24,-10 Q-20,-26 -2,-22 Q10,-34 24,-20 Q40,-20 38,-4 Q46,8 32,12 L-30,12 Q-40,12 -36,8 Z" fill="#5c6b78" stroke="#1d2a2e" stroke-width="2.5"/>
+    <path transform="translate(992,318) scale(0.85)" d="M-36,8 Q-40,-8 -24,-10 Q-20,-26 -2,-22 Q10,-34 24,-20 Q40,-20 38,-4 Q46,8 32,12 L-30,12 Q-40,12 -36,8 Z" fill="#5c6b78" stroke="#1d2a2e" stroke-width="2.4"/>
+    <g transform="translate(934,300)">
+      <path d="M-36,8 Q-40,-8 -24,-10 Q-20,-26 -2,-22 Q10,-34 24,-20 Q40,-20 38,-4 Q46,8 32,12 L-30,12 Q-40,12 -36,8 Z" fill="#5c6b78" stroke="#1d2a2e" stroke-width="2"/>
+      <polygon points="0,10 -8,26 0,26 -5,40 10,20 2,20 8,10" fill="#f2b632" stroke="#1d2a2e" stroke-width="1.5"/>
+    </g>
   </g>
-  <path d="M866,330 L812,346" stroke="#1d2a2e" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M832,326 L786,340" stroke="#1d2a2e" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
 
   <!-- popisky, písmo zhruba 10 bodů -->
   <g font-size="19" fill="#1d2a2e">
