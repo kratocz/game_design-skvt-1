@@ -42,15 +42,15 @@ Descenders dnes open-world nejsou: stojí na uzlech a procedurálně generovaný
 
 - **Osada v údolí** (Highlands): start i cíl.
 - **Horská včelí stanice** (Peaks): cíl cesty tam, viditelná z osady na obzoru.
-- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), bývalá čerpací stanice (Canyon), horská bouda pod Peaks. Vycházejí z medic campů kariéry, kde se doplňují životy; v kampani v nich jezdec odpočívá, čte předpověď a mění výbavu.
-- **Tři hlavní koridory dolů ze včelí stanice**, propojené příčnými stezkami, takže je hráč může kombinovat:
+- **Safe zóny:** chata nad osadou (Highlands), hájovna (Forest), bývalá čerpací stanice (Canyon), horská bouda pod stanicí. Vycházejí z medic campů kariéry, kde se doplňují životy; v kampani v nich jezdec odpočívá, čte předpověď a mění výbavu.
+- **Tři hlavní trasy dolů ze včelí stanice**, propojené příčnými stezkami, takže je hráč může kombinovat:
   - *Hřebenová zkratka:* nejrychlejší, prudká a kamenitá, nejvíc otřesů, v mrazu.
   - *Přes Canyon:* rychlá, ale v horku.
   - *Přes Forest:* nejdelší, ve stínu, ale tma a kořeny.
 
 **Volnost:** trasa není předepsaná a jezdit se dá i mimo stezky. Pevný je jen cíl.
 
-**Průzkum se vyplácí:** vyhlídky upřesní předpověď počasí pro okolní biom, objevené zkratky zkracují příští průjezd. *Volitelně:* drobné zakázky mezi safe zónami odměňují průzkum výbavou.
+**Průzkum se vyplácí:** vyhlídky upřesní předpověď počasí pro okolní biom, objevené zkratky šetří čas. *Volitelně:* drobné zakázky mezi safe zónami odměňují průzkum výbavou.
 
 ## 5. Struktura kampaně
 

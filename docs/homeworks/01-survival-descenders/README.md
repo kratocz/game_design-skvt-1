@@ -83,6 +83,15 @@ Odevzdávané soubory nesou příjmení a pořadí čtení (`Kratochvil-DU1-<po�
 - **Náklad je včelí roj s mladou královnou.** „Roj královen“ včelařsky neexistuje, roj je jedna královna s dělnicemi. Starší zápisy výše mluví o královnách, platí tento.
 - **Čerpací stanice v Canyonu je bývalá, ne opuštěná**, protože je to safe zóna, ve které lidé zůstali.
 
+## Kontrola před odevzdáním (2026-10-13)
+
+Nezávislá kontrola v čistém kontextu nenašla zásadní problém. Z jejích nálezů jsme vzali ty, které stojí jednu větu a nepřelijí stránku.
+
+- **„Otevřený svět“ zazní přímo v one-pageru a hlavní cesty dolů jsou „trasy“, ne „koridory“.** Koridor v game designu znamená lineární úroveň, tedy opak otevřeného světa. Starší zápisy výše mluví o koridorech, platí tento.
+- **Věty platí doslova:** dobrého jezdce survival vrstva „tolik nebrzdí“ místo „skoro necítí“, mezi safe zónami a rozcestími hráč volí „hlavně“ stopu, Forest v příkladu stojí délku a kořeny, bouda leží „pod stanicí“ (na mapě je v Peaks) a v tabulce má předpověď jen počasí.
+- **Příloha říká, že výtvarný styl a detaily ilustrací nejsou závazné.** Obrázky z ChatGPT mají jiný styl než Descenders a detaily, které settingu odporují (zříceniny hradů, řeka v Canyonu, med v osadě).
+- **Vědomě beze změny:** cesta tam vede v mapě mimo safe zóny jako samostatná stoupací stezka; hovorové „jde + infinitiv“ a nadpis „Proč tahle premisa“ drží přirozený tón z jazykové revize; pevné mezery za jednopísmennými předložkami by mohly přelít one-pager. Noční jízdu ve hře potvrdil autor 2026-10-06.
+
 ## Další kroky
 
 1. Odevzdat tři PDF ze složky `odevzdani` v Labaverse do čt 2026-10-15 18:00.

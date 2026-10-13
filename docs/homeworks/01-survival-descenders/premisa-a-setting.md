@@ -1,7 +1,7 @@
 # Descenders: Kurýr – premisa, setting a úpravy hry
 
 - **Účel:** separátní dokument k one-pageru: premisa a setting nového režimu kampaně a úpravy Descenders, na kterých survival vrstva stojí
-- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce), jazyková revize schválená 2026-10-11; odevzdávaná verze je [odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf](odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf), zdroj `odevzdani/Kratochvil-DU1-2-premisa-a-setting.html`
+- **Stav:** text schválený autorem 2026-10-10 (včetně tvrzení o kariéře v tabulce), jazyková revize schválená 2026-10-11, úpravy po kontrole před odevzdáním 2026-10-13; odevzdávaná verze je [odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf](odevzdani/Kratochvil-DU1-2-premisa-a-setting.pdf), zdroj `odevzdani/Kratochvil-DU1-2-premisa-a-setting.html`
 
 ## Premisa
 
@@ -11,7 +11,7 @@ Hráč je kurýr na horském kole, jedno z mála spojení mezi osadami. Je jaro 
 
 Teprve ve včelí stanici se kurýr dozví, jak křehký náklad poveze: včelí roj s mladou královnou v malém zatepleném boxu. Včely nesnesou horko, mráz ani otřesy. Rutinní zakázka se mění v závod s počasím a časem. Jde v něm o život, jen ne o kurýrův.
 
-Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu postaráno. Když dorazí po odkvětu, osada dostane včely až pro příští rok a čeká ji hubená zima. Když roj cestou zahyne, kurýr se pro náhradu vrací do stanice a ztrácí čas. Kampaň jde dohrát vždy, jen epilog je skromnější.
+Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu postaráno. Když dorazí po odkvětu, osada dostane včely až pro příští rok a čeká ji hubená zima. Když roj cestou zahyne, kurýr se pro náhradu vrací do stanice a ztrácí čas. Kampaň jde dohrát vždy, pozdní příjezd znamená jen skromnější epilog.
 
 ## Setting
 
@@ -28,7 +28,7 @@ Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu post
 - **Canyon:** vyprahlá skalní pánev se starou silnicí a bývalou čerpací stanicí. Ve dne výheň, v noci chlad.
 - **Peaks:** hřebeny se sněhem a ledem, horská bouda a nejvýš včelí stanice.
 
-**Safe zóny.** Útulny podél tras udržují kurýři a pár lidí, kteří v nich zůstali: chata nad osadou, hájovna ve Forestu, čerpací stanice v Canyonu a horská bouda pod Peaks. V každé je pryčna, rádio s předpovědí ze včelí stanice a sklad výbavy.
+**Safe zóny.** Útulny podél tras udržují kurýři a pár lidí, kteří v nich zůstali: chata nad osadou, hájovna ve Forestu, čerpací stanice v Canyonu a horská bouda pod stanicí. V každé je pryčna, rádio s předpovědí ze včelí stanice a sklad výbavy.
 
 **Vizuál.** Stylizovaný vzhled Descenders zůstává. Kolaps je vidět jen v detailech: zarostlé silnice, rezavé stožáry vedení, prázdné vesnice, sesuvy přes cesty. Barevně nejvýraznější jsou kvetoucí sady, kterými končí včasný příjezd.
 
@@ -43,9 +43,9 @@ Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh pro
 | Volba | další trať na větvené mapě | trasa, čas odjezdu a výbava |
 | Pád | stojí život | cestou zpět ubírá vitalitu roje |
 | Zastávky | medic campy doplňují životy | safe zóny: odpočinek, předpověď, výměna výbavy |
-| Čas a počasí | dané tratí | plynou, mají předpověď a hráč volí, kdy jet |
+| Čas a počasí | dané tratí | čas plyne, počasí se mění a má předpověď |
 
-**Otevřený svět.** Ručně postavená mapa nahrazuje procedurální tratě proto, že předpověď, zkratky a volba trasy potřebují stálou krajinu, kterou se hráč naučí. Osada leží v údolí v Highlands, včelí stanice na hřebeni Peaks a je z osady vidět na obzoru. Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky. Ze stanice vedou dolů tři koridory (hřebenová zkratka, přes Canyon, přes Forest), propojené příčnými stezkami, takže je jde kombinovat. Trasa není předepsaná a jezdit se dá i mimo stezky. Vyhlídky upřesní předpověď pro okolní biom, objevené zkratky zrychlí příští průjezd.
+**Otevřený svět.** Ručně postavená mapa nahrazuje procedurální tratě proto, že předpověď, zkratky a volba trasy potřebují stálou krajinu, kterou se hráč naučí. Osada leží v údolí v Highlands, včelí stanice na hřebeni Peaks a je z osady vidět na obzoru. Mezi biomy nejsou neviditelné zdi ani nahrávací obrazovky. Ze stanice vedou dolů tři hlavní trasy (hřebenová zkratka, přes Canyon, přes Forest), propojené příčnými stezkami, takže je jde kombinovat. Trasa není předepsaná a jezdit se dá i mimo stezky. Vyhlídky upřesní předpověď pro okolní biom, objevené zkratky ušetří čas.
 
 **Průběh kampaně.**
 
@@ -55,7 +55,7 @@ Survival vrstva z one-pageru potřebuje svět, ve kterém se cestuje. Návrh pro
 
 ## Proč tahle premisa
 
-Každý prvek světa zdůvodňuje jednu mechaniku survival vrstvy:
+Každý prvek světa má v návrhu svůj důvod:
 
 - **Nedostatek paliva a zničené silnice:** kolo je jediný dopravní prostředek a přenést kolo je běžný způsob, jak se dostat dál.
 - **Rozpadlá elektrická síť:** solární panely jsou cenné zboží, takže cesta tam má důvod.
