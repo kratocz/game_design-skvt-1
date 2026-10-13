@@ -3,7 +3,7 @@
 - **Zadání:** [Ukol c.1 - zadani - design dokument.pdf](../Ukol%20c.1%20-%20zadani%20-%20design%20dokument.pdf), varianta *Zadání 1: Survival*
 - **Deadline:** čtvrtek 2026-10-15 v 18:00 (začátek lekce), bráno jako tvrdý termín
 - **Interní cíl:** víceméně hotovo týden předem (čtvrtek 2026-10-08, prošlo bez draftu); krajně nejpozději úterý 2026-10-13
-- **Stav:** odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); příloha s ilustracemi hotová jako PDF (2026-10-11); open-world režim prošel: na doplňující dotaz na Discordu 2026-10-12 odpověď zněla, že modifikace by fungovala, pokud hráč může sám chodit po mapě a volit si kam (hru lektorka nezná); hotovo k odevzdání v Labaverse
+- **Stav:** **odevzdáno v Labaverse v úterý 2026-10-13** (jediný pokus, hodnotí se z 30 bodů, čeká na vyhodnocení): tři PDF ze složky `odevzdani` s krátkým průvodním textem, stejné soubory leží i ve sdílené složce na Google Drive. Před odevzdáním: odevzdávaný one-pager i dokument s premisou, settingem a úpravami hry hotové jako PDF, oba po oponentuře ([oponentura-2026-10-10.md](oponentura-2026-10-10.md)); příloha s ilustracemi hotová jako PDF (2026-10-11); open-world režim prošel: na doplňující dotaz na Discordu 2026-10-12 odpověď zněla, že modifikace by fungovala, pokud hráč může sám chodit po mapě a volit si kam (hru lektorka nezná).
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -95,4 +95,5 @@ Nezávislá kontrola v čistém kontextu nenašla zásadní problém. Z jejích 
 
 ## Další kroky
 
-1. Odevzdat tři PDF ze složky `odevzdani` v Labaverse do čt 2026-10-15 18:00.
+1. Až přijde hodnocení, zapsat sem body, zpětnou vazbu a to, co si z ní vzít do dalších úkolů.
+2. Kdyby lektorka chtěla seznam zvažovaných a vyřazených nápadů, který nabízí průvodní text, poslat jí [odlozene-napady.md](odlozene-napady.md).
