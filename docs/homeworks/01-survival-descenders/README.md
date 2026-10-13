@@ -91,6 +91,7 @@ Nezávislá kontrola v čistém kontextu nenašla zásadní problém. Z jejích 
 - **Věty platí doslova:** dobrého jezdce survival vrstva „tolik nebrzdí“ místo „skoro necítí“, mezi safe zónami a rozcestími hráč volí „hlavně“ stopu, Forest v příkladu stojí délku a kořeny, bouda leží „pod stanicí“ (na mapě je v Peaks) a v tabulce má předpověď jen počasí.
 - **Příloha říká, že výtvarný styl a detaily ilustrací nejsou závazné.** Obrázky z ChatGPT mají jiný styl než Descenders a detaily, které settingu odporují (zříceniny hradů, řeka v Canyonu, med v osadě).
 - **Vědomě beze změny:** cesta tam vede v mapě mimo safe zóny jako samostatná stoupací stezka; hovorové „jde + infinitiv“ a nadpis „Proč tahle premisa“ drží přirozený tón z jazykové revize; pevné mezery za jednopísmennými předložkami by mohly přelít one-pager. Noční jízdu ve hře potvrdil autor 2026-10-06.
+- **Druhá kontrola jiným modelem (Fable 5.1, jen chyby) nenašla jistou chybu, jen dva rozpory.** Premisa tvrdila, že stanice líhne „jen pár“ královen za rok, ačkoli podle oponentury z 2026-10-10 je náhrad dost a limitem je čas; věta vypadla. One-pager vyhrazoval volbu trasy rozcestí, ale příklad i mapa ji kladou do boudy, kde se trasy dělí; teď hráč volí trasu v safe zóně a na rozcestí ji mění.
 
 ## Další kroky
 

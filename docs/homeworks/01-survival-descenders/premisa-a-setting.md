@@ -19,7 +19,7 @@ Když roj dorazí včas, opylí ještě letošní květ a osada má na zimu post
 
 **Proč kolo.** Palivo došlo a silnice přerušily sesuvy a povodně. Kolo projede, kudy auto ne, a kde nejde jet, jezdec ho přenese. Kurýři na kolech proto drží pohromadě osady, které by jinak byly odříznuté.
 
-**Horská včelí stanice.** Poslední místo v kraji, kde včely přežily, protože je izolace hor uchránila před nákazou z nížin. Včelaři tu líhnou královny, ale jen pár za rok. Panely a akumulátory potřebují, aby příští zimu udrželi líheň v teple. Počasí sledují, protože na něm včely závisí, a předpověď vysílají do útulen podél tras.
+**Horská včelí stanice.** Poslední místo v kraji, kde včely přežily, protože je izolace hor uchránila před nákazou z nížin. Včelaři tu líhnou královny. Panely a akumulátory potřebují, aby příští zimu udrželi líheň v teple. Počasí sledují, protože na něm včely závisí, a předpověď vysílají do útulen podél tras.
 
 **Krajina.** Čtyři hlavní biomy kariéry Descenders, jak vypadají po kolapsu:
 
