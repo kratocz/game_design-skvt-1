@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24, otevřená je forma ukázky blueprintů; další krok je postup pro editor
+- **Stav:** design schválen 2026-10-24; další krok je postup pro editor
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -120,17 +120,13 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
   7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka.
   8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
   9. Přiznání použití AI (znění doladit).
+- **Blueprinty ve videu i v PDF** (rozhodnuto 2026-10-24): na konci videa krátký blok s každým klíčovým grafem asi 10 s s titulkem, aby video obstálo samo. K tomu PDF s ostrými screenshoty a krátkým popisem implementace včetně toho, co nefunguje; blueprint ve videu se čte špatně, v PDF si ho lektorka zvětší. PDF se vyrobí přes weasyprint jako u DÚ č. 1. Grafy proto potřebují komentářové bloky, aby se daly číst i bez výkladu.
 - **Záložní video** se natočí hned po povinné části, před reakcí mimozemšťana.
 - **Titulky vypálit do obrazu:** zdejší `ffmpeg` nemá filtry `subtitles` ani `drawtext` (chybí `libass` a `freetype`), má jen `overlay`. Možnosti: plnější build ffmpeg, titulky jako obrázky přes `overlay`, nebo iMovie.
 
-## Otevřené otázky
-
-- **Forma ukázky blueprintů** (z lekce 2026-10-15): ve videu, v samostatném dokumentu, nebo obojí.
-
 ## Další kroky
 
-1. Rozhodnout formu ukázky blueprintů.
-2. Postup krok za krokem pro editor.
-3. Implementace v `Content/Krato/`: postava, animace, kamera, level, záložní video, mimozemšťan.
-4. Natočení a střih videa s titulky a ukázkou blueprintů, přiznání použití AI.
-5. Odevzdat v Labaverse nejpozději v úterý 2026-10-27.
+1. Postup krok za krokem pro editor.
+2. Implementace v `Content/Krato/`: postava, animace, kamera, level, záložní video, mimozemšťan.
+3. Natočení a střih videa s titulky a blokem blueprintů, PDF se screenshoty blueprintů a popisem implementace, přiznání použití AI.
+4. Odevzdat v Labaverse nejpozději v úterý 2026-10-27.
