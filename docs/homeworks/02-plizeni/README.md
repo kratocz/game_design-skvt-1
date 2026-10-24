@@ -80,9 +80,9 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 ```
 [1 Sklad] → [2 Křižovatka] ─┬─ hlavní chodba: hlídka, bedny ─┬─→ [5 Strojovna]
  spadlá traverza:           │                                │
- protáhnout se v dřepu      └─ ventilace nad chodbou ────────┘
+ protáhnout se v dřepu      └─ ventilace podél chodby ───────┘
                                vstup ve zdi nad podlahou (poskok),
-                               mřížky v podlaze, seskok za zády hlídky (4)
+                               mřížky ve stěně, výstup za zády hlídky (4)
 ```
 
 | Místo | Co se tam děje | Napětí |
@@ -90,8 +90,10 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 | 1 Sklad | Učení v bezpečí: dveře blokuje spadlá traverza, pod ní se projde jen v dřepu. Kamera se přiblíží a pod traverzou nejde vstát. | nízké |
 | 2 Křižovatka | Z kolmé chodby je vidět mimozemšťan v osvětlené hlavní chodbě (signposting z lekce 2026-10-20). Nasvícená ventilační mříž ve zdi nabízí druhou cestu. Hráč volí. | střední |
 | 3a Chodba | Rychlá a riskantní: hlídka a bedny jako kryt. | vysoké |
-| 3b Ventilace | Pomalá a bezpečná: vstup jen poskokem v dřepu, nízký strop, mřížkami je vidět hlídka pod sebou. | střední |
-| 4 Seskok | Jednosměrný seskok za zády hlídky, pár metrů dřepu kolem konce její trasy. | vysoké |
+| 3b Ventilace | Pomalá a bezpečná: vstup jen poskokem v dřepu, nízký strop, mřížkami ve stěně je vidět hlídka v chodbě. | střední |
+| 4 Výstup | Výstup z ventilace do chodby za zády hlídky, pár metrů dřepu kolem konce její trasy. | vysoké |
+
+Ventilace vede podél chodby za její boční stěnou, ne nad ní (změna 2026-10-24 při psaní postupu pro editor): ze vstupu ve zdi nad podlahou by se do výšky stropu chodby poskokem nedalo dostat.
 | 5 Strojovna | Cíl a oddech. | nízké |
 
 Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animace, výška poskoku), ne od oka:
@@ -109,7 +111,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 ### Video
 
-- **Titulky bez hlasu**, zhruba 9 titulků a 130 slov, 2 až 2,5 minuty záznamu ze hry. Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
+- **Titulky bez hlasu**, zhruba 9 titulků a 130 slov, 2 až 2,5 minuty záznamu ze hry. Jestli přece jen nahrát hlasový komentář, rozhodneme po záložním videu (postup, T6). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
 - **Pracovní znění titulků:**
   1. Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.
   2. Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.
@@ -126,7 +128,10 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 ## Další kroky
 
-1. Postup krok za krokem pro editor.
-2. Implementace v `Content/Krato/`: postava, animace, kamera, level, záložní video, mimozemšťan.
-3. Natočení a střih videa s titulky a blokem blueprintů, PDF se screenshoty blueprintů a popisem implementace, přiznání použití AI.
-4. Odevzdat v Labaverse nejpozději v úterý 2026-10-27.
+Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T8, odhad 11–17,5 h, rozhodovací pravidla pro škrtnutí mimozemšťana).
+
+1. T0: ověřit výchozí stav v editoru a naměřit rozměry postavy.
+2. T1–T5: postava, animace, skok, kamera, level.
+3. T6: záložní video a screenshoty blueprintů, rozhodnutí o hlasovém komentáři.
+4. T7: mimozemšťan.
+5. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
