@@ -2,11 +2,12 @@
 
 ## Projekt
 
-Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta.
+Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta. Cvičení z lekcí letošního běhu kurzu jsou ve větvi `upstream/stream10` (dřívější běhy mají `Stream6` až `Stream9`); `upstream/main` se od 2026-09-24 nehýbe.
 
 ## Domácí úkoly
 
-- Domácí úkoly se řeší v branch `student-krato-homeworks`; `main` sleduje kurz.
+- Domácí úkoly se řeší v branch `student-krato-homeworks`; `main` sleduje `upstream/main`. Novinky z lekcí se do branch úkolů dostávají merge `upstream/stream10`.
+- Vlastní assety v Unrealu patří do `Content/Krato/`, assety kurzu se needitují: binární `.uasset` git neumí sloučit s dalšími změnami z kurzu. Změny chování se dělají v child blueprintech, upravovaný asset kurzu se zkopíruje.
 - Zadání (PDF z lekcí) leží v `docs/homeworks/`, každý úkol má vlastní složku `docs/homeworks/NN-<téma>/` s `README.md` (zadání, deadline, rozhodnutí, další kroky).
 - Zápisy z cvičení na lekcích jsou v `docs/lesson-*.md`.
 - Nevybrané nápady se nemažou, ukládají se do `odlozene-napady.md` v dané složce i s podmínkou návratu.
@@ -17,6 +18,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 | Úkol | Deadline | Interní cíl | Stav |
 |---|---|---|---|
 | DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 23:59:59 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
+| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději út 2026-10-27 (týden předem propadl, začátek so 2026-10-24) | brainstorming designu |
 
 ## Psaní dokumentů
 

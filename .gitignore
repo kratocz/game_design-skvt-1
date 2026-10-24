@@ -85,5 +85,9 @@ docs/homeworks/*.pdf
 # ze kterých se skládá příloha.
 docs/homeworks/*/odevzdani/obrazky/*.png
 
+# Videa k odevzdání (DÚ č. 2+) do veřejného repa bez LFS nepatří.
+docs/homeworks/**/*.mov
+docs/homeworks/**/*.mp4
+
 # JetBrains IDE (IntelliJ IDEA, Rider)
 .idea/
