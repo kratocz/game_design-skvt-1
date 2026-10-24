@@ -56,6 +56,7 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 
 - **Dřep je přepínač:** jeden stisk dřep, další stisk vstát. Ventilací se leze dlouho a držet přitom klávesu by unavovalo; stealth hry (Dishonored, Thief) to dělají stejně.
 - **Pod nízkým stropem vstát nejde:** hra pokus zahodí a postava zůstane v dřepu, dokud hráč nezkusí vstát znovu na volném místě. Kdyby vstala sama, jakmile je nad ní místo, mohla by se na výstupu z ventilace nečekaně napřímit před mimozemšťanem.
+- **Ve vzduchu se dřep nepřepíná** (doplněno 2026-10-24 po kontrole postupu): stisk ve vzduchu se ignoruje. Jinak by se do ventilace dalo dostat i skokem ve stoje a dřepnutím ve vzduchu, protože kapsle se ve vzduchu zmenšuje kolem středu a nohy vyskočí výš, a kamera by při přechodu ve vzduchu škubala.
 - **Klávesy:** C a levý Ctrl, na gamepadu pravé tlačítko (B / kolečko). Že je C volné, *ověřit* v editoru.
 
 ### Pohyb v dřepu
@@ -106,7 +107,8 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 - **Hlídkuje** po trase v hlavní chodbě.
 - **Vidí** jen v zorném kuželu a jen když na hráče přímo dohlédne: ve stoje zdálky, v dřepu až zblízka (zhruba 15 m a 5 m, *cíl ladění*). Viditelnost se měří k temeni postavy, takže kdo se krčí za bednou, je skrytý fyzicky bez zvláštního kódu.
-- **Když hráče zahlédne, pronásleduje ho** (follower AI z kurzu). Když ho chytí, obrazovka ztmavne a hráč se vrátí na křižovatku.
+- **Mřížkami ventilace hráče nevidí**, i když hráč jimi vidí ven: v otvorech je neviditelná deska, která blokuje paprsek mimozemšťana. Ventilace tak zůstává bezpečná.
+- **Když hráče zahlédne, pronásleduje ho**, ale jen v hlavní chodbě (navigační síť nesahá jinam); útěk za roh na křižovatku ho zastaví. Když hráče chytí, obrazovka ztmavne a hráč se vrátí na křižovatku.
 - **Pořadí prací:** dokud nejsou hotové povinné mechaniky, level a záložní video, je mimozemšťan jen hlídka bez reakce. Reakce na hráče přijde až potom, aby odevzdání nestálo na AI.
 
 ### Video
