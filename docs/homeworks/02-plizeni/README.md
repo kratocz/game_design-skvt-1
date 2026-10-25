@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24; další krok je postup pro editor
+- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25; další krok je T0 v editoru
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -93,9 +93,9 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 | 3a Chodba | Rychlá a riskantní: hlídka a bedny jako kryt. | vysoké |
 | 3b Ventilace | Pomalá a bezpečná: vstup jen poskokem v dřepu, nízký strop, mřížkami ve stěně je vidět hlídka v chodbě. | střední |
 | 4 Výstup | Výstup z ventilace do chodby za zády hlídky, pár metrů dřepu kolem konce její trasy. | vysoké |
+| 5 Strojovna | Cíl a oddech. | nízké |
 
 Ventilace vede podél chodby za její boční stěnou, ne nad ní (změna 2026-10-24 při psaní postupu pro editor): ze vstupu ve zdi nad podlahou by se do výšky stropu chodby poskokem nedalo dostat.
-| 5 Strojovna | Cíl a oddech. | nízké |
 
 Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animace, výška poskoku), ne od oka:
 

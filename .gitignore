@@ -88,6 +88,7 @@ docs/homeworks/*/odevzdani/obrazky/*.png
 # Videa k odevzdání (DÚ č. 2+) do veřejného repa bez LFS nepatří.
 docs/homeworks/**/*.mov
 docs/homeworks/**/*.mp4
+docs/homeworks/*/odevzdani/video/
 
 # JetBrains IDE (IntelliJ IDEA, Rider)
 .idea/

@@ -88,7 +88,7 @@ Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: 
 - [ ] **Krok 5:** Otevřít `Content/Skvt/Characters/Input/IMC_Default`, `IMC_SkvtInput` a `IMC_SwapPawn`: je někde použitá klávesa C nebo levý Ctrl? Pokud ano, dřep dostane jen levý Ctrl (a gamepad).
 - [ ] **Krok 6:** Otevřít `Content/Skvt/Characters/NPC/BehaviorTrees/BP_NPC_BT_base`: jaký má AI Controller Class, mesh a Anim Class a co dělá jeho Event Graph (útok, pronásledování)? Poznamenat.
 - [ ] **Krok 7:** Otevřít `BP_SkvtCharacterMale`, vybrat Capsule Component a Character Movement a vyplnit tabulku Naměřené hodnoty.
-- [ ] **Krok 8:** Zavřít editor bez ukládání čehokoli. Agent ověří `git status` (čekáme jen `docs/lesson-2026-10-20.md`).
+- [ ] **Krok 8:** Zavřít editor bez ukládání čehokoli. Agent ověří `git status` (čekáme čistý strom).
 
 ---
 

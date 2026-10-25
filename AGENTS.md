@@ -2,23 +2,27 @@
 
 ## Projekt
 
-Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta. Cvičení z lekcí letošního běhu kurzu jsou ve větvi `upstream/stream10` (dřívější běhy mají `Stream6` až `Stream9`); `upstream/main` se od 2026-09-24 nehýbe.
+Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta; do `origin` se commituje a pushuje bez ptaní (fork je jen studentův, na GitHubu ale veřejný), do `upstream` nikdy. Cvičení z lekcí letošního běhu kurzu jsou ve větvi `upstream/stream10` (dřívější běhy mají `Stream6` až `Stream9`); `upstream/main` se od 2026-09-24 nehýbe.
 
 ## Domácí úkoly
 
 - Domácí úkoly se řeší v branch `student-krato-homeworks`; `main` sleduje `upstream/main`. Novinky z lekcí se do branch úkolů dostávají merge `upstream/stream10`.
-- Vlastní assety v Unrealu patří do `Content/Krato/`, assety kurzu se needitují: binární `.uasset` git neumí sloučit s dalšími změnami z kurzu. Změny chování se dělají v child blueprintech, upravovaný asset kurzu se zkopíruje.
+- Commity úkolů mají tvar Conventional Commits se scope úkolu, např. `docs(hw02): …`.
+- Vlastní assety v Unrealu patří do `Content/Krato/`, assety kurzu se needitují: binární `.uasset` git neumí sloučit s dalšími změnami z kurzu. Změny chování se dělají v child blueprintech, upravovaný asset kurzu se zkopíruje. Před commitem práce z editoru se ověří `git status`: změny smí být jen v `Content/Krato/` a `docs/`, změna jinde v `Content/` znamená upravený asset kurzu.
 - Zadání (PDF z lekcí) leží v `docs/homeworks/`, každý úkol má vlastní složku `docs/homeworks/NN-<téma>/` s `README.md` (zadání, deadline, rozhodnutí, další kroky).
+- Odevzdávané soubory leží v `odevzdani/` ve složce úkolu a jmenují se `Kratochvil-DU<N>-…`, u více dokumentů s pořadím čtení (`Kratochvil-DU1-1-one-pager`). Dokumenty se píšou jako HTML a do PDF se převádějí přes weasyprint. Videa a surové záznamy zůstávají mimo git (`odevzdani/video/`, `*.mov` a `*.mp4` jsou v `.gitignore`).
 - Zápisy z cvičení na lekcích jsou v `docs/lesson-*.md`.
 - Nevybrané nápady se nemažou, ukládají se do `odlozene-napady.md` v dané složce i s podmínkou návratu.
 - Použití AI je v kurzu povolené, pokud student uvede, co vytvořil s pomocí AI a co sám. Odevzdávané výstupy proto obsahují krátké věcné přiznání použití AI, ne omluvu ani žádost o vyřazení z hodnocení.
 
 ### Termíny
 
+Úkoly se odevzdávají v Labaverse a závazný je termín na stránce úkolu tam, i s hodinou. Ústní údaj z lekce bývá přibližný: DÚ č. 1 platil do konce čtvrtka, ne do začátku lekce, a u DÚ č. 2 zaznělo „asi tři týdny“, kdežto Labaverse uvádí dva.
+
 | Úkol | Deadline | Interní cíl | Stav |
 |---|---|---|---|
 | DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 23:59:59 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
-| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději út 2026-10-27 (týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, následuje postup pro editor |
+| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději út 2026-10-27 (týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, postup pro editor hotový 2026-10-25, následuje T0 v editoru |
 
 ## Psaní dokumentů
 
