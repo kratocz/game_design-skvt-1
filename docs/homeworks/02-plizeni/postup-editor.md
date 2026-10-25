@@ -3,7 +3,7 @@
 - **Datum:** 2026-10-24
 - **Spec:** [README.md](README.md), sekce Design (schválená 2026-10-24)
 - **Kdo co dělá:** v editoru Unrealu pracuje autor; agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
-- **Engine:** Unreal Engine 5.5 (`skvt_projekt.uproject`)
+- **Engine:** Unreal Engine 5.8. Projekt kurzu je z 5.5 a 2026-10-25 se převedl na místě (Convert in-place), protože na Macu je nainstalovaná jen 5.8. Postup a oponentura počítaly s 5.5; kde se editor 5.8 liší, zapíše se to do Zjištění. Hláška o nenalezeném `StarterContent.upack` při otevření je neškodná: `Config/DefaultGame.ini` kurzu chce Starter Content importovat, ten už ale v `Content/StarterContent` je.
 - **Kontrola:** 2026-10-24 oponentura v čistém kontextu hledala neplatná tvrzení o UE 5.5: 0 blokujících, 8 zdržujících a 12 kosmetických nálezů, všechny zapracované. Potvrdila, že přetížení Can Jump na skok v dřepu stačí, že postava zůstane v dřepu i ve vzduchu a že vyrovnání výšky kamery sedí. Tvrzení o vnitřku enginu stojí na dokumentaci Epicu a fórech, ne na zdrojovém kódu.
 
 **Cíl:** postava kurzu, která se plíží podle spec, testovací level s mimozemšťanem a podklady pro video i PDF.
@@ -75,7 +75,7 @@ Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: 
 
 **Výstup:** vyplněná tabulka Naměřené hodnoty a odpovědi na pět otázek níže, zapsané v sekci Zjištění na konci tohoto souboru (zapíše agent podle tvé zprávy).
 
-- [ ] **Krok 1:** Otevřít projekt v UE 5.5. Po merge `stream10` může editor chvíli kompilovat shadery.
+- [ ] **Krok 1:** Otevřít projekt v UE 5.8 (Project Browser → Browse… → `skvt_projekt.uproject`, u dialogu o jiné verzi More Options → Convert in-place). Při prvním otevření editor dlouho kompiluje shadery.
 - [ ] **Krok 2:** Spustit `Content/Skvt/SkvtProjectMap` (Play). Ověřit a poznamenat: funguje zoom kolečkem, přepnutí první/třetí osoby, objeví se po startu menu (cvičení UI)?
 - [ ] **Krok 3:** Otevřít `BP_SkvtBaseChar`, Event Graph, najít událost `IA_ZoomCamera` a funkci `SetCamera3rdPerson`. Zjistit a poznamenat:
   - nastavuje zoom `TargetArmLength` jednorázově na vstup, nebo ho průběžně dorovnává (Event Tick, Timeline, FInterp)?
