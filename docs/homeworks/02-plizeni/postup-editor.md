@@ -39,13 +39,13 @@ Vyplnit v T0 z `BP_SkvtCharacterMale` (Capsule Component a Character Movement); 
 
 | Veličina | Kde v Details | Hodnota |
 |---|---|---|
-| Stand half height (SHH) | Capsule Component → Capsule Half Height | |
-| Poloměr kapsle (R) | Capsule Component → Capsule Radius | |
-| Max Walk Speed | Character Movement | |
-| Jump Z Velocity | Character Movement | |
-| Gravity Scale | Character Movement | |
-| Max Step Height | Character Movement | |
-| Crouched Half Height (CHH) | Character Movement, nastavíme v T2 | |
+| Stand half height (SHH) | Capsule Component → Capsule Half Height | 90 |
+| Poloměr kapsle (R) | Capsule Component → Capsule Radius | 35 |
+| Max Walk Speed | Character Movement | 500 |
+| Jump Z Velocity | Character Movement | 700 |
+| Gravity Scale | Character Movement | 1,75 |
+| Max Step Height | Character Movement | 45 (výchozí enginu) |
+| Crouched Half Height (CHH) | Character Movement, nastavíme v T2 | 40 (výchozí enginu, v T2 doladit podle pózy) |
 
 Odvozené rozměry levelu (vzorce platí vždy, příklad počítá s SHH 96, R 42, CHH 60, Max Step Height 45, Gravity Scale 1,75):
 
@@ -476,3 +476,14 @@ Root
 ## Zjištění
 
 Vyplní agent během T0 a dalších úkolů.
+
+### T0 (2026-10-25)
+
+- **Engine:** UE 5.8, projekt převedený z 5.5 (viz hlavička). Při prvním spuštění hlásil editor chybějící Metal Toolchain, ačkoli byl nainstalovaný (Xcode 27.1); macOS ho připojí až při prvním použití, po zavolání `xcrun metal --version` editor naběhl. Kdyby se chyba vrátila: `xcodebuild -downloadComponent MetalToolchain`.
+- **Krok 2:** zoom kolečkem funguje, první a třetí osoba se přepíná klávesou V, menu po startu není, otevírá ho klávesa P.
+- **Krok 3:** `IA_ZoomCamera` nastaví jednorázově `Target Arm Length = Clamp(Target Arm Length + Action Value × (−10), 200, 600)`, relativně a jen při aktivní `3rd Person Camera`. `SetCamera3rdPerson` jen přepne aktivní kameru a vypne `Use Controller Rotation Yaw`, rameno nemění. Výchozí `Target Arm Length` je 400. **→ T4 podle plánu**, ne záložní varianta. Okrajový případ k testu T4: když hráč ve stoje přiblíží rameno pod 333, v dřepu bude pod 200 a první otočení kolečkem ho omezení kurzu skokem vrátí na 200; po vstání pak rameno bude 200 / 0,6 = 333.
+- **Krok 4:** `1stPersonCamera` visí pod kapslí (Location 40, 0, 50), `CameraBoom` taky (Location Z 8,49). **→ T4 krok 5 se dělá** (vyhladit výšku kamery první osoby). Oči ve stoje SHH + 50 = 140 cm, v dřepu CHH + 50.
+- **Krok 5:** žádné mapování (`IMC_Default`, `IMC_SkvtInput`; `IMC_SwapPawn` je jen redirector na `IMC_SkvtInput`) nepoužívá C, levý Ctrl ani Gamepad Face Button Right. Klávesy kurzu: W/A/S/D, šipky, mezerník, myš, V, R, P, Escape, kolečko, D-pad nahoru. Ověřeno z tabulek názvů v `.uasset`, kontrola na mezerníku v `IMC_Default`. **→ dřep dostane C, levý Ctrl i pravé tlačítko gamepadu.**
+- **Krok 6:** `BP_NPC_BT_base` (rodič `BP_NPC_base`, mesh `SKM_Manny_Simple`, Anim Class `ABP_Manny`) má jen vypnuté výchozí události. AI Controller `AIC_BT_NPCBase` na BeginPlay spustí `BT_NPCBase`: Root → Sequence → `BTTask_Follow` (Get Player Pawn → AI MoveTo s Acceptance Radius). Blackboard má jen `SelfActor`. NPC kurzu hráče jen následuje, nevidí, nehlídkuje ani neútočí. **→ T7 podle plánu** s vlastním controllerem, blackboardem a stromem; `BTTask_Follow` je vzor pro pronásledování.
+- **Krok 7:** hodnoty v tabulce Naměřené hodnoty. Kapsli a pohyb nastavuje `BP_SkvtBaseChar`, `BP_SkvtCharacterMale` je nepřepisuje. Hodnoty bez přepsání jsou výchozí z `CharacterMovementComponent.cpp` UE 5.8: Max Step Height 45, Crouched Half Height 40, Max Walk Speed Crouched 300 (počítá se v konstruktoru z výchozích 600, ne z 500 kurzu), `Can Walk Off Ledges When Crouching` vypnuté, `Can Crouch` vypnuté. Air Control 0,35. Plný skok vyjde 700² / (2 × 980 × 1,75) ≈ 143 cm.
+- **Rozměry levelu s naměřenými hodnotami** (CHH 60 jako odhad, přepočítat po T2): H_s 180, H_c 120, L 140–150 → 150, šířka ventilace 2 × 35 + 30 = 100 cm, S ≥ 60 → 60, h_c 75–90 → 80, Crouch Jump Z Velocity √(2 × 980 × 1,75 × 80) ≈ 524, bedny C 130–140 → 135. Rozpětí L je jen 10 cm: kdyby T2 dalo CHH nad 65, L nebude mít řešení a strop se musí zvednout na úkor pravidla H_s − 30.
