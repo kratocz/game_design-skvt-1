@@ -2,7 +2,7 @@
 
 - **Datum:** 2026-10-24
 - **Spec:** [README.md](README.md), sekce Design (schválená 2026-10-24)
-- **Kdo co dělá:** v editoru Unrealu pracuje autor; agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
+- **Kdo co dělá:** od 2026-10-25 staví blueprinty T1–T4 (a podle možností blockout T5) agent přes MCP plugin editoru (viz `AGENTS.md`); autor je kontroluje, ukládá a testuje v Play. Kroky níže zůstávají jako specifikace a záložní postup, kdyby zápis přes MCP nefungoval. Agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
 - **Engine:** Unreal Engine 5.8. Projekt kurzu je z 5.5 a 2026-10-25 se převedl na místě (Convert in-place), protože na Macu je nainstalovaná jen 5.8. Postup a oponentura počítaly s 5.5; kde se editor 5.8 liší, zapíše se to do Zjištění. Hláška o nenalezeném `StarterContent.upack` při otevření je neškodná: `Config/DefaultGame.ini` kurzu chce Starter Content importovat, ten už ale v `Content/StarterContent` je.
 - **Kontrola:** 2026-10-24 oponentura v čistém kontextu hledala neplatná tvrzení o UE 5.5: 0 blokujících, 8 zdržujících a 12 kosmetických nálezů, všechny zapracované. Potvrdila, že přetížení Can Jump na skok v dřepu stačí, že postava zůstane v dřepu i ve vzduchu a že vyrovnání výšky kamery sedí. Tvrzení o vnitřku enginu stojí na dokumentaci Epicu a fórech, ne na zdrojovém kódu.
 
