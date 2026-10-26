@@ -41,4 +41,4 @@ Semi-realistic video game concept art, landscape 3:2. A small rebuilt settlement
 
 ## Upozornění do přílohy
 
-> Ilustrace v této příloze vygenerovala AI (ChatGPT). Přidal jsem je, protože dobře ukazují záměr: tón světa, biomy a to, jak má náklad a péče o něj ve hře působit.
+> Ilustrace v této příloze vygenerovala AI (ChatGPT). Přidal jsem je, protože dobře ukazují záměr: tón světa, biomy a to, jak má náklad a péče o něj ve hře působit. Výtvarný styl a detaily ale nejsou závazné, hra si ponechá stylizovaný vzhled Descenders.

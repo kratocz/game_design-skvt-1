@@ -51,10 +51,14 @@ for w in wanted:
         raw = data[p:p + 32].hex(" ")
         val = ""
         if tname in ("FloatProperty", "DoubleProperty", "IntProperty"):
-            # FName typu (8 B) + počet vnořených (4 B) + Size (4 B) + Flags (1 B) + hodnota
+            # FName typu (8 B) + počet vnořených (4 B) + Size (4 B) + Flags (1 B)
+            # [+ ArrayIndex (4 B), je-li flag 0x01] [+ GUID (16 B), je-li flag 0x02] + hodnota.
+            # GUID mají proměnné blueprintu, vlastnosti z C++ ne.
             q = p + 8 + 4
             (size,) = struct.unpack_from("<i", data, q)
-            v = data[q + 5:q + 5 + size]
+            flags = data[q + 4]
+            o = q + 5 + (4 if flags & 0x01 else 0) + (16 if flags & 0x02 else 0)
+            v = data[o:o + size]
             if tname == "FloatProperty" and size == 4:
                 val = struct.unpack("<f", v)[0]
             elif tname == "DoubleProperty" and size == 8:

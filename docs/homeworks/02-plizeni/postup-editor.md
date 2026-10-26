@@ -2,7 +2,7 @@
 
 - **Datum:** 2026-10-24
 - **Spec:** [README.md](README.md), sekce Design (schválená 2026-10-24)
-- **Kdo co dělá:** od 2026-10-25 staví blueprinty T1–T4 (a podle možností blockout T5) agent přes MCP plugin editoru (viz `AGENTS.md`); autor je kontroluje, ukládá a testuje v Play. Kroky níže zůstávají jako specifikace a záložní postup, kdyby zápis přes MCP nefungoval. Agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
+- **Kdo co dělá:** od 2026-10-25 staví blueprinty T1–T4 (a podle možností blockout T5) agent přes MCP plugin editoru (viz `AGENTS.md`); autor je kontroluje, ukládá a testuje v Play. Zaškrtávací políčka u kroků se neudržují, stav úkolů je v sekci Zjištění. Kroky níže zůstávají jako specifikace a záložní postup, kdyby zápis přes MCP nefungoval. Agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
 - **Engine:** Unreal Engine 5.8. Projekt kurzu je z 5.5 a 2026-10-25 se převedl na místě (Convert in-place), protože na Macu je nainstalovaná jen 5.8. Postup a oponentura počítaly s 5.5; kde se editor 5.8 liší, zapíše se to do Zjištění. Hláška o nenalezeném `StarterContent.upack` při otevření je neškodná: `Config/DefaultGame.ini` kurzu chce Starter Content importovat, ten už ale v `Content/StarterContent` je.
 - **Kontrola:** 2026-10-24 oponentura v čistém kontextu hledala neplatná tvrzení o UE 5.5: 0 blokujících, 8 zdržujících a 12 kosmetických nálezů, všechny zapracované. Potvrdila, že přetížení Can Jump na skok v dřepu stačí, že postava zůstane v dřepu i ve vzduchu a že vyrovnání výšky kamery sedí. Tvrzení o vnitřku enginu stojí na dokumentaci Epicu a fórech, ne na zdrojovém kódu.
 
@@ -15,7 +15,7 @@
 Platí pro každý úkol.
 
 - **Vlastní assety jen v `Content/Krato/`.** Assety kurzu se jen čtou a odkazují. Neukládat je, ani když je editor po otevření označí jako změněné.
-- **Neukládat přes Save All naslepo.** V dialogu ukládání odškrtnout všechno mimo `Content/Krato/`. Před každým commitem musí `git status` ukazovat změny jen v `Content/Krato/` a `docs/`. Když se objeví změna v `Content/Skvt/`, `Config/` nebo jinde, necommitovat a ozvat se.
+- **Neukládat přes Save All naslepo.** V dialogu ukládání odškrtnout všechno mimo `Content/Krato/`. Před každým commitem musí `git status` ukazovat změny jen v `Content/Krato/` a `docs/`. Když se objeví změna v `Content/Skvt/`, `Config/` nebo jinde, necommitovat a ozvat se. Výjimka: `Config/DefaultEditor.ini` přepisuje editor sám, necommituje se a vrací se `git checkout` při zavřeném editoru (viz `AGENTS.md`).
 - **Názvy:** blueprinty `BP_Krato…`, animační blueprint `ABP_Krato…`, mapa `L_Plizeni`, vstupy `IA_…` a `IMC_Krato`.
 - **Hodnoty ze spec:** násobek kamery v dřepu 0,6, přechod kamery 0,3 s, rychlost v dřepu zhruba polovina chůze, mimozemšťan vidí stojícího hráče na 15 m a hráče v dřepu na 5 m. Všechno jsou *cíle ladění*.
 - **Po každé změně blueprintu Compile a Save** (jen ten asset).
@@ -47,7 +47,7 @@ Vyplnit v T0 z `BP_SkvtCharacterMale` (Capsule Component a Character Movement); 
 | Max Step Height | Character Movement | 45 (výchozí enginu) |
 | Crouched Half Height (CHH) | Character Movement, nastavíme v T2 | 70 (T2: podle hlavy při chůzi v dřepu, viz Zjištění T2; výchozí enginu 40) |
 
-Odvozené rozměry levelu (vzorce platí vždy, příklad počítá s SHH 96, R 42, CHH 60, Max Step Height 45, Gravity Scale 1,75):
+Odvozené rozměry levelu (vzorce platí vždy kromě dvou pravidel, od kterých se vědomě odchyluje rozhodnutí ve Zjištění T2; příklad počítá s SHH 96, R 42, CHH 60, Max Step Height 45, Gravity Scale 1,75):
 
 | Rozměr | Vzorec | Příklad |
 |---|---|---|
@@ -315,19 +315,19 @@ Původní X a Y vzít z Break Vector aktuální relativní polohy CameraBoom.
 
 **Platí od T2 (2026-10-26):** rozměry se berou ze Zjištění T2, ne z příkladu v tabulce Odvozené rozměry ani z čísel níže: strop ventilace a traverzy L = 165 cm, bedny C = 150 cm, šířka ventilace 100 cm, práh S 60 cm. Přes MCP se BSP vytvořit nedá, geometrie se staví z kostek `/Engine/BasicShapes/Cube` (pivot uprostřed, viz `docs/unreal-mcp.md`).
 
-Geometrie z Geometry → Box (BSP, rozměry přesně v Brush Settings), otvory přes Box s Brush Type **Subtractive**. Rozměry z tabulky Odvozené rozměry; čísla níže jsou příklad. Testovací boxy z T1 a T3 smazat.
+Ruční záloha bez MCP: geometrie z Geometry → Box (BSP, rozměry přesně v Brush Settings), otvory přes Box s Brush Type **Subtractive**. Rozměry podle odstavce výše. Testovací strop z T1 (`NizkyStrop_Test`) smazat; práh z T3 je už odstraněný.
 
 ```
  [1 Sklad 8×6 m] ─dveře─ [2 Křižovatka] ─roh─ [3a Hlavní chodba 25×4 m, hlídka] ─ [5 Strojovna]
    propadlý strop            │ okno do chodby          ║ mřížky ve stěně
    3 m dlouhý, L nad zemí    └─ vstup do ventilace ─ [3b Ventilace podél chodby] ─ výstup (4) do chodby
-                                práh S, nasvícený        šířka 120, strop L         za koncem hlídky
+                                práh S, nasvícený        šířka 100, strop L         za koncem hlídky
 ```
 
 - [ ] **Krok 1: Sklad.** Místnost 800 × 600 × 400 cm, dveře 200 × 300 cm do křižovatky. Před dveřmi propadlý strop přes celou šířku místnosti, 300 cm dlouhý, spodní hrana ve výšce L, aby se k dveřím dalo jen v dřepu. Player Start na opačném konci skladu.
 - [ ] **Krok 2: Křižovatka.** Krátká chodba kolmo k hlavní chodbě. Ve stěně do hlavní chodby okno (subtractive box ve výšce očí), aby byla hlídka vidět dřív, než do chodby hráč vstoupí. Za rohem, odkud hlídka nevidí, Target Point s tagem **`Checkpoint`** (Details → Actor → Tags).
 - [ ] **Krok 3: Hlavní chodba.** 2500 × 400 × 400 cm, dobře osvětlená (signposting z lekce 2026-10-20). Bedny výšky C jako kryt, rozestavěné tak, aby se mezi nimi dalo v dřepu proplížit. Na konci dveře do strojovny.
-- [ ] **Krok 4: Ventilace.** Vstup z křižovatky: otvor ve stěně s prahem S nad podlahou a výškou L. Uvnitř tunel šířky 120 cm a výšky L, vedený za boční stěnou hlavní chodby, ve stěně směrem do chodby několik mřížek (otvory nebo mezery mezi boxy), skrz které je vidět hlídka. Do každého otvoru dát `Content/StarterContent/Shapes/Shape_Cube` naškálovanou na tenkou desku, Collision Preset **BlockAll** a zaškrtnuté **Actor Hidden In Game**: hráč otvorem vidí, paprsek mimozemšťana ne, takže ventilace zůstane bezpečná, jak chce spec. Výstup do hlavní chodby za koncem hlídkové trasy, kousek před strojovnou.
+- [ ] **Krok 4: Ventilace.** Vstup z křižovatky: otvor ve stěně s prahem S nad podlahou a výškou L. Uvnitř tunel šířky 100 cm a výšky L, vedený za boční stěnou hlavní chodby, ve stěně směrem do chodby několik mřížek (otvory nebo mezery mezi boxy), skrz které je vidět hlídka. Do každého otvoru dát `Content/StarterContent/Shapes/Shape_Cube` naškálovanou na tenkou desku, Collision Preset **BlockAll** a zaškrtnuté **Actor Hidden In Game**: hráč otvorem vidí, paprsek mimozemšťana ne, takže ventilace zůstane bezpečná, jak chce spec. Výstup do hlavní chodby za koncem hlídkové trasy, kousek před strojovnou.
 - [ ] **Krok 5: Strojovna.** Malá místnost; u dveří žluté světlo (podle lekce strojovna jako jediná žlutá místnost na mapě).
 - [ ] **Krok 6: Světla.** Hlavní chodba jasně, ventilace šero, nasvícená mříž vstupu do ventilace (barevný Spot Light), žluté světlo u strojovny.
 - [ ] **Krok 7: NavMesh a hlídka.** Place Actors → Volumes → **Nav Mesh Bounds Volume** jen přes hlavní chodbu (klávesa P ukáže zelenou navigační síť). Mimozemšťan tak za hráčem nevyjde z chodby a útěk za roh na křižovatku, kde je checkpoint, je bezpečný. Ověřit, že síť nezasahuje do ventilace. Dva Target Pointy pro hlídku na koncích trasy (zhruba 15 m od sebe, konec trasy pár metrů před výstupem z ventilace).
@@ -496,13 +496,13 @@ Vyplní agent během T0 a dalších úkolů.
 
 - **Postaveno přes MCP:** složky v `Content/Krato/`, `IA_Crouch` (Digital, bez triggerů), `IMC_Krato` (C, Left Ctrl, Gamepad Face Button Right), `BP_KratoCharacter` (rodič `BP_SkvtCharacterMale`) s `Can Crouch` a `Can Walk Off Ledges When Crouching`, proměnnými, BeginPlay podle kroku 7 a funkcí `CanStandUp` podle kroku 8. Kompilace bez chyb i varování, uložení přes `save_assets` funguje, `git status` ukazuje jen nové soubory v `Content/Krato/` a assety kurzu nejsou označené jako změněné.
 - **Odchylka od kroku 9:** logika přepínače je ve funkci `ToggleCrouch` a `IA_Crouch (Started)` ji jen volá. DSL nástroje `write_graph_dsl` neumí událost Enhanced Input vytvořit ani napojit na výstup `Started` (napojil by `Triggered`, který u Digital bez triggerů běží každý snímek), takže událost a volání funkce vznikly přes `create_node` a `connect_pins`.
-- **Volání rodiče v BeginPlay (krok 7) přes MCP nejde:** uzel „Add Call to Parent Function“ není mezi typy uzlů. Rodiče `BP_SkvtCharacterMale` ani `BP_SkvtBaseChar` BeginPlay neimplementují (`list_events`), takže volání je zatím jen pojistka; doplní se ručně v editoru (doplněno 2026-10-26 v T3).
+- **Volání rodiče v BeginPlay (krok 7) přes MCP nejde:** uzel „Add Call to Parent Function“ není mezi typy uzlů. Rodiče `BP_SkvtCharacterMale` ani `BP_SkvtBaseChar` BeginPlay neimplementují (`list_events`), takže volání je jen pojistka; doplnil ho autor ručně 2026-10-26 v T3.
 - **Krok 10:** `BP_KratoGameMode` (rodič `BP_SkvtGameMode`) má Default Pawn Class `BP_KratoCharacter`, Player Controller zůstává `BP_SkvtPlayerController` z kurzu.
 - **Krok 11:** MCP nemá nástroj na nový level, `L_Plizeni` je proto kopie šablony Basic (`/Engine/Maps/Templates/Template_Default`, podle `TemplateMapInfos` v `BaseEngine.ini`), což je totéž, co dělá New Level → Basic. GameMode Override je `BP_KratoGameMode`, Player Start je jen jeden, v (0, 0, 92). Horní plocha podlahy vychází z bounds v Z = −0,5, tedy prakticky 0. BSP box MCP vytvořit neumí, nízký strop je proto statický mesh `/Engine/BasicShapes/Cube` (kostka 100 cm s pivotem uprostřed) jménem `NizkyStrop_Test`, scale 3 × 3 × 1, Location (600, 0, 200), tedy 300 × 300 × 100 cm se spodní hranou v 150 cm. Kolize je ověřená trace zespodu, zásah v Z = 150. Blockout v T5 přes MCP by tedy stál na kostkách enginu místo BSP, se stejným pravidlem pivotu uprostřed.
 - **Test kroku 12 (autor):** dřep, vstávání pod stropem, okraj stropu, skok a logika kurzu prošly. Těsně u boku překážky nad výškou dřepu (bok kostky stropu, který začíná ve 150 cm) šlo dřepnout, ale ne vstát: koule `CanStandUp` s plným poloměrem hlásila zásah na spodní hraně boku. Engine v `UCharacterMovementComponent::UnCrouch` testuje místo statickým překryvem stojící kapsle (`OverlapBlockingTestByChannel`, plný poloměr, výška zvětšená o 0,001), ne pohybem koule, takže těsně podél plochy zásah nenajde. Opraveno podle kroku 8 na poloměr koule R − 0,5; opakovaný test u boku kostky i na okraji stropu prošel. Engine navíc testuje kanálem kapsle (Pawn), `CanStandUp` kanálem Visibility; u kostek enginu blokují oba, u jiných překážek to může rozhodovat.
 - **Poznatky k MCP pro další úkoly:** přesunuté do `docs/unreal-mcp.md`.
 
-### T2 (2026-10-25)
+### T2 (2026-10-25 až 2026-10-26)
 
 - **Postaveno přes MCP:** `BS_CrouchMove` (osa `Speed` 0–250, `Crouch_Idle` na 0, `Crouch_Walk` na 250), `ABP_KratoCharacter` (kopie `ABP_SkvtCharacter`) s proměnnými `IsCrouching` a `CrouchSpeed` na konci Update Animation (`CrouchSpeed` = 0 ve vzduchu, jinak `Speed` kurzu) a s Blend Poses by bool (0,2 s oběma směry) mezi state machine `Main` a slotem `DefaultSlot`. `BP_KratoCharacter` má Anim Class `ABP_KratoCharacter`, `Max Walk Speed Crouched` 250 (polovina 500, krok 7 tím rovnou hotový) a `Crouched Half Height` 60 jako startovní odhad z T0 (výsledná hodnota 70, viz krok 6 níže). Kompilace bez varování, Play přes MCP naběhl bez chyb v logu, assety kurzu nejsou změněné.
 - **Odchylky od postupu:** MCP nemá nástroj na nový blend space, `BS_CrouchMove` je proto kopie `MoveForward_Blendspace` z kurzu s přepsanou osou a vzorky. Zápis vlastností přes MCP nepřepočítá vnitřní data blend space (`UBlendSpace::ResampleData` volá jen jeho editor při otevření a úpravách), proto se po úpravě blend space otevřel v editoru (`OpenEditorForAsset`) a pak uložil. Pole `SampleData` nejde přes `set_properties` zároveň zkrátit a změnit; napřed se zkrátilo beze změny prvků, pak se prvky přepsaly.

@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26; další krok je T3, blueprinty staví agent přes MCP plugin editoru
+- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26; další krok je T4, blueprinty staví agent přes MCP plugin editoru
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -31,7 +31,7 @@ Z přepisu části lekce, ve které lektorka úkol představila (nahrávka uživ
 
 ## Výchozí stav projektu
 
-Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `strings`, v editoru zatím *ověřit*.
+Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `strings`, v editoru ověřeno v T0 2026-10-25 (Zjištění T0 v `postup-editor.md`).
 
 - `BP_SkvtBaseChar` má kameru z první i ze třetí osoby s přepínáním (`IA_SwapCamera`) a zoom kamery přes `TargetArmLength` spring armu (`IA_ZoomCamera`). `BP_SkvtPlayerController` drží `SavedZoomAmount` i přes výměnu postavy.
 - `ABP_SkvtCharacter` má state machine se stavy Idle, Jump a Landing. Crouch zatím není v animačním blueprintu ani v postavě.
@@ -57,7 +57,7 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 - **Dřep je přepínač:** jeden stisk dřep, další stisk vstát. Ventilací se leze dlouho a držet přitom klávesu by unavovalo; stealth hry (Dishonored, Thief) to dělají stejně.
 - **Pod nízkým stropem vstát nejde:** hra pokus zahodí a postava zůstane v dřepu, dokud hráč nezkusí vstát znovu na volném místě. Kdyby vstala sama, jakmile je nad ní místo, mohla by se na výstupu z ventilace nečekaně napřímit před mimozemšťanem.
 - **Ve vzduchu se dřep nepřepíná** (doplněno 2026-10-24 po kontrole postupu): stisk ve vzduchu se ignoruje. Jinak by se do ventilace dalo dostat i skokem ve stoje a dřepnutím ve vzduchu, protože kapsle se ve vzduchu zmenšuje kolem středu a nohy vyskočí výš, a kamera by při přechodu ve vzduchu škubala.
-- **Klávesy:** C a levý Ctrl, na gamepadu pravé tlačítko (B / kolečko). Že je C volné, *ověřit* v editoru.
+- **Klávesy:** C a levý Ctrl, na gamepadu pravé tlačítko (B / kolečko). C, levý Ctrl ani to tlačítko gamepadu kurz nepoužívá (ověřeno v T0).
 
 ### Pohyb v dřepu
 

@@ -2,7 +2,7 @@
 
 - **Hra:** Descenders (MTB, RageSquid / No More Robots)
 - **Zadání:** DÚ č. 1, varianta Survival
-- **Stav:** pracovní verze po oponentuře 2026-10-10 (všechny opravy zapracované); z ní vznikne zhuštěný odevzdávaný one-pager
+- **Stav:** pracovní verze po oponentuře 2026-10-10 (všechny opravy zapracované); z ní vznikl zhuštěný one-pager odevzdaný 2026-10-13 (`odevzdani/Kratochvil-DU1-1-one-pager`)
 
 > Pracovní dokument, podrobnější než odevzdávaná verze. Fakta o současné hře označená *ověřit* jsou přesvědčení autora, ne ověřený stav. Čísla označená *cíl ladění* jsou výchozí hodnoty návrhu, ne měření.
 
