@@ -24,7 +24,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 | Úkol | Deadline | Interní cíl | Stav |
 |---|---|---|---|
 | DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 23:59:59 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
-| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději út 2026-10-27 (týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, postup pro editor, T0 a T1 hotové 2026-10-25, T2 hotové 2026-10-26, T3 hotové 2026-10-26, následuje T4 (blueprinty staví agent přes MCP) |
+| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději út 2026-10-27 (týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, postup pro editor, T0 a T1 hotové 2026-10-25, T2 hotové 2026-10-26, T3 hotové 2026-10-26, T4 hotové 2026-10-26, následuje T5 (blueprinty staví agent přes MCP) |
 
 ## Psaní dokumentů
 
