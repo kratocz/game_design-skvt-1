@@ -13,6 +13,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 - Zadání (PDF z lekcí) leží v `docs/homeworks/`, každý úkol má vlastní složku `docs/homeworks/NN-<téma>/` s `README.md` (zadání, deadline, rozhodnutí, další kroky).
 - Odevzdávané soubory leží v `odevzdani/` ve složce úkolu a jmenují se `Kratochvil-DU<N>-…`, u více dokumentů s pořadím čtení (`Kratochvil-DU1-1-one-pager`). Dokumenty se píšou jako HTML a do PDF se převádějí přes weasyprint. Videa a surové záznamy zůstávají mimo git (`odevzdani/video/`, `*.mov` a `*.mp4` jsou v `.gitignore`).
 - Zápisy z cvičení na lekcích jsou v `docs/lesson-*.md`.
+- Otázky k úkolům se řeší na Discordu kurzu (server „Game design pro začátečníky“ s číslem běhu), v kategorii Úkoly-otázky má každý úkol vlastní kanál; dál stojí za kontrolu kanály s důležitými informacemi a k Unreal Engine. Agent je čte přes Discord MCP před plánováním a před odevzdáním úkolu. Do repa z nich jdou jen vlastní závěry pro plán, ne jména ani obsah zpráv (viz Veřejné repo).
 - Nevybrané nápady se nemažou, ukládají se do `odlozene-napady.md` v dané složce i s podmínkou návratu.
 - Použití AI je v kurzu povolené, pokud student uvede, co vytvořil s pomocí AI a co sám. Odevzdávané výstupy proto obsahují krátké věcné přiznání použití AI, ne omluvu ani žádost o vyřazení z hodnocení.
 
