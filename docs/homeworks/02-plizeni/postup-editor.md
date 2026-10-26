@@ -64,6 +64,8 @@ Odvozené rozměry levelu (vzorce platí vždy, příklad počítá s SHH 96, R 
 
 Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: T0 0,5–1 h, T1 1–1,5 h, T2 1–1,5 h, T3 0,5 h, T4 1–1,5 h, T5 2–3 h, T6 1–1,5 h, T7 2–4 h, T8 2–3 h; celkem 11–17,5 h.
 
+Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h.
+
 **Rozhodovací pravidla (platí předem, ne podle výsledku):**
 
 - Pokud T1 až T6 nejsou hotové v pondělí 2026-10-26 ve 23:59 (hodinu upřesnil autor 2026-10-26), T7 se škrtá a odevzdává se záložní verze (mimozemšťan jen jako hlídka bez reakce, v PDF popsané, co chybí).
