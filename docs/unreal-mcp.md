@@ -1,7 +1,7 @@
 # MCP plugin Unrealu – co jde a co ne
 
 - **Engine:** UE 5.8, oficiální experimentální plugin `ModelContextProtocol` + `AllToolsets` (připojení viz `AGENTS.md`)
-- **Ověřeno:** 2026-10-25 a 2026-10-26 při stavbě T1 až T4 DÚ č. 2 (`docs/homeworks/02-plizeni/postup-editor.md`, sekce Zjištění)
+- **Ověřeno:** 2026-10-25 a 2026-10-26 při stavbě T1 až T6 DÚ č. 2 (`docs/homeworks/02-plizeni/postup-editor.md`, sekce Zjištění)
 
 Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_tool`. `call_tool` potřebuje `toolset_name` (plné jméno z `list_toolsets`, např. `editor_toolset.toolsets.blueprint.BlueprintTools`) a `tool_name` jako krátké jméno (`read_graph_dsl`); samotné krátké jméno ani jméno s prefixem toolsetu bez `toolset_name` nástroj nenajde. Volitelné parametry, které schéma vede jako povinné (`find_nodes.title`, `find_node_types.context_pins`), se posílají prázdné (`""`, `[]`). Popis toolsetu `BlueprintTools` je přes 70 tisíc znaků a do odpovědi se nevejde; vyplatí se ho uložit do souboru a vypsat jen názvy a parametry nástrojů.
 
@@ -28,6 +28,14 @@ Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_too
 - **Timeline:** uzel vytvoří `create_node` s typem `|AddTimeline...`. Šablona je objekt `…/<BP>.<BP>_C:Timeline_Template` a délku nastaví `set_properties` (`timelineLength`, `lengthMode`). Stopy (`FloatTracks`) ani jméno Timeline MCP nepřečte ani nezapíše. Bez stopy se Alpha počítá z `Components|Timeline|GetPlaybackPosition` a `GetTimelineLength`, komponentu vrací `Variables|<BP>|GetTimeline` (ověřeno v T4).
 - **Event Graph s ručně doplněnými uzly nepřepisovat přes DSL** (volání rodiče z DSL znovu nevznikne). Logika patří do funkcí přes `write_graph_dsl` a do grafu se přidá jen uzel `CallFunction|<Jméno>`: `create_node`, pak `break_pins` a `connect_pins` do existující exec cesty. Parametry funkce přidá `add_function_param` před zápisem DSL. `get_node_type_pins` vytváří dočasné uzly, které v grafu nezůstanou.
 - **Uzly z DSL leží v jedné řadě**, `arrange_nodes` je rozloží (kvůli screenshotům blueprintů). Proměnná `float` z `add_variable` je double.
+
+## Komentáře a screenshoty grafů (ověřeno v T6)
+
+- **Komentář přes `create_node` nejde dokončit:** typ `|AddComment...` uzel na zadané poloze vytvoří, ale nástroj skončí chybou (`'EdGraphNode_Comment' object has no attribute 'set_node_pos'`) a text, velikost ani polohu komentáře MCP nenastaví, protože `NodeComment`, `NodeWidth` a `NodePosX` nejsou editovatelné vlastnosti. `delete_node` bere jen `K2Node`, komentář smaže až UI (klik na titulek, Delete).
+- **Funkční cesta je vložení textu T3D ze schránky:** objekty `/Script/UnrealEd.EdGraphNode_Comment` s `NodeComment`, `NodePosX/Y`, `NodeWidth/Height`, `CommentColor` a `FontSize` se dají do schránky přes `pbcopy` (UTF-8, diakritika projde), pak `SlateInspectorToolset.Click` na vodoznak plochy grafu („BLUEPRINT“, „ANIMATION“) a `PressKey` `Ctrl+V`. Vložení posune polohy k místu kurzoru, proto se přibalí reroute (`K2Node_Knot`) se známou polohou: z jeho skutečné polohy se spočítá posun, o ten se posunou všechny uzly grafu (`set_node_position`) a reroute se smaže. Vložení se vrací `Ctrl+Z`. Bez kliknutí do plochy grafu (fokus v My Blueprint) se nevloží nic.
+- **Screenshot grafu:** `SlateInspectorToolset.Screenshot` s refem splitteru plochy grafu vrací PNG v rozlišení okna. `Home` přiblíží na celý graf, s vybraným komentářem jen na něj, nejvýš na 1:1; po `Home` chvíli počkat, jinak snímek zachytí rozjetou animaci. Čitelné snímky potřebují velké okno: změnit velikost okna editoru agent neumí (osascript nemá asistenční přístup), okno maximalizuje autor.
+- **Polohy prvků grafu ve `Snapshot` nejsou přepočtené zoomem,** takže klik na uzel nebo titulek komentáře míří správně jen při zoomu 1:1. Klik na vodoznak funguje vždy. Refy se mění, když se strom widgetů přestaví (dvojklik ve stromu My Blueprint, nový tab); `Snapshot` celého okna stojí 5–15 tisíc tokenů, levnější je podstrom splitteru s `Observe` a malým `maxDepth`.
+- **Nastavení editoru** (Editor Preferences → Play: velikost a poloha nového okna) zapisuje `ConfigSettingsToolset.SetSectionProperties` (kontejner `Editor`, kategorie `LevelEditor`, sekce `PlayIn`) do `Saved/`, mimo git. `StartPIE` s `PlayMode_InEditorFloating` okno na té poloze otevře.
 
 ## Level a Play
 
