@@ -1,0 +1,29 @@
+{
+  "video_dir": "video",
+  "bp_dir": "blueprinty",
+  "shots": [
+    {"file": "Záznam obrazovky 2026-10-26 v 23.39.46.mov", "t": "Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.20.50.mov", "t": "Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.29.52.mov", "t": "Kamera se v dřepu plynule přiblíží a sníží. Ve ventilaci by do stropu narazila sama; takhle hráč pozná, že se plíží."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.31.07.mov", "t": "Pod nízkým stropem vstát nejde. Hra pokyn zahodí, takže z ventilace nevylezeš nečekaně ve stoje."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.35.48.mov", "t": "Skok v dřepu je nízký poskok: vejde se pod strop a dostane tě do ventilace. Plný skok až po vstání."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.37.16.mov", "t": "V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk."},
+    {"file": "Záznam obrazovky 2026-10-26 v 23.34.15.mov", "t": "Chodba je rychlá a riskantní, ventilace pomalá a bezpečná."}
+  ],
+  "blueprints": [
+    {"file": "12-priprava-beginplay.png", "t": "Blueprint: příprava při startu (výška kapsle, skoku a kamery, vstup dřepu)"},
+    {"file": "01-prepinac-drepu-vstup.png", "t": "Blueprint: přepínač dřepu, vstup (C, levý Ctrl, gamepad)"},
+    {"file": "02-prepinac-drepu.png", "t": "Blueprint: přepínač dřepu, pod nízkým stropem zůstane postava v dřepu"},
+    {"file": "08-smi-vstat.png", "t": "Blueprint: smí vstát? Koule nad hlavou otestuje strop"},
+    {"file": "09-skok-v-drepu.png", "t": "Blueprint: skok v dřepu jen ze země"},
+    {"file": "03-drep-skok-a-kamera.png", "t": "Blueprint: nižší skok v dřepu a spuštění přechodu kamery"},
+    {"file": "04-kamera-drep.png", "t": "Blueprint: kamera při začátku dřepu"},
+    {"file": "05-kamera-vstani.png", "t": "Blueprint: kamera při vstání"},
+    {"file": "06-kamera-prubeh.png", "t": "Blueprint: průběh přechodu kamery (smoothstep)"},
+    {"file": "07-kamera-vychozi-vyska.png", "t": "Blueprint: výchozí výška kamery"},
+    {"file": "10-poza-drepu-animgraph.png", "t": "Animační blueprint: póza dřepu v AnimGraphu"},
+    {"file": "11-poza-drepu-update.png", "t": "Animační blueprint: stav dřepu a rychlost pro pózu"},
+    {"file": "13-character-movement.png", "t": "Nastavení Character Movement pro dřep"}
+  ],
+  "outro": "Použití AI: návrh mechanik a levelu vznikl v dialogu s AI (Claude), rozhodnutí a testování ve hře jsou moje. Blueprinty a blockout postavila AI v editoru přes MCP plugin, záběry jsem natočil sám, titulky a střih připravila AI."
+}

@@ -22,13 +22,13 @@
 
 ## Záběry v pořadí natáčení
 
-- [ ] **1. Dřep a vstání (titulek 2), asi 10 s.** Stůj na startu ve skladu, kamera za zády. C, 3 s počkat, C, 2 s počkat, a celé ještě jednou.
-- [ ] **2. Detail kamery (titulek 3), asi 10 s.** Na stejném místě otoč myší kameru o 90° na bok postavy. C, 3 s, C, 3 s. Má být vidět, jak kamera přijede blíž a níž a pak zpět.
-- [ ] **3. Pod stropem nejde vstát (titulek 4), asi 12 s.** Dřepni a jdi ke dveřím na konci skladu pod propadlý strop (pás 3 m před dveřmi). Uprostřed pod ním 2–3× zmáčkni C a nic se nestane. Projdi dveřmi do křižovatky a tam C, postava vstane.
-- [ ] **4. Chodba versus ventilace (titulek 8), asi 8 s.** V křižovatce dojdi na sever k tyrkysově nasvícenému otvoru ve východní stěně a zastav se. Pomalu otoč kameru z otvoru ventilace doprava na roh, kde se otevírá hlavní chodba.
-- [ ] **5. Poskok do ventilace (titulek 5), asi 10 s.** Stůj čelem k tyrkysovému otvoru. Ve stoje zkus dojít a skočit dovnitř; nejde to. Pak C a mezerník: poskok na práh a dovnitř.
-- [ ] **6. Chůze v dřepu (titulek 6), asi 15 s.** Jdi ventilací v dřepu na východ podél mřížek, kterými je vidět chodba, až k výstupu na konci (asi 22 m) a seskoč do chodby. Tam vstaň, kus jdi ve stoje, pak znovu C a pokračuj v dřepu mezi bednami; rozdíl rychlosti má být vidět.
-- [ ] **7. Úvodní pohled (titulek 1), asi 8 s.** Od dveří strojovny na východním konci se otoč na západ a pomalu projeď kamerou celou chodbu s bednami. Mimozemšťan v ní zatím není; záběr se v T8 přetočí podle postupu.
+- [x] **1. Dřep a vstání (titulek 2), asi 10 s.** Stůj na startu ve skladu, kamera za zády. C, 3 s počkat, C, 2 s počkat, a celé ještě jednou.
+- [x] **2. Detail kamery (titulek 3), asi 10 s.** Na stejném místě otoč myší kameru o 90° na bok postavy. C, 3 s, C, 3 s. Má být vidět, jak kamera přijede blíž a níž a pak zpět.
+- [x] **3. Pod stropem nejde vstát (titulek 4), asi 12 s.** Dřepni a jdi ke dveřím na konci skladu pod propadlý strop (pás 3 m před dveřmi). Uprostřed pod ním 2–3× zmáčkni C a nic se nestane. Projdi dveřmi do křižovatky a tam C, postava vstane.
+- [x] **4. Chodba versus ventilace (titulek 8), asi 8 s.** V křižovatce dojdi na sever k tyrkysově nasvícenému otvoru ve východní stěně a zastav se. Pomalu otoč kameru z otvoru ventilace doprava na roh, kde se otevírá hlavní chodba.
+- [x] **5. Poskok do ventilace (titulek 5), asi 10 s.** Stůj čelem k tyrkysovému otvoru. Ve stoje zkus dojít a skočit dovnitř; nejde to. Pak C a mezerník: poskok na práh a dovnitř.
+- [x] **6. Chůze v dřepu (titulek 6), asi 15 s.** Jdi ventilací v dřepu na východ podél mřížek, kterými je vidět chodba, až k výstupu na konci (asi 22 m) a seskoč do chodby. Tam vstaň, kus jdi ve stoje, pak znovu C a pokračuj v dřepu mezi bednami; rozdíl rychlosti má být vidět.
+- [x] **7. Úvodní pohled (titulek 1), asi 8 s.** Od dveří strojovny na východním konci se otoč na západ a pomalu projeď kamerou celou chodbu s bednami. Mimozemšťan v ní zatím není; záběr se v T8 přetočí podle postupu.
 
 ## Titulky, ke kterým záběry patří
 
@@ -46,4 +46,4 @@ Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sesta
 
 ## Po natáčení
 
-Hotové záběry nech v `odevzdani/video/` a napiš agentovi. Neukládej v editoru nic mimo `Content/Krato/` (hláška „2 Unsaved“ se týká assetů kurzu).
+Záběry jsou natočené 2026-10-26 23:20–23:41 a použité v záložním videu (`tools/build_video.py`, data `odevzdani/video-zalozni.json`). V T8 se přidají záběry s mimozemšťanem a úvodní pohled se případně přetočí; nové záběry stačí nechat v `odevzdani/video/` a napsat agentovi. Neukládej v editoru nic mimo `Content/Krato/` (hláška „2 Unsaved“ se týká assetů kurzu).

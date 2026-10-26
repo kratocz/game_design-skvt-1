@@ -13,6 +13,7 @@ Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_too
 - **Blend space se po zápisu přes MCP nepřepočítá:** vnitřní data (`UBlendSpace::ResampleData`) přepočítává jen jeho editor. Po úpravě ho otevřít (`EditorAppToolset.OpenEditorForAsset`) a pak uložit.
 - **Pole nejde zároveň zkrátit a změnit:** `set_properties` to odmítne („elements changed alongside the size change“). Napřed pole zkrátit beze změny prvků, pak prvky přepsat.
 - **Ukládání:** `AssetTools.save_assets` s cestami bez přípony objektu; `is_dirty` ukáže neuložené změny. Po uložení ověřit `git status`. Po kompilaci a otevření potomka byl rodič z kurzu (`BP_SkvtBaseChar`) označený jako neuložený (co přesně ho označilo, se nezjišťovalo), proto nikdy `save_assets` s prázdným seznamem (uloží vše). Seznam neuložených assetů dá skript `ProgrammaticToolset.execute_tool_script` s `find_assets` a `is_dirty`.
+- **Behavior tree jen čte:** `aimodule_toolset.toolsets.behavior_tree.BehaviorTreeTools` umí výpis uzlů, potomků, hloubek a blackboardu; nástroj na stavbu stromu, dekorátorů a služeb chybí (ověřeno 2026-10-27, totéž `StateTreeTools`). AI, kterou staví agent, proto patří do blueprintu (AI MoveTo, časovač detekce); viz rozhodnutí v T7 DÚ č. 2.
 - **Editor sám přepisuje `Config/DefaultEditor.ini`:** při otevření editoru assetu s náhledem (blend space) převede sdílené profily náhledové scény na formát 5.8. Je to soubor kurzu, necommituje se.
 
 ## Grafy blueprintů

@@ -2,7 +2,7 @@
 
 - **Datum:** 2026-10-24
 - **Spec:** [README.md](README.md), sekce Design (schválená 2026-10-24)
-- **Kdo co dělá:** od 2026-10-25 staví blueprinty T1–T4 (a podle možností blockout T5) agent přes MCP plugin editoru (viz `AGENTS.md`); autor je kontroluje, ukládá a testuje v Play. Zaškrtávací políčka u kroků se neudržují, stav úkolů je v sekci Zjištění. Kroky níže zůstávají jako specifikace a záložní postup, kdyby zápis přes MCP nefungoval. Agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
+- **Kdo co dělá:** od 2026-10-25 staví blueprinty T1–T4 a blockout T5 agent přes MCP plugin editoru (viz `AGENTS.md`); autor je kontroluje, ukládá a testuje v Play. Zaškrtávací políčka u kroků se neudržují, stav úkolů je v sekci Zjištění. Kroky níže zůstávají jako specifikace a záložní postup, kdyby zápis přes MCP nefungoval. Agent po každém úkolu zkontroluje `git status`, commitne, řeší problémy a dělá titulky, střih a PDF
 - **Engine:** Unreal Engine 5.8. Projekt kurzu je z 5.5 a 2026-10-25 se převedl na místě (Convert in-place), protože na Macu je nainstalovaná jen 5.8. Postup a oponentura počítaly s 5.5; kde se editor 5.8 liší, zapíše se to do Zjištění. Hláška o nenalezeném `StarterContent.upack` při otevření je neškodná: `Config/DefaultGame.ini` kurzu chce Starter Content importovat, ten už ale v `Content/StarterContent` je.
 - **Kontrola:** 2026-10-24 oponentura v čistém kontextu hledala neplatná tvrzení o UE 5.5: 0 blokujících, 8 zdržujících a 12 kosmetických nálezů, všechny zapracované. Potvrdila, že přetížení Can Jump na skok v dřepu stačí, že postava zůstane v dřepu i ve vzduchu a že vyrovnání výšky kamery sedí. Tvrzení o vnitřku enginu stojí na dokumentaci Epicu a fórech, ne na zdrojovém kódu.
 
@@ -64,7 +64,7 @@ Odvozené rozměry levelu (vzorce platí vždy kromě dvou pravidel, od kterých
 
 Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: T0 0,5–1 h, T1 1–1,5 h, T2 1–1,5 h, T3 0,5 h, T4 1–1,5 h, T5 2–3 h, T6 1–1,5 h, T7 2–4 h, T8 2–3 h; celkem 11–17,5 h.
 
-Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h. T4 asi 20 min (2026-10-26 02:34–02:53 včetně testu autora) proti odhadu 1–1,5 h. T5 asi 1 h (02:56–03:57 včetně testů autora a opravy navigační sítě) proti odhadu 2–3 h.
+Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h. T4 asi 20 min (2026-10-26 02:34–02:53 včetně testu autora) proti odhadu 1–1,5 h. T5 asi 1 h (02:56–03:57 včetně testů autora a opravy navigační sítě) proti odhadu 2–3 h. T3 nejvýš 55 min (mezi commity 01:19 a 02:12, včetně retra) proti odhadu 0,5 h. T6 asi 1 h 20 min měřené práce proti odhadu 1–1,5 h: agent komentáře, screenshoty a nastavení okna 2026-10-26 04:07–04:57, autor natáčení 23:20–23:41 (bez přípravy před prvním záběrem), agent střih 23:45–23:52.
 
 Kalibrace pro zbytek (2026-10-26): úkoly, které stavěl agent přes MCP (T1, T4 a T5), trvaly asi 0,3–0,5 odhadu; T2 s ručním měřením v Play odhad přesáhl. Pro T7 se dá čekat zrychlení podobné T4 a T5, protože ho staví agent. T6 a T8 jsou hlavně ruční práce autora a první natáčení a střih videa, tam zrychlení neplatí; T6 je přeodhadnuté na 1,5–2,5 h.
 
@@ -343,7 +343,7 @@ Ruční záloha bez MCP: geometrie z Geometry → Box (BSP, rozměry přesně v 
 **Soubory:** `docs/homeworks/02-plizeni/odevzdani/blueprinty/*.png` (v gitu), surové záznamy do `odevzdani/video/` (mimo git)
 
 - [ ] **Krok 1: Komentáře v grafech.** V `BP_KratoCharacter` a `ABP_KratoCharacter` označit logické celky a stisknout C (komentářový blok) s krátkým názvem česky: „Přepínač dřepu“, „Smí vstát?“, „Skok v dřepu“, „Kamera při dřepu“, „Póza dřepu“. `CanStandUp`: Draw Debug Type na None.
-- [ ] **Krok 2: Screenshoty.** Každý celek zvlášť: graf přes celou obrazovku, zoom tak, aby byl text čitelný, Cmd+Shift+4. Uložit jako `odevzdani/blueprinty/01-prepinac-drepu.png` atd. (pořadí podle titulků). Plus Details Character Movement s nastavením dřepu.
+- [ ] **Krok 2: Screenshoty.** Každý celek zvlášť: graf přes celou obrazovku, zoom tak, aby byl text čitelný, Cmd+Shift+4. Uložit do `odevzdani/blueprinty/` s pořadovým číslem podle titulků (skutečná jména `01-prepinac-drepu-vstup.png` až `13-character-movement.png`, viz Zjištění T6). Plus Details Character Movement s nastavením dřepu.
 - [ ] **Krok 3: Nastavit záznam.** Editor Preferences → Level Editor → Play → New Window Size 1920 × 1080, Play in New Editor Window. Před záznamem v konzoli `DisableAllScreenMessages`.
 - [ ] **Krok 4: Natočit záběry** (Cmd+Shift+5 → Record Selected Portion na okno hry, bez zvuku), každý záběr zvlášť a mechaniku držet aspoň 7 s:
   1. úvodní pohled na hlavní chodbu s hlídkou;
@@ -353,13 +353,23 @@ Ruční záloha bez MCP: geometrie z Geometry → Box (BSP, rozměry přesně v 
   5. poskok do ventilace (titulek 5);
   6. chůze v dřepu (titulek 6);
   7. chodba versus ventilace z křižovatky (titulek 8).
-- [ ] **Krok 5: Agent sestaví záložní video** ze záběrů a screenshotů s titulky (`ffmpeg-full` s libass doinstaluje přes brew) a pošle ho k zhlédnutí.
+- [ ] **Krok 5: Agent sestaví záložní video** ze záběrů a screenshotů s titulky (`ffmpeg-full` s libass, nainstalovaný 2026-10-26; skript `tools/build_video.py`) a pošle ho k zhlédnutí.
 - [ ] **Krok 6: Rozhodnutí o hlasu.** Po zhlédnutí záložního videa: zůstávají titulky, nebo nahráváš hlasový komentář? Zapsat do README.
 - [ ] **Krok 7: Napsat „commit T6“** (screenshoty). Zpráva: `docs(hw02): screenshoty blueprintů a záložní video`.
 
 ---
 
 ### T7: Mimozemšťan
+
+**Rozhodnutí 2026-10-27: mimozemšťan jako blueprint bez behavior tree.** MCP plugin behavior tree jen čte (`BehaviorTreeTools` vypíše uzly a blackboard, stavět neumí) a naklikání stromu přes `SlateInspectorToolset` by stálo odhadem 1,5–3 h s asi poloviční šancí na úspěch. Hráč uvidí stejné chování a zadání techniku AI nepředepisuje. Agent proto staví všechno přes MCP v `BP_KratoAlien` a kroky níže platí jako specifikace chování s tímto převodem:
+- kroky 1 a 8 (blackboard a strom) odpadají, cíl pronásledování drží proměnná `Target` (Actor) v `BP_KratoAlien`;
+- krok 3: AI Controller Class musí být controller bez Run Behavior Tree (vlastní `AIC_KratoAlien` nebo výchozí `AIController`), jinak zděděný `AIC_BT_NPCBase` spustí `BT_NPCBase` kurzu; ověřit, odkud rodič controller bere;
+- krok 4 je funkce hlídky: AI MoveTo k `PatrolPoints[PatrolIndex]`, po úspěchu Delay 1,5 s, posun indexu a znovu;
+- krok 5 je funkce detekce volaná časovačem `Set Timer by Event` každých 0,2 s se stejnou logikou a hodnotami; při zahlédnutí AI MoveTo na hráče (Acceptance Radius 80) a rychlost pronásledování, po ztrátě návrat k hlídce;
+- krok 6 je kontrola po dokončení AI MoveTo na hráče: vzdálenost ≤ 200 → `CaughtByAlien`, jinak zpět k hlídce;
+- kroky 7, 9 a 10 beze změny.
+
+Podmínka návratu k behavior tree: autor ho chce ve výstupu, protože ho lektorka na lekci probírala (kurz má `BT_NPCBase`). Pak hybrid: blackboard, úkoly a službu postaví agent jako blueprinty přes MCP a strom z kroku 8 naklikne autor (asi 20–30 min).
 
 **Soubory (nové v `Content/Krato/AI/`):** `BB_KratoAlien`, `BT_KratoAlien`, `AIC_KratoAlien`, `BP_KratoAlien` (rodič `BP_NPC_BT_base`), `BTS_DetectPlayer`, `BTT_NextPatrolPoint`, `BTT_CatchPlayer`; úprava `BP_KratoCharacter` (událost `CaughtByAlien`) a `L_Plizeni`.
 
@@ -472,8 +482,8 @@ Root
 **Soubory:** `docs/homeworks/02-plizeni/odevzdani/Kratochvil-DU2-blueprinty.html` a `.pdf` (v gitu), finální video `odevzdani/video/Kratochvil-DU2-plizeni.mp4` (mimo git)
 
 - [ ] **Krok 1: Dotočit záběry s mimozemšťanem:** zahlédnutí ve stoje a chycení, proplížení v dřepu za bednami, pohled mřížkou z ventilace (titulek 7); případně přetočit úvodní záběr 1.
-- [ ] **Krok 2: Doplnit screenshoty** behavior tree, `BTS_DetectPlayer` a `CaughtByAlien` do `odevzdani/blueprinty/`.
-- [ ] **Krok 3: Agent sestaví finální video:** záběry s titulky, na konci blok blueprintů (každý screenshot asi 10 s s titulkem), titulek s přiznáním AI. Délka 2,5–4 min (zadání 1–6 min).
+- [ ] **Krok 2: Doplnit screenshoty** logiky mimozemšťana v `BP_KratoAlien` (hlídka, detekce, pronásledování) a `CaughtByAlien` do `odevzdani/blueprinty/`.
+- [ ] **Krok 3: Agent sestaví finální video:** záběry s titulky, na konci blok blueprintů (každý screenshot asi 10 s s titulkem), titulek s přiznáním AI. Délka 2,5–4 min (zadání 1–6 min). Postup: zkopírovat `odevzdani/video-zalozni.json` na `video-finalni.json`, doplnit záběry s mimozemšťanem, titulek 7 a screenshoty T7 a pustit `python3 tools/build_video.py odevzdani/video-finalni.json odevzdani/video/Kratochvil-DU2-plizeni.mp4`; jeden segment na zkoušku titulků se vyrenderuje s jeho číslem jako třetím argumentem.
 - [ ] **Krok 4: Agent napíše PDF** (weasyprint jako u DÚ č. 1): pro každý blueprint screenshot a dvě tři věty co a proč, nastavení Character Movement, co nefunguje nebo by šlo líp, přiznání AI.
 - [ ] **Krok 5: Kontrola** videa a PDF tebou; znění přiznání AI schvaluješ ty.
 - [ ] **Krok 6: Odevzdat v Labaverse:** video jako soubor, nebo odkaz na Google Drive s přístupem „kdokoli s odkazem“ (ověřit v anonymním okně), plus PDF.
@@ -553,7 +563,7 @@ Vyplní agent během T0 a dalších úkolů.
 - **Krok 1 přes MCP:** komentářové bloky jsou ve všech grafech `BP_KratoCharacter` (Event Graph pět skupin: příprava v BeginPlay, skok v dřepu, plný skok po vstání, kamera při dřepu, přepínač dřepu; každá funkce jeden blok) a v `ABP_KratoCharacter` (AnimGraph a konec Update Animation). Barvy podle celku: přepínač oranžově, skok zeleně, kamera modře, „Smí vstát?“ červeně, póza fialově. Komentáře vznikly vložením textu T3D ze schránky, protože `create_node` jim text ani velikost nenastaví (postup v `docs/unreal-mcp.md`); uzly grafů se proto posunuly o vložený posun, logika se nezměnila. `CanStandUp`: Draw Debug Type je `None`. Obě blueprinty se kompilují s varováními jako chybami bez chyb a jsou uložené, `git status` ukazuje změnu jen v nich a v `Config/DefaultEditor.ini`.
 - **Krok 2 přes MCP:** 13 screenshotů v `odevzdani/blueprinty/` (`01-prepinac-drepu-vstup` až `13-character-movement`), pořadí podle titulků: přepínač, kamera, vstávání, skok, póza, nastavení. Fotilo se v okně maximalizovaném na 4K televizi (autor), funkce přiblížené přes Home nejvýš na 1:1 a oříznuté na komentář. Odchylky: Event Graph je vyfocený celý a skupiny jsou z něj vyříznuté (zoom asi 0,75), protože klik na komentář míří správně jen při zoomu 1:1; události On Start/End Crouch, skok a kamera jsou v jednom snímku `03-drep-skok-a-kamera`, protože události leží mimo komentáře. Největší graf `06-kamera-prubeh` (`UpdateCrouchCamera`) má zoom asi 0,5, text je čitelný jen v plném rozlišení. V `13-character-movement` (Details, filtr „crouch“) jsou popisky zkrácené úzkým panelem, hodnoty jsou vidět; do PDF patří i tabulkou. Titulek „Skok v dřepu: nižší Jump Z Velocity“ se zalomil do dvou řádků, uzel SET pod ním je posunutý o 40.
 - **Krok 3 přes MCP:** nové okno Play má 1920 × 1080 a stojí na středu 4K televize (`NewWindowPosition` 177, −1604; poloha ze souřadnic zmaximalizovaného okna), zapsáno přes `ConfigSettingsToolset` do `Saved/`. Ověřeno `StartPIE` s `PlayMode_InEditorFloating`: okno 1920 × 1114 včetně titulku, bez hlášek v obraze. Režim tlačítka Play (New Editor Window) a `DisableAllScreenMessages` dělá autor.
-- **Krok 4 (autor, 2026-10-26 23:20–23:41):** sedm záběrů podle `scenar-nataceni.md` v `odevzdani/video/`, každý 12–32 s, záznam 2426 × 1422 při 60 fps (výběr o pár řádků vyšší než 16:9, při střihu se ořízne). Úvodní pohled je natočený z první osoby (klávesa V) místo otáčení kamery třetí osoby. Pořadí záběrů určuje čas v názvu souboru, ne čas změny: první záznam (23.20.50) dostal čas změny 23:41, protože macOS ho do složky přesunul až po zavření plovoucího náhledu. Názvy souborů jsou na disku v NFD, takže je skript s českým názvem v NFC nenajde; střih proto pracuje přes symlinky `shotN.mov`.
+- **Krok 4 (autor, 2026-10-26 23:20–23:41):** sedm záběrů podle `scenar-nataceni.md` v `odevzdani/video/`, každý 12–32 s, záznam 2426 × 1422 při 60 fps (výběr o pár řádků vyšší než 16:9, při střihu se ořízne). Úvodní pohled je natočený z první osoby (klávesa V) místo otáčení kamery třetí osoby. Pořadí záběrů určuje čas v názvu souboru, ne čas změny: první záznam (23.20.50) dostal čas změny 23:41, protože macOS ho do složky přesunul až po zavření plovoucího náhledu. Názvy souborů jsou na disku v NFD a za „v“ mají pevnou mezeru (U+00A0), takže je ručně napsaná cesta nenajde; `tools/build_video.py` proto názvy z JSON hledá ve výpisu adresáře po normalizaci.
 - **Krok 5 (agent, hotovo 2026-10-26 23:52):** záložní video `odevzdani/video/Kratochvil-DU2-zalozni.mp4` (popis v README, sekce Video), sestavené skriptem přes `ffmpeg-full`: každý segment zvlášť (ořez na 16:9, 1920 × 1080, 30 fps, titulky ASS, prolínání 0,3 s, tichá zvuková stopa) a pak spojení přes concat demuxer bez překódování. Render trvá asi 75 s.
 - **Krok 6:** hlasový komentář se nenahrává, autor video s titulky po zhlédnutí 2026-10-27 schválil; zapsáno v README.
 - **Pravidlo pro T7:** záběry dorazily ve 23:41 a záložní video bylo hotové ve 23:52, tedy před termínem 23:59, takže T7 se neškrtá. Rozhodnutí o hlasu a tento zápis přišly až po půlnoci. Agent doporučil pravidlo vykládat takto a autor nevznesl námitku; pojistka úterý 2026-10-27 18:00 platí beze změny.

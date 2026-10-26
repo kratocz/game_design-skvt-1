@@ -133,8 +133,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T8, odhad 11–17,5 h, rozhodovací pravidla pro škrtnutí mimozemšťana).
 
-1. T0: ověřit výchozí stav v editoru a naměřit rozměry postavy.
-2. T1–T5: postava, animace, skok, kamera, level.
-3. T6: záložní video a screenshoty blueprintů, rozhodnutí o hlasovém komentáři.
-4. T7: mimozemšťan.
-5. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
+T0–T6 jsou hotové (viz Stav). Zbývá:
+
+1. T7: mimozemšťan jako blueprint bez behavior tree (rozhodnutí 2026-10-27 v postupu). Když nefunguje v úterý 2026-10-27 v 18:00, odevzdává se záložní video.
+2. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
