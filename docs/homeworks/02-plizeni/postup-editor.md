@@ -64,7 +64,7 @@ Odvozené rozměry levelu (vzorce platí vždy kromě dvou pravidel, od kterých
 
 Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: T0 0,5–1 h, T1 1–1,5 h, T2 1–1,5 h, T3 0,5 h, T4 1–1,5 h, T5 2–3 h, T6 1–1,5 h, T7 2–4 h, T8 2–3 h; celkem 11–17,5 h.
 
-Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h. T4 asi 20 min (2026-10-26 02:34–02:53 včetně testu autora) proti odhadu 1–1,5 h.
+Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h. T4 asi 20 min (2026-10-26 02:34–02:53 včetně testu autora) proti odhadu 1–1,5 h. T5 asi 1 h (02:56–03:57 včetně testů autora a opravy navigační sítě) proti odhadu 2–3 h.
 
 **Rozhodovací pravidla (platí předem, ne podle výsledku):**
 
@@ -530,3 +530,18 @@ Vyplní agent během T0 a dalších úkolů.
 - **Odchylka od kroků 2 a 3: místo větve `Select`.** `PlayerArm = Select(Timeline.Is Playing, PlayerArm, aktuální rameno)` (při konci dřepu `aktuální rameno / CrouchArmFactor`). Chování je stejné jako u větve: během přechodu se `PlayerArm` nemění. `Select` v DSL nevyžaduje ruční napojení obou výstupů větve, na které krok 2 upozorňuje.
 - **Ověřeno v Play přes MCP:** BeginPlay naplní `BaseBoomZ` 8,49 a `Base1PZ` 50, v logu nejsou chyby. Dřep přes MCP vyvolat nejde. Ani `SlateInspectorToolset.PressKey` „C“ za běhu Play postavu nedřepne, test kroku 7 proto dělá autor ručně.
 - **Test kroku 7 (autor, 2026-10-26):** všech sedm bodů prošlo: plynulý přechod v obou směrech, zoom v dřepu, rychlé přepínání, přepnutí pohledu v dřepu, poskok, první osoba a nízký strop z T1.
+
+### T5 (2026-10-26)
+
+- **Postaveno přes MCP** z kostek `/Engine/BasicShapes/Cube` (pivot uprostřed), ve World Outlineru ve složkách `Blockout/1_Sklad` až `Blockout/5_Strojovna`. Podlaha šablony (80 × 80 m, horní plocha Z = −0,5) zůstala, výšky se počítají od ní. Stěny mají 20 cm, místnosti jsou vysoké 400 cm a mají strop. Testovací strop z T1 je odstraněný. Rozměry ověřilo trasování paprsků (`trace_world`) na 22 místech.
+- **Půdorys** (X na východ, Y na sever, vnitřní rozměry v cm):
+  - **1 Sklad:** X −800…0, Y −300…300. Player Start (−650, 0, 92) se dívá na východ. Dveře 200 × 300 ve východní stěně, před nimi traverza X −300…0 přes celou šířku se spodní hranou ve 165.
+  - **2 Křižovatka:** chodba X 20…420, Y −200…1000 ze dveří skladu na sever. Na severním konci se otevírá na východ do hlavní chodby (roh). Ve východní stěně je vstup do ventilace Y 480…580, práh 60, horní hrana 225, na něj míří tyrkysový spotlight. Checkpoint (Target Point s tagem `Checkpoint`) stojí v (220, 0, 92) a dívá se na sever.
+  - **3a Hlavní chodba:** X 420…2920, Y 600…1000. Bedny 150 × 150 × 150 jsou střídavě u jižní stěny (X 1100 a 1800) a u severní (X 1450 a 2150). Svítí ji pět bodových světel po 15 cd.
+  - **3b Ventilace:** X 440…2700, Y 480…580, podlaha v 60, strop ve 225. Ve společné stěně s chodbou jsou čtyři mřížky (X 850, 1350, 1850 a 2250, každá 100 cm široká, Z 100…200), v každé skrytá deska (`bHidden`, kolize kostky). Trasování potvrdilo, že deska paprsek blokuje. Šero dávají dvě světla po 0,5 cd.
+  - **4 Výstup:** otvor ve společné stěně X 2590…2690 v plné výšce ventilace, seskok 60 cm do chodby.
+  - **5 Strojovna:** X 2940…3540, Y 500…1100 za dveřmi 200 × 300 ve východní stěně chodby, se dvěma žlutými světly.
+- **NavMesh a hlídka:** Nav Mesh Bounds Volume (výchozí kostka 200 cm, měřítko 12,4 × 2 × 0,95) pokrývá jen chodbu X 440…2920, Y 600…1000, Z −50…140, takže nesahá do křižovatky, do ventilace ani na víka beden. `RecastNavMesh-Default` vznikl sám, Runtime Generation je přepnutá ze `Static` na `Dynamic`, aby se síť stavěla při startu hry a po změně geometrie bez ručního buildu. Původní rozsah Z 0…300 nezahrnul podlahu šablony (horní plocha v Z = −0,5) a síť vznikla jen na víkách beden. Při Play se pak hlásilo „NAVMESH NEEDS TO BE REBUILT“ a log psal „Unable to find RecastNavMesh instance“. Po zvětšení rozsahu dolů a Build → Build Paths (autor) je zelená síť v celé chodbě. Body hlídky `Hlidka_A` (850, 800) a `Hlidka_B` (2350, 800) jsou 15 m od sebe, výstup z ventilace je 2,4 m za koncem trasy.
+- **Odchylka od kroku 2: okno z křižovatky do chodby není.** Hlídka je vidět přes roh ze severního konce křižovatky. Okno by vidělo stejně daleko a mimozemšťan by přes něj viděl i hráče, takže by nic nepřidalo. Checkpoint je z chodby skrytý: přímka od hlídky k němu protne východní stěnu křižovatky.
+- **Světla** jsou Movable kvůli osvětlení bez buildu.
+- **Test kroku 8 (autor, 2026-10-26):** prošel. Nejdřív se zkoušel sklad a křižovatka (průchod pod traverzou jen v dřepu, vstup do ventilace jen poskokem v dřepu, světla), pak zbytek: ventilace až k výstupu bez možnosti vstát a s výhledem mřížkami, seskok do chodby, cesta chodbou mezi bednami do strojovny, světla a navigační síť jen v chodbě.
