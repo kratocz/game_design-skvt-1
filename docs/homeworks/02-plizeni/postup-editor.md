@@ -66,7 +66,7 @@ Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: 
 
 **Rozhodovací pravidla (platí předem, ne podle výsledku):**
 
-- Pokud T1 až T6 nejsou hotové v pondělí 2026-10-26 večer, T7 se škrtá a odevzdává se záložní verze (mimozemšťan jen jako hlídka bez reakce, v PDF popsané, co chybí).
+- Pokud T1 až T6 nejsou hotové v pondělí 2026-10-26 ve 23:59 (hodinu upřesnil autor 2026-10-26), T7 se škrtá a odevzdává se záložní verze (mimozemšťan jen jako hlídka bez reakce, v PDF popsané, co chybí).
 - Pokud T7 nefunguje v úterý 2026-10-27 v 18:00, odevzdává se záložní verze a rozpracovaný T7 se popíše v PDF i s blueprinty (lektorka výslovně stojí o to, co se nepovedlo).
 
 ---
