@@ -3,7 +3,7 @@
 - **Engine:** UE 5.8, oficiální experimentální plugin `ModelContextProtocol` + `AllToolsets` (připojení viz `AGENTS.md`)
 - **Ověřeno:** 2026-10-25 a 2026-10-26 při stavbě T1 a T2 DÚ č. 2 (`docs/homeworks/02-plizeni/postup-editor.md`, sekce Zjištění)
 
-Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_tool`. Popis toolsetu `BlueprintTools` je přes 70 tisíc znaků a do odpovědi se nevejde; vyplatí se ho uložit do souboru a vypsat jen názvy a parametry nástrojů.
+Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_tool`. `call_tool` potřebuje `toolset_name` (plné jméno z `list_toolsets`, např. `editor_toolset.toolsets.blueprint.BlueprintTools`) a `tool_name` jako krátké jméno (`read_graph_dsl`); samotné krátké jméno ani jméno s prefixem toolsetu bez `toolset_name` nástroj nenajde. Volitelné parametry, které schéma vede jako povinné (`find_nodes.title`, `find_node_types.context_pins`), se posílají prázdné (`""`, `[]`). Popis toolsetu `BlueprintTools` je přes 70 tisíc znaků a do odpovědi se nevejde; vyplatí se ho uložit do souboru a vypsat jen názvy a parametry nástrojů.
 
 ## Assety
 
