@@ -311,6 +311,8 @@ Původní X a Y vzít z Break Vector aktuální relativní polohy CameraBoom.
 
 **Soubory:** úprava `Content/Krato/Maps/L_Plizeni`
 
+**Platí od T2 (2026-10-26):** rozměry se berou ze Zjištění T2, ne z příkladu v tabulce Odvozené rozměry ani z čísel níže: strop ventilace a traverzy L = 165 cm, bedny C = 150 cm, šířka ventilace 100 cm, práh S 60 cm. Přes MCP se BSP vytvořit nedá, geometrie se staví z kostek `/Engine/BasicShapes/Cube` (pivot uprostřed, viz `docs/unreal-mcp.md`).
+
 Geometrie z Geometry → Box (BSP, rozměry přesně v Brush Settings), otvory přes Box s Brush Type **Subtractive**. Rozměry z tabulky Odvozené rozměry; čísla níže jsou příklad. Testovací boxy z T1 a T3 smazat.
 
 ```
@@ -496,7 +498,7 @@ Vyplní agent během T0 a dalších úkolů.
 - **Krok 10:** `BP_KratoGameMode` (rodič `BP_SkvtGameMode`) má Default Pawn Class `BP_KratoCharacter`, Player Controller zůstává `BP_SkvtPlayerController` z kurzu.
 - **Krok 11:** MCP nemá nástroj na nový level, `L_Plizeni` je proto kopie šablony Basic (`/Engine/Maps/Templates/Template_Default`, podle `TemplateMapInfos` v `BaseEngine.ini`), což je totéž, co dělá New Level → Basic. GameMode Override je `BP_KratoGameMode`, Player Start je jen jeden, v (0, 0, 92). Horní plocha podlahy vychází z bounds v Z = −0,5, tedy prakticky 0. BSP box MCP vytvořit neumí, nízký strop je proto statický mesh `/Engine/BasicShapes/Cube` (kostka 100 cm s pivotem uprostřed) jménem `NizkyStrop_Test`, scale 3 × 3 × 1, Location (600, 0, 200), tedy 300 × 300 × 100 cm se spodní hranou v 150 cm. Kolize je ověřená trace zespodu, zásah v Z = 150. Blockout v T5 přes MCP by tedy stál na kostkách enginu místo BSP, se stejným pravidlem pivotu uprostřed.
 - **Test kroku 12 (autor):** dřep, vstávání pod stropem, okraj stropu, skok a logika kurzu prošly. Těsně u boku překážky nad výškou dřepu (bok kostky stropu, který začíná ve 150 cm) šlo dřepnout, ale ne vstát: koule `CanStandUp` s plným poloměrem hlásila zásah na spodní hraně boku. Engine v `UCharacterMovementComponent::UnCrouch` testuje místo statickým překryvem stojící kapsle (`OverlapBlockingTestByChannel`, plný poloměr, výška zvětšená o 0,001), ne pohybem koule, takže těsně podél plochy zásah nenajde. Opraveno podle kroku 8 na poloměr koule R − 0,5; opakovaný test u boku kostky i na okraji stropu prošel. Engine navíc testuje kanálem kapsle (Pawn), `CanStandUp` kanálem Visibility; u kostek enginu blokují oba, u jiných překážek to může rozhodovat.
-- **Poznatky k MCP pro další úkoly:** `write_graph_dsl` přepíše celou funkci; v Event Graphu výchozí události Tick a ActorBeginOverlap zápis přežily, jestli přežije i uzel `IA_Crouch` přidaný přes `create_node`, je neověřené (před dalším zápisem do Event Graphu ho zkontrolovat, nebo novou logiku dávat do funkcí). Uzel s několika datovými výstupy se váže `(bind (outHit hit) …)`, jinak se vezme první výstup. Vlastní funkce se volá typem `CallFunction|<Jméno>`. Výpis `read_graph_dsl` zobrazuje čisté uzly vnořeně, i když jsou v grafu jen jednou. Uzly z DSL leží v jedné řadě, `arrange_nodes` je rozloží. Proměnná typu `float` z `add_variable` je double, proto implicitní převod u `GetUnscaledCapsuleHalfHeight`.
+- **Poznatky k MCP pro další úkoly:** přesunuté do `docs/unreal-mcp.md`.
 
 ### T2 (2026-10-25)
 
