@@ -66,6 +66,8 @@ Odhad je pro první setkání s tímhle typem práce v Unrealu, proto široký: 
 
 Skutečnost (podle začátku session a commitů, blueprinty stavěl agent přes MCP): T1 asi 30 min (2026-10-25 23:06–23:35), T2 asi 1 h 35 min (23:35–01:08, včetně měření výšky hlavy a opravy chodidel nad podlahou); dohromady asi 2 h proti odhadu 2–3 h. T4 asi 20 min (2026-10-26 02:34–02:53 včetně testu autora) proti odhadu 1–1,5 h. T5 asi 1 h (02:56–03:57 včetně testů autora a opravy navigační sítě) proti odhadu 2–3 h.
 
+Kalibrace pro zbytek (2026-10-26): úkoly, které stavěl agent přes MCP (T1, T4 a T5), trvaly asi 0,3–0,5 odhadu; T2 s ručním měřením v Play odhad přesáhl. Pro T7 se dá čekat zrychlení podobné T4 a T5, protože ho staví agent. T6 a T8 jsou hlavně ruční práce autora a první natáčení a střih videa, tam zrychlení neplatí; T6 je přeodhadnuté na 1,5–2,5 h.
+
 **Rozhodovací pravidla (platí předem, ne podle výsledku):**
 
 - Pokud T1 až T6 nejsou hotové v pondělí 2026-10-26 ve 23:59 (hodinu upřesnil autor 2026-10-26), T7 se škrtá a odevzdává se záložní verze (mimozemšťan jen jako hlídka bez reakce, v PDF popsané, co chybí).
