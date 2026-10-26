@@ -12,14 +12,16 @@ Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_too
 - **Co vytvořit nejde a čím se to nahradí:** nový level (kopie šablony Basic `/Engine/Maps/Templates/Template_Default` přes `AssetTools.duplicate`), BSP box (kostka `/Engine/BasicShapes/Cube`, 100 cm s pivotem uprostřed), nový blend space (kopie existujícího a přepsání osy a vzorků).
 - **Blend space se po zápisu přes MCP nepřepočítá:** vnitřní data (`UBlendSpace::ResampleData`) přepočítává jen jeho editor. Po úpravě ho otevřít (`EditorAppToolset.OpenEditorForAsset`) a pak uložit.
 - **Pole nejde zároveň zkrátit a změnit:** `set_properties` to odmítne („elements changed alongside the size change“). Napřed pole zkrátit beze změny prvků, pak prvky přepsat.
-- **Ukládání:** `AssetTools.save_assets` s cestami bez přípony objektu; `is_dirty` ukáže neuložené změny. Po uložení ověřit `git status`.
+- **Ukládání:** `AssetTools.save_assets` s cestami bez přípony objektu; `is_dirty` ukáže neuložené změny. Po uložení ověřit `git status`. Po kompilaci a otevření potomka byl rodič z kurzu (`BP_SkvtBaseChar`) označený jako neuložený (co přesně ho označilo, se nezjišťovalo), proto nikdy `save_assets` s prázdným seznamem (uloží vše). Seznam neuložených assetů dá skript `ProgrammaticToolset.execute_tool_script` s `find_assets` a `is_dirty`.
 - **Editor sám přepisuje `Config/DefaultEditor.ini`:** při otevření editoru assetu s náhledem (blend space) převede sdílené profily náhledové scény na formát 5.8. Je to soubor kurzu, necommituje se.
 
 ## Grafy blueprintů
 
 - **`write_graph_dsl`** přepíše celou funkci. V Event Graphu přepíše události uvedené v DSL; výchozí neaktivní události (Tick, ActorBeginOverlap) zápis přežily.
 - **Události Enhanced Input DSL neumí** (hledá `AddEvent|…` a selže). Uzel události se vytvoří přes `create_node` s typem `Input|EnhancedActionEvents|<IA>`, logika patří do funkce a výstup `Started` (index 1) se napojí `connect_pins` na volání funkce `CallFunction|<Jméno>`. `Triggered` u Digital akce bez triggerů běží každý snímek.
-- **„Add Call to Parent Function“** mezi typy uzlů není; doplňuje se ručně v editoru.
+- **„Add Call to Parent Function“** mezi typy uzlů není (ani v přetížené funkci, ověřeno na Can Jump v T3); doplňuje se ručně v editoru. Přes UI toolset `SlateInspectorToolset` to taky nejde: uzly grafu ve stromu widgetů nejsou.
+- **Přetížení funkce rodiče:** `add_function_graph` s názvem C++ funkce (`CanJumpInternal`, ne zobrazovaný „Can Jump“). Události rodiče přes `add_event` (`K2_OnStartCrouch`), v DSL se pak jmenují `EventOnStartCrouch`.
+- **Poziční argumenty u setterů komponent** (`Class|CharacterMovementComponent|SetJumpZVelocity`) jdou v pořadí hodnota, `self`; bezpečnější jsou pojmenované `:self … :JumpZVelocity …`. Pořadí pinů ukáže `get_node_type_pins`.
 - **Uzel s několika datovými výstupy** se váže `(bind (outHit hit) …)`, jinak se vezme první výstup. Cesty tříd, enumy a assety v DSL musí být v uvozovkách.
 - **`read_graph_dsl`** vypisuje čisté uzly vnořeně, i když jsou v grafu jen jednou; počet uzlů ukáže `find_nodes`. U událostí Enhanced Input vrací jen hlavičku.
 - **AnimGraph** se staví přes `create_node`, `connect_pins`, `break_pins` a `set_pin_value`. U Blend Poses by bool je `BlendPose_0` True Pose a `BlendPose_1` False Pose.
