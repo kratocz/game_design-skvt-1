@@ -51,7 +51,7 @@ transform = {"location": {"x": x, "y": y, "z": 92}, "rotation": {"pitch": 0, "ya
 tool("editor_toolset.toolsets.actor.ActorTools", "set_actor_transform", {"actor": {"refPath": LEVEL + PLAYER}, "xform": transform, "worldspace": True})
 start = time.time()
 while time.time() - start < seconds:
-    light = (props(ALIEN + ".AlertLight", ["Intensity"]), props(ALIEN + ".AlertOrb", ["OverrideMaterials"])[-60:])
+    light = props(ALIEN + ".AlertLight", ["LightColor", "Intensity"])
     print("%5.1f s  mimozemšťan %s  hráč %s  %s  světlo %s" % (time.time() - start, where(ALIEN), where(PLAYER), props(ALIEN, ["IsChasing", "PatrolIndex"]), light))
     time.sleep(0.3)
 tool("EditorToolset.EditorAppToolset", "StopPIE", {})

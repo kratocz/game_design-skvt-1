@@ -40,10 +40,20 @@ Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sesta
 4. Pod nízkým stropem vstát nejde. Hra pokyn zahodí, takže z ventilace nevylezeš nečekaně ve stoje.
 5. Skok v dřepu je nízký poskok: vejde se pod strop a dostane tě do ventilace. Plný skok až po vstání.
 6. V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk.
-7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběr vznikne v T8.)
+7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběry 8 a 9 z druhého natáčení.)
 8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
 9. Přiznání použití AI.
 
 ## Po natáčení
 
-Záběry jsou natočené 2026-10-26 23:20–23:41 a použité v záložním videu (`tools/build_video.py`, data `odevzdani/video-zalozni.json`). V T8 se přidají záběry s mimozemšťanem a úvodní pohled se případně přetočí; nové záběry stačí nechat v `odevzdani/video/` a napsat agentovi. Neukládej v editoru nic mimo `Content/Krato/` (hláška „2 Unsaved“ se týká assetů kurzu).
+Záběry jsou natočené 2026-10-26 23:20–23:41 a použité v záložním videu (`tools/build_video.py`, data `odevzdani/video-zalozni.json`). Mají ale starý bílý vzhled, takže se v T8 natáčejí všechny znovu (sekce Druhé natáčení); nové záběry stačí nechat v `odevzdani/video/` a napsat agentovi. Neukládej v editoru nic mimo `Content/Krato/` (hláška „2 Unsaved“ se týká assetů kurzu).
+
+## Druhé natáčení (T8)
+
+Vizuální vylepšení změnila vzhled (panely na stěnách, lampy, ocelové bedny), záběry z prvního natáčení proto nejdou do finálního videa. Nastavení, ovládání a pravidla jsou stejné jako výše.
+
+- [ ] **1.–6.** Záběry 1 až 6 z prvního natáčení znovu, stejně jako tehdy.
+- [ ] **7. Úvodní pohled (titulek 1), asi 8 s.** Jako dřív, teď už s hlídajícím mimozemšťanem v chodbě.
+- [ ] **8. Zahlédnutí a chycení (titulek 7), asi 12 s.** Ve stoje vyjdi z křižovatky do chodby proti mimozemšťanovi. Světlo nad jeho hlavou zčervená, rozběhne se k postavě, obrazovka ztmavne a postava je zpět na křižovatce.
+- [ ] **9. Proplížení za bednami (titulek 7), asi 15 s.** V dřepu jdi chodbou za bednami, zatímco mimozemšťan jde opačným směrem; světlo nad ním zůstane zelené.
+- [ ] **10. Pohled mřížkou (titulek 8), asi 8 s.** Ve ventilaci se zastav u mřížky a otoč kameru do chodby, ať je vidět procházející mimozemšťan.
