@@ -5,7 +5,9 @@ Použití: python3 tools/build_video.py <segmenty.json> <výstup.mp4> [číslo_s
 V JSON jsou adresáře záběrů a screenshotů relativně k JSON souboru (viz
 docs/homeworks/02-plizeni/odevzdani/video-zalozni.json). S číslem segmentu se
 vyrenderuje jen ten (na zkoušku titulků), bez spojení; úvodní karta (klíč
-„intro“, nepovinný) je segment 1. Potřebuje ffmpeg-full
+„intro“, nepovinný) je segment 1. Záběr může mít ořez „ss“/„to“ v sekundách
+a prázdné „t“ (pokračování záběru se stejným titulkem); „cards“ jsou karty
+{"t", "sec"} za záběry, „outro_sec“ délka závěrečného titulku. Potřebuje ffmpeg-full
 (brew, keg-only), výchozí ffmpeg z Homebrew nemá filtr subtitles.
 """
 import json
@@ -100,12 +102,22 @@ if "intro" in cfg:
 for s in cfg["shots"]:
     n += 1
     src = find(cfg["video_dir"], s["file"])
-    d = dur(src)
-    a = work / f"{n:02d}.ass"
-    ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, TITLE_MAX))
+    ss = s.get("ss", 0)
+    d = s.get("to", dur(src)) - ss
     # záznam je 2426x1422 (širší než 16:9 o pár řádků): oříznout na 16:9 a zmenšit
-    vf = f"crop=iw:trunc(iw*9/16/2)*2,scale={W}:{H}:flags=lanczos,fps={FPS},fade=t=in:d=0.3,fade=t=out:st={d - 0.35:.2f}:d=0.3,{sub(a)}"
-    segs.append((n, ["-i", src] + SILENCE, vf, None))
+    vf = f"crop=iw:trunc(iw*9/16/2)*2,scale={W}:{H}:flags=lanczos,fps={FPS},fade=t=in:d=0.3,fade=t=out:st={d - 0.35:.2f}:d=0.3"
+    if s["t"]:
+        a = work / f"{n:02d}.ass"
+        ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, TITLE_MAX))
+        vf += f",{sub(a)}"
+    segs.append((n, ["-ss", str(ss), "-t", f"{d:.3f}", "-i", src] + SILENCE, vf, d))
+
+for c in cfg.get("cards", []):
+    n += 1
+    a = work / f"{n:02d}.ass"
+    ass(a, c["t"], "Center", 0.3, c["sec"] - 0.3)
+    segs.append((n, ["-f", "lavfi", "-t", str(c["sec"]), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
+                 f"fade=t=in:d=0.3,fade=t=out:st={c['sec'] - 0.5}:d=0.5,{sub(a)}", c["sec"]))
 
 for b in cfg["blueprints"]:
     n += 1
@@ -118,6 +130,7 @@ for b in cfg["blueprints"]:
     segs.append((n, ["-loop", "1", "-t", str(BP_SEC), "-i", src] + SILENCE, vf, BP_SEC))
 
 n += 1
+OUTRO_SEC = cfg.get("outro_sec", OUTRO_SEC)
 a = work / f"{n:02d}.ass"
 ass(a, cfg["outro"], "Center", 0.3, OUTRO_SEC - 0.3)
 segs.append((n, ["-f", "lavfi", "-t", str(OUTRO_SEC), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
