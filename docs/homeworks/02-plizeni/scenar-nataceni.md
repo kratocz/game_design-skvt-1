@@ -54,10 +54,10 @@ Záběry jsou natočené 2026-10-26 23:20–23:41 a použité v záložním vide
 
 Vizuální vylepšení změnila vzhled (panely na stěnách, lampy, ocelové bedny), záběry z prvního natáčení proto nejdou do finálního videa. Nastavení, ovládání a pravidla jsou stejné jako výše.
 
-- [ ] **1.–6.** Záběry 1 až 6 z prvního natáčení znovu, stejně jako tehdy.
-- [ ] **7. Úvodní pohled (titulek 1), asi 8 s.** Jako dřív, teď už s hlídajícím mimozemšťanem v chodbě.
-- [ ] **8. Zahlédnutí a chycení (titulek 7), asi 12 s.** Ve stoje vyjdi z křižovatky do chodby proti mimozemšťanovi. Světlo nad jeho hlavou zčervená, rozběhne se k postavě, obrazovka ztmavne a postava je zpět na křižovatce.
-- [ ] **9. Proplížení za bednami (titulek 7), asi 15 s.** V dřepu jdi chodbou za bednami, zatímco mimozemšťan jde opačným směrem; světlo nad ním zůstane zelené.
-- [ ] **10. Pohled mřížkou (titulek 8), asi 8 s.** Ve ventilaci se zastav u mřížky a otoč kameru do chodby, ať je vidět procházející mimozemšťan.
-- [ ] **11. Únik teleportem (titulek 9), asi 12 s.** Nezahlédnutý dojdi do strojovny a postav se doprostřed svítící plošiny. Stůj 4 s, světlo nad plošinou sílí, obrazovka zbělá a level začne znovu ve skladu. Záběr ukonči na bílé obrazovce.
-- [ ] **12. Chycení na teleportu (titulek 9), asi 10 s.** Ve stoje se nech v chodbě zahlédnout, utíkej do strojovny na plošinu a čekej. Mimozemšťan doběhne dřív, než se teleport nabije, a obrazovka ztmavne.
+- [x] **1.–6.** Záběry 1 až 6 z prvního natáčení znovu, stejně jako tehdy.
+- [x] **7. Úvodní pohled (titulek 1), asi 8 s.** Jako dřív, teď už s hlídajícím mimozemšťanem v chodbě.
+- [x] **8. Zahlédnutí a chycení (titulek 7), asi 12 s.** Ve stoje vyjdi z křižovatky do chodby proti mimozemšťanovi. Světlo nad jeho hlavou zčervená, rozběhne se k postavě, obrazovka ztmavne a postava je zpět na křižovatce.
+- [x] **9. Proplížení za bednami (titulek 7), asi 15 s.** V dřepu jdi chodbou za bednami, zatímco mimozemšťan jde opačným směrem; světlo nad ním zůstane zelené.
+- [x] **10. Pohled mřížkou (titulek 8), asi 8 s.** Ve ventilaci se zastav u mřížky a otoč kameru do chodby, ať je vidět procházející mimozemšťan.
+- [x] **11. Únik teleportem (titulek 9), asi 12 s.** Nezahlédnutý dojdi do strojovny a postav se doprostřed svítící plošiny. Stůj 4 s, světlo nad plošinou sílí, obrazovka zbělá a level začne znovu ve skladu. Záběr ukonči na bílé obrazovce.
+- [x] **12. Chycení na teleportu (titulek 9), asi 10 s.** Ve stoje se nech v chodbě zahlédnout, utíkej do strojovny na plošinu a čekej. Mimozemšťan doběhne dřív, než se teleport nabije, a obrazovka ztmavne.
