@@ -108,7 +108,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 - **Hlídkuje** po trase v hlavní chodbě.
 - **Vidí** jen v zorném kuželu a jen když na hráče přímo dohlédne: ve stoje zdálky, v dřepu až zblízka (zhruba 15 m a 5 m, *cíl ladění*). Viditelnost se měří k temeni postavy, takže kdo se krčí za bednou, je skrytý fyzicky bez zvláštního kódu.
 - **Mřížkami ventilace hráče nevidí**, i když hráč jimi vidí ven: v otvorech je neviditelná deska, která blokuje paprsek mimozemšťana. Ventilace tak zůstává bezpečná.
-- **Když hráče zahlédne, pronásleduje ho**, ale jen v hlavní chodbě (navigační síť nesahá jinam); útěk za roh na křižovatku ho zastaví. Když hráče chytí, obrazovka ztmavne a hráč se vrátí na křižovatku.
+- **Když hráče zahlédne, pronásleduje ho** v hlavní chodbě i na křižovatce, až ke dveřím skladu (rozhodnutí autora 2026-10-27 02:26: na kraji chodby jen marně zíral). Ukrýt se jde jen tam, kam se vejde jen postava v dřepu: pod propadlý strop ve skladu nebo do ventilace. Když k hráči nevede cesta, dojde na nejbližší místo, kam dojít může, chvíli tam stojí a vrátí se k hlídce. Když hráče chytí, obrazovka ztmavne a hráč se vrátí na křižovatku.
 - **Pořadí prací:** dokud nejsou hotové povinné mechaniky, level a záložní video, je mimozemšťan jen hlídka bez reakce. Reakce na hráče přijde až potom, aby odevzdání nestálo na AI.
 
 ### Video
