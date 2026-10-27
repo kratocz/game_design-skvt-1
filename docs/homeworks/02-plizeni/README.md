@@ -135,4 +135,9 @@ Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T
 
 T0–T7 jsou hotové (viz Stav). Zbývá:
 
-1. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
+1. Vizuální vylepšení před natáčením T8 (rozhodnutí autora 2026-10-27 ~02:50; staví agent přes MCP, autor odpovídá na otázky a zkouší v Play průběžně, protože paralelně pracuje na jiných projektech):
+   1. **Světlo zahlédnutí na mimozemšťanovi** (určitě): malé bodové světlo na hlavě, tlumeně zelené při hlídce, červené při pronásledování (přepíná se v `StartChase` a `StopChase`, světlo najde `GetComponentByClass`). Účel: aby bylo ve videu vidět, kdy hráče zahlédl, což je hodnocená mechanika. Odhad 20–30 min.
+   2. **Stropní lampy** (určitě): `/Game/StarterContent/Props/SM_Lamp_Ceiling` u každého bodového světla v chodbě, strojovně a skladu, světlo těsně pod lampou. Odhad 15 min.
+   3. **Textury** (vyzkoušet): `M_Tech_Panel` na stěny, `M_Tech_Hex_Tile` nebo `M_Concrete_Tiles` na podlahu, ocel na bedny, vše ze Starter Contentu. Napřed na jedné stěně chodby a snímek autorovi: kostky jsou natažené měřítkem (stěna chodby 25 m), takže se textura může roztáhnout. Pokud ano, vlastní materiál s texturou podle polohy ve světě (world-aligned) za dalších 30–45 min, nebo textury vynechat. Rozhoduje autor podle snímku.
+   Změna vzhledu znamená přetočit i sedm záběrů záložního videu (asi 20 min autora), aby finální video nemíchalo bílý blockout s novým vzhledem. Skryté desky v mřížích ventilace a navigační síť se nemění; po úpravách zopakovat test z T7 (chycení ve stoje, křižovatka, strojovna, ventilace). Pojistka zůstává: pokud by vylepšení ohrozila odevzdání v úterý 2026-10-27, natáčí se bez nich.
+2. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
