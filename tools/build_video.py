@@ -19,6 +19,8 @@ import tempfile
 import unicodedata
 from pathlib import Path
 
+from PIL import ImageFont
+
 FF = "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg"
 FP = "/opt/homebrew/opt/ffmpeg-full/bin/ffprobe"
 W, H, FPS = 1920, 1080, 30
@@ -54,7 +56,7 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Bottom,Arial,46,&H00FFFFFF,&H00FFFFFF,&H80000000,&H80000000,0,0,0,0,100,100,0,0,4,14,0,2,220,220,60,1
+Style: Bottom,Arial,46,&H00FFFFFF,&H00FFFFFF,&H60000000,&H60000000,0,0,0,0,100,100,0,0,4,0,14,2,220,220,60,1
 Style: Top,Arial,40,&H00FFFFFF,&H00FFFFFF,&HB0000000,&HB0000000,0,0,0,0,100,100,0,0,3,12,0,8,120,120,24,1
 Style: Center,Arial,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,260,260,0,1
 
@@ -69,9 +71,45 @@ def ts(s):
     return f"{int(h)}:{int(m):02d}:{sec:05.2f}"
 
 
+ARIAL = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)  # ASS 46 ≈ em 40 (libass: výška = ascent + descent)
+LINE_MAX = 1440  # 1920 bez okrajů 2 × 220 a podkladu
+SPACER = r"\N{\fs11}\h\N{\fs46}"  # prázdný řádek o čtvrtinu výšky: ASS řádkování nemá
+
+
+def wrap(text):
+    # jednopísmenná předložka/spojka nesmí zůstat na konci řádku: slepit s dalším slovem
+    words = []
+    for w in text.split(" "):
+        if words and re.fullmatch(r"[ksvzaiouKSVZAIOU]", words[-1].split("\\h")[-1]) and not words[-1].endswith((".", ",")):
+            words[-1] += "\\h" + w
+        else:
+            words.append(w)
+
+    def width(s):
+        return ARIAL.getlength(s.replace("\\h", " "))
+
+    if width(" ".join(words)) <= LINE_MAX:
+        return " ".join(words)
+    # dva řádky: co nejvyrovnanější, zlom raději za interpunkcí (bonus 150 px)
+    best = None
+    for k in range(1, len(words)):
+        a, b = " ".join(words[:k]), " ".join(words[k:])
+        if max(width(a), width(b)) > LINE_MAX:
+            continue
+        cost = max(width(a), width(b)) - (150 if words[k - 1][-1] in ".,;:" else 0)
+        if best is None or cost < best[0]:
+            best = (cost, a, b)
+    if best is None:
+        raise SystemExit(f"titulek se nevejde na dva řádky: {text}")
+    return best[1] + SPACER + best[2]
+
+
 def ass(path, text, style, start, end):
-    # jednopísmenná předložka/spojka nesmí zůstat na konci řádku: pevná mezera \h
-    text = re.sub(r"(?<=\s)([ksvzaiouKSVZAIOU]) ", r"\1\\h", text)
+    if style == "Bottom":
+        text = wrap(text)
+    else:
+        # jednopísmenná předložka/spojka nesmí zůstat na konci řádku: pevná mezera \h
+        text = re.sub(r"(?<=\s)([ksvzaiouKSVZAIOU]) ", r"\1\\h", text)
     fade = r"{\fad(300,300)}"
     path.write_text(ASS_HEAD + f"Dialogue: 0,{ts(start)},{ts(end)},{style},,0,0,0,,{fade}{text}\n", encoding="utf-8")
 
