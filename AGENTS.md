@@ -24,7 +24,7 @@ Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course
 | Úkol | Deadline | Interní cíl | Stav |
 |---|---|---|---|
 | DÚ č. 1 – survival vrstva pro Descenders | čt 2026-10-15 23:59:59 | týden předem; krajně út 2026-10-13 | odevzdáno út 2026-10-13, čeká na hodnocení |
-| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději st 2026-10-28 23:59 (původně út 2026-10-27, posunuto o den kvůli večerní lekci a na doladění; týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, postup pro editor, T0 a T1 hotové 2026-10-25, T2 hotové 2026-10-26, T3 hotové 2026-10-26, T4 hotové 2026-10-26, T5 hotové 2026-10-26, T6 (screenshoty blueprintů, záložní video) hotové 2026-10-26 23:52, T7 (mimozemšťan) hotové 2026-10-27 02:44, vizuální vylepšení (světlo zahlédnutí, lampy, panely na stěnách) hotová 2026-10-27, teleport s nabíjením ve strojovně postavený 2026-10-27 14:10 (čeká na test autora), následuje T8 (přetočit všech sedm záběrů, finální video, PDF, odevzdání) |
+| DÚ č. 2 – plížení (video) | čt 2026-10-29 23:59 | odevzdat nejpozději st 2026-10-28 23:59 (původně út 2026-10-27, posunuto o den kvůli večerní lekci a na doladění; týden předem propadl, začátek so 2026-10-24) | design schválen 2026-10-24, postup pro editor, T0 a T1 hotové 2026-10-25, T2 hotové 2026-10-26, T3 hotové 2026-10-26, T4 hotové 2026-10-26, T5 hotové 2026-10-26, T6 (screenshoty blueprintů, záložní video) hotové 2026-10-26 23:52, T7 (mimozemšťan) hotové 2026-10-27 02:44, vizuální vylepšení (světlo zahlédnutí, lampy, panely na stěnách) hotová 2026-10-27, teleport s nabíjením a stroje ve strojovně hotové 2026-10-27, test autora prošel 17:56, následuje T8 (přetočit všech sedm záběrů, finální video, PDF, odevzdání) |
 
 ## Psaní dokumentů
 
