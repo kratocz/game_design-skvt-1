@@ -42,7 +42,8 @@ Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sesta
 6. V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk.
 7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběry 8 a 9 z druhého natáčení.)
 8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
-9. Přiznání použití AI.
+9. Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš. (Záběry 11 a 12 z druhého natáčení.)
+10. Přiznání použití AI.
 
 ## Po natáčení
 
@@ -57,3 +58,5 @@ Vizuální vylepšení změnila vzhled (panely na stěnách, lampy, ocelové bed
 - [ ] **8. Zahlédnutí a chycení (titulek 7), asi 12 s.** Ve stoje vyjdi z křižovatky do chodby proti mimozemšťanovi. Světlo nad jeho hlavou zčervená, rozběhne se k postavě, obrazovka ztmavne a postava je zpět na křižovatce.
 - [ ] **9. Proplížení za bednami (titulek 7), asi 15 s.** V dřepu jdi chodbou za bednami, zatímco mimozemšťan jde opačným směrem; světlo nad ním zůstane zelené.
 - [ ] **10. Pohled mřížkou (titulek 8), asi 8 s.** Ve ventilaci se zastav u mřížky a otoč kameru do chodby, ať je vidět procházející mimozemšťan.
+- [ ] **11. Únik teleportem (titulek 9), asi 12 s.** Nezahlédnutý dojdi do strojovny a postav se doprostřed svítící plošiny. Stůj 4 s, světlo nad plošinou sílí, obrazovka zbělá a level začne znovu ve skladu. Záběr ukonči na bílé obrazovce.
+- [ ] **12. Chycení na teleportu (titulek 9), asi 10 s.** Ve stoje se nech v chodbě zahlédnout, utíkej do strojovny na plošinu a čekej. Mimozemšťan doběhne dřív, než se teleport nabije, a obrazovka ztmavne.

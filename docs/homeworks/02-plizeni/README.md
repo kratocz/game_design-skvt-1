@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; T7 (mimozemšťan jako blueprint, hlídka, detekce a chycení ověřené v Play přes MCP, ocelové mříže ve ventilaci) hotové 2026-10-27 02:44 po třech kolech testu autora; vizuální vylepšení (světlo zahlédnutí, lampy, panely na stěnách, ocelové bedny) hotová 2026-10-27 a schválená autorem v Play; další krok je T8 (přetočit všech sedm záběrů, finální video, PDF, odevzdání)
+- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; T7 (mimozemšťan jako blueprint, hlídka, detekce a chycení ověřené v Play přes MCP, ocelové mříže ve ventilaci) hotové 2026-10-27 02:44 po třech kolech testu autora; vizuální vylepšení (světlo zahlédnutí, lampy, panely na stěnách, ocelové bedny) hotová 2026-10-27 a schválená autorem v Play; teleport s nabíjením uprostřed strojovny (cíl levelu) postavený 2026-10-27 ve 13:50–14:10, ověřený v Play přes MCP, čeká na ruční test autora; další krok je T8 (přetočit všech sedm záběrů, finální video, PDF, odevzdání)
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -93,7 +93,7 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 | 3a Chodba | Rychlá a riskantní: hlídka a bedny jako kryt. | vysoké |
 | 3b Ventilace | Pomalá a bezpečná: vstup jen poskokem v dřepu, nízký strop, mřížkami ve stěně je vidět hlídka v chodbě. | střední |
 | 4 Výstup | Výstup z ventilace do chodby za zády hlídky, pár metrů dřepu kolem konce její trasy. | vysoké |
-| 5 Strojovna | Cíl a oddech. | nízké |
+| 5 Strojovna | Cíl: teleport uprostřed místnosti, kterým hráč z lodi unikne. Musí se na něm 4 s nabíjet, takže kdo přijde nezahlédnutý, má oddech, kdo přiběhne s mimozemšťanem v zádech, nestihne to. | nízké, nebo vrchol při útěku |
 
 Ventilace vede podél chodby za její boční stěnou, ne nad ní (změna 2026-10-24 při psaní postupu pro editor): ze vstupu ve zdi nad podlahou by se do výšky stropu chodby poskokem nedalo dostat.
 
@@ -111,9 +111,16 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 - **Když hráče zahlédne, pronásleduje ho** v hlavní chodbě, na křižovatce až ke dveřím skladu a ve strojovně (rozhodnutí autora 2026-10-27 02:26: na kraji chodby jen marně zíral). Ukrýt se jde jen tam, kam se vejde jen postava v dřepu: pod propadlý strop ve skladu nebo do ventilace. Když k hráči nevede cesta, dojde na nejbližší místo, kam dojít může, chvíli tam stojí a vrátí se k hlídce. Když hráče chytí, obrazovka ztmavne a hráč se vrátí na křižovatku.
 - **Pořadí prací:** dokud nejsou hotové povinné mechaniky, level a záložní video, je mimozemšťan jen hlídka bez reakce. Reakce na hráče přijde až potom, aby odevzdání nestálo na AI.
 
+### Teleport ve strojovně (návrh autora, rozhodnuto 2026-10-27)
+
+- **Proč:** od chvíle, kdy mimozemšťan pronásleduje hráče i do strojovny (rozhodnutí 2026-10-27 02:44), neměl level konec: hráč do strojovny došel a nic se nestalo, i když ji tabulka levelu vede jako cíl a oddech. Teleport cíl zhmotní, sedí k příběhu útěku z lodi a dává videu závěr.
+- **Nabíjení 4 s** (*cíl ladění*): hráč ve stoje chodí rychlostí 500, mimozemšťan pronásleduje rychlostí 450, ve stoje mu tedy uteče. Okamžitě bezpečné místo by z posledního úseku udělalo závod, ve kterém plížení nemá smysl. Za 4 s mimozemšťan urazí 18 m, takže hráč, kterého zahlédl, unikne jen s velkým náskokem; kdo se doplíží nezahlédnutý, odteleportuje se v klidu. Světlo nad plošinou při nabíjení sílí, aby hráč věděl, že má čekat. Sestoupení z plošiny nabíjení zruší.
+- **Únik:** obrazovka zbělá, mimozemšťan hráče přestane vidět i pronásledovat a level začne znovu od skladu. Když mimozemšťan hráče během nabíjení chytí, platí chycení.
+- **Zvažovaná a odmítnutá varianta:** okamžitě bezpečné místo bez nabíjení (rychlejší na stavbu, ale ve stoje se k němu dá doběhnout).
+
 ### Video
 
-- **Titulky bez hlasu**, zhruba 9 titulků a 130 slov, 2 až 2,5 minuty záznamu ze hry. Hlasový komentář se nenahrává: autor záložní video s titulky po zhlédnutí 2026-10-27 schválil („Je to výborné“). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
+- **Titulky bez hlasu**, zhruba 10 titulků a 150 slov, 2 až 2,5 minuty záznamu ze hry. Hlasový komentář se nenahrává: autor záložní video s titulky po zhlédnutí 2026-10-27 schválil („Je to výborné“). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
 - **Pracovní znění titulků:**
   1. Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.
   2. Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.
@@ -123,7 +130,8 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
   6. V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk.
   7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka.
   8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
-  9. Použití AI: návrh mechanik a levelu vznikl v dialogu s AI (Claude), rozhodnutí a testování ve hře jsou moje. Blueprinty a blockout postavila AI v editoru přes MCP plugin, záběry jsem natočil sám, titulky a střih připravila AI. (Znění schválené se záložním videem 2026-10-27; po T7 doplnit mimozemšťana.)
+  9. Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.
+  10. Použití AI: návrh mechanik a levelu vznikl v dialogu s AI (Claude), rozhodnutí a testování ve hře jsou moje. Blueprinty a blockout postavila AI v editoru přes MCP plugin, záběry jsem natočil sám, titulky a střih připravila AI. (Znění schválené se záložním videem 2026-10-27; po T7 doplnit mimozemšťana.)
 - **Blueprinty ve videu i v PDF** (rozhodnuto 2026-10-24): na konci videa krátký blok s každým klíčovým grafem asi 10 s s titulkem, aby video obstálo samo. K tomu PDF s ostrými screenshoty a krátkým popisem implementace včetně toho, co nefunguje; blueprint ve videu se čte špatně, v PDF si ho lektorka zvětší. PDF se vyrobí přes weasyprint jako u DÚ č. 1. Grafy proto potřebují komentářové bloky, aby se daly číst i bez výkladu.
 - **Záložní video** se natočí hned po povinné části, před reakcí mimozemšťana.
 - **Titulky vypálit do obrazu:** výchozí `ffmpeg` z Homebrew nemá filtry `subtitles` ani `drawtext`, proto je vedle něj nainstalovaný `ffmpeg-full` (keg-only, `/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`), který je má. Titulky jsou ASS s písmem Arial a pevnou mezerou za jednopísmennými předložkami.
@@ -133,7 +141,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T8, odhad 11–17,5 h, rozhodovací pravidla pro škrtnutí mimozemšťana).
 
-T0–T7 a vizuální vylepšení jsou hotové (viz Stav). Zbývá jen T8 (bod 2); bod 1 zůstává jako záznam:
+T0–T7 a vizuální vylepšení jsou hotové (viz Stav). Zbývá test teleportu (bod 2) a T8 (bod 3); bod 1 zůstává jako záznam:
 
 1. Vizuální vylepšení před natáčením T8 (rozhodnutí autora 2026-10-27 ~02:50; staví agent přes MCP, autor odpovídá na otázky a zkouší v Play průběžně, protože paralelně pracuje na jiných projektech). **Postaveno 2026-10-27 v 03:00–04:20** (commity `bac0ce2`, `3fcb3d7` a `8087c51`), autor výsledek v Play schválil:
    - mimozemšťan má nad hlavou bodové světlo, při hlídce tlumeně zelené (5 cd), při pronásledování červené (60 cd, zbarví okolí). Světlo 20 cd bylo podle autora nenápadné; zkoušela se k němu svítící kulička nad hlavou (stealth hry ukazují stav nepřítele znakem nad hlavou, vykřičník v Metal Gear, ukazatel odhalení v Assassin's Creed), ale autor ji odmítl, „vypadá divně“, a zůstalo jen silnější červené světlo;
@@ -146,4 +154,5 @@ T0–T7 a vizuální vylepšení jsou hotové (viz Stav). Zbývá jen T8 (bod 2)
    2. **Stropní lampy** (určitě): `/Game/StarterContent/Props/SM_Lamp_Ceiling` u každého bodového světla v chodbě, strojovně a skladu, světlo těsně pod lampou. Odhad 15 min.
    3. **Textury** (vyzkoušet): `M_Tech_Panel` na stěny, `M_Tech_Hex_Tile` nebo `M_Concrete_Tiles` na podlahu, ocel na bedny, vše ze Starter Contentu. Napřed na jedné stěně chodby a snímek autorovi: kostky jsou natažené měřítkem (stěna chodby 25 m), takže se textura může roztáhnout. Pokud ano, vlastní materiál s texturou podle polohy ve světě (world-aligned) za dalších 30–45 min, nebo textury vynechat. Rozhoduje autor podle snímku.
    Změna vzhledu znamená přetočit i sedm záběrů záložního videu (asi 20 min autora), aby finální video nemíchalo bílý blockout s novým vzhledem. Skryté desky v mřížích ventilace a navigační síť se nemění; po úpravách zopakovat test z T7 (chycení ve stoje, křižovatka, strojovna, ventilace).
-2. T8: přetočit všech sedm záběrů záložního videa (nový vzhled se nemá míchat s bílým blockoutem) a dotočit záběry s mimozemšťanem podle `scenar-nataceni.md`, sekce Druhé natáčení; pak finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
+2. Teleport: ruční test autora v Play (nezahlédnutý průchod a únik; zahlédnutí v chodbě a útěk ve stoje na plošinu, kde má mimozemšťan hráče chytit). Délku nabíjení (`ChargeTime` na actoru `Teleport`) případně doladit. Když teleport do 15:20 (strop 1,5 h od začátku stavby) spolehlivě nefunguje, odloží se do `odlozene-napady.md` a T8 se natočí bez něj.
+3. T8: přetočit všech sedm záběrů záložního videa (nový vzhled se nemá míchat s bílým blockoutem) a dotočit záběry s mimozemšťanem a teleportem podle `scenar-nataceni.md`, sekce Druhé natáčení; pak finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
