@@ -136,9 +136,9 @@ Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T
 T0–T7 jsou hotové (viz Stav). Zbývá:
 
 1. Vizuální vylepšení před natáčením T8 (rozhodnutí autora 2026-10-27 ~02:50; staví agent přes MCP, autor odpovídá na otázky a zkouší v Play průběžně, protože paralelně pracuje na jiných projektech). **Postaveno 2026-10-27 v 03:00–04:00** (commity `bac0ce2` a `3fcb3d7`), čeká na druhé kolo testu autora v Play:
-   - mimozemšťan má nad hlavou svítící kuličku a bodové světlo, při hlídce tlumeně zelené (5 cd), při pronásledování červené (60 cd). Samotné světlo bylo podle autora „nenápadné, kdybych o tom nevěděl, nevšiml bych si“, proto přibyla kulička: stealth hry ukazují stav nepřítele znakem nad hlavou (vykřičník v Metal Gear, ukazatel odhalení v Assassin's Creed);
+   - mimozemšťan má nad hlavou bodové světlo, při hlídce tlumeně zelené (5 cd), při pronásledování červené (60 cd, zbarví okolí). Světlo 20 cd bylo podle autora nenápadné; zkoušela se k němu svítící kulička nad hlavou (stealth hry ukazují stav nepřítele znakem nad hlavou, vykřičník v Metal Gear, ukazatel odhalení v Assassin's Creed), ale autor ji odmítl, „vypadá divně“, a zůstalo jen silnější červené světlo;
    - lampy visí u všech hlavních světel včetně světla u dveří strojovny, jsou zmenšené na 0,75 a ocelové (autor: zlaté byly moc světlé); bez lampy zůstala světla ve ventilaci a reflektor na její vstup;
-   - stěny mají `M_Krato_TechPanel_World`, kopii `M_Tech_Panel` s texturou podle polohy ve světě (čtvercové panely 2 m, vodorovně se opakují). Autor první pokus s natažením po kostce odmítl kvůli roztaženým šroubům, odraz se mu líbil. Bedny a traverza ve skladu jsou z `M_Metal_Steel`;
+   - stěny místností mají `M_Krato_TechPanel_World`, kopii `M_Tech_Panel` s texturou podle polohy ve světě (čtvercové panely 2 m, vodorovně se opakují). Autor první pokus s natažením po kostce odmítl kvůli roztaženým šroubům, odraz se mu líbil. Ventilace zůstala bílá (autor): společná stěna s chodbou je jedna kostka, na straně ventilace ji proto kryje 2cm bílé obložení mimo otvory s mřížemi (`Blockout/3b_Ventilace/Oblozeni`). Bedny a traverza ve skladu jsou z `M_Metal_Steel`;
    - pruh na stěně strojovny, který autor viděl problikávat, příčinu nenašel; po výměně materiálu stěn ve snímku není (viz `docs/unreal-mcp.md`, Level a Play).
 
    Původní plán:
