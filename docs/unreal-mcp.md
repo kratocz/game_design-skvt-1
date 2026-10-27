@@ -66,3 +66,9 @@ Nástroje jsou za meta-nástroji `list_toolsets`, `describe_toolset` a `call_too
 ## Měření v levelu
 
 Výšky ze screenshotů neodhadovat: perspektiva kamery a překrývající se obrysy (kapsle, debug trace, fyzikální tělesa) vedly k chybě o 20 cm. Spolehlivě měří řada tenkých destiček ve známých výškách (kostka se Z měřítkem 0,02, po 5 cm), pod kterou se postava projde a autor řekne, kterou ještě prorazí. Hodnoty z běžící hry (poloha actoru, výška kapsle) dává přímo MCP.
+
+## Gamepad na Macu
+
+Unreal 5.8 na Macu čte gamepady přes framework GameController od Applu (`Engine/Source/Runtime/ApplicationCore/Private/Apple/AppleControllerInterface.cpp`) a přijme jen ovladač, který mu macOS předá jako `extendedGamepad` (Xbox, PlayStation a další plnohodnotné gamepady) nebo `microGamepad` (typ Apple TV Remote). Jiný ovladač dostane typ `Unassigned` a Unreal veškerý jeho vstup zahodí, i tlačítka. Poznat se to dá v logu editoru (`~/Library/Logs/Unreal Engine/skvt_projektEditor/`, časy v UTC): při připojení `LogAppleController: Warning: Controller type is not recognized` a pak každý snímek `UNSUPPORTED CONTROLLER`. Notifikace Unrealu o novém vstupním zařízení ani to, že ovladač vidí macOS v Nastavení systému → Herní ovladače (panel se ukáže, až když je ovladač připojený), neznamená, že vstup dojde do hry.
+
+Takhle dopadl 8BitDo Zero 2 (2026-10-27) ve dvou režimech; ostatní režimy se nezkoušely, protože ovladač nemá páčky a kameru by stejně neovládal. Mapování gamepadu v projektu: pohyb levá páčka, kamera pravá páčka, skok spodní tlačítko (`IMC_Default` kurzu), dřep pravé tlačítko (`IMC_Krato`), D-pad nahoru menu (`IMC_SkvtInput` kurzu); D-pad na pohyb namapovaný není.
