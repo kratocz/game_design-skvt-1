@@ -135,7 +135,13 @@ Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T
 
 T0–T7 jsou hotové (viz Stav). Zbývá:
 
-1. Vizuální vylepšení před natáčením T8 (rozhodnutí autora 2026-10-27 ~02:50; staví agent přes MCP, autor odpovídá na otázky a zkouší v Play průběžně, protože paralelně pracuje na jiných projektech):
+1. Vizuální vylepšení před natáčením T8 (rozhodnutí autora 2026-10-27 ~02:50; staví agent přes MCP, autor odpovídá na otázky a zkouší v Play průběžně, protože paralelně pracuje na jiných projektech). **Postaveno 2026-10-27 v 03:00–04:00** (commity `bac0ce2` a `3fcb3d7`), čeká na druhé kolo testu autora v Play:
+   - mimozemšťan má nad hlavou svítící kuličku a bodové světlo, při hlídce tlumeně zelené (5 cd), při pronásledování červené (60 cd). Samotné světlo bylo podle autora „nenápadné, kdybych o tom nevěděl, nevšiml bych si“, proto přibyla kulička: stealth hry ukazují stav nepřítele znakem nad hlavou (vykřičník v Metal Gear, ukazatel odhalení v Assassin's Creed);
+   - lampy visí u všech hlavních světel včetně světla u dveří strojovny, jsou zmenšené na 0,75 a ocelové (autor: zlaté byly moc světlé); bez lampy zůstala světla ve ventilaci a reflektor na její vstup;
+   - stěny mají `M_Krato_TechPanel_World`, kopii `M_Tech_Panel` s texturou podle polohy ve světě (čtvercové panely 2 m, vodorovně se opakují). Autor první pokus s natažením po kostce odmítl kvůli roztaženým šroubům, odraz se mu líbil. Bedny a traverza ve skladu jsou z `M_Metal_Steel`;
+   - pruh na stěně strojovny, který autor viděl problikávat, příčinu nenašel; po výměně materiálu stěn ve snímku není (viz `docs/unreal-mcp.md`, Level a Play).
+
+   Původní plán:
    1. **Světlo zahlédnutí na mimozemšťanovi** (určitě): malé bodové světlo na hlavě, tlumeně zelené při hlídce, červené při pronásledování (přepíná se v `StartChase` a `StopChase`, světlo najde `GetComponentByClass`). Účel: aby bylo ve videu vidět, kdy hráče zahlédl, což je hodnocená mechanika. Odhad 20–30 min.
    2. **Stropní lampy** (určitě): `/Game/StarterContent/Props/SM_Lamp_Ceiling` u každého bodového světla v chodbě, strojovně a skladu, světlo těsně pod lampou. Odhad 15 min.
    3. **Textury** (vyzkoušet): `M_Tech_Panel` na stěny, `M_Tech_Hex_Tile` nebo `M_Concrete_Tiles` na podlahu, ocel na bedny, vše ze Starter Contentu. Napřed na jedné stěně chodby a snímek autorovi: kostky jsou natažené měřítkem (stěna chodby 25 m), takže se textura může roztáhnout. Pokud ano, vlastní materiál s texturou podle polohy ve světě (world-aligned) za dalších 30–45 min, nebo textury vynechat. Rozhoduje autor podle snímku.
