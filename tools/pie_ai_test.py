@@ -16,7 +16,7 @@ from pathlib import Path
 
 MCP = str(Path(__file__).with_name("unreal_mcp.py"))
 LEVEL = "/Game/Krato/Maps/UEDPIE_0_L_Plizeni.L_Plizeni:PersistentLevel."
-ALIEN, PLAYER = "BP_KratoAlien_C_0", "BP_KratoCharacter_C_0"
+ALIEN, PLAYER = "BP_KratoAlien_C_1", "BP_KratoCharacter_C_0"
 
 
 def tool(toolset, name, args):
@@ -48,6 +48,7 @@ transform = {"location": {"x": x, "y": y, "z": 92}, "rotation": {"pitch": 0, "ya
 tool("editor_toolset.toolsets.actor.ActorTools", "set_actor_transform", {"actor": {"refPath": LEVEL + PLAYER}, "xform": transform, "worldspace": True})
 start = time.time()
 while time.time() - start < seconds:
-    print("%5.1f s  mimozemšťan %s  hráč %s  %s" % (time.time() - start, where(ALIEN), where(PLAYER), props(ALIEN, ["IsChasing", "PatrolIndex"])))
+    light = props(ALIEN + ".AlertLight", ["LightColor", "Intensity"])
+    print("%5.1f s  mimozemšťan %s  hráč %s  %s  světlo %s" % (time.time() - start, where(ALIEN), where(PLAYER), props(ALIEN, ["IsChasing", "PatrolIndex"]), light))
     time.sleep(0.3)
 tool("EditorToolset.EditorAppToolset", "StopPIE", {})
