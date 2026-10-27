@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; další krok je T7 (mimozemšťan), blueprinty a level staví agent přes MCP plugin editoru
+- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; T7 (mimozemšťan jako blueprint, hlídka, detekce a chycení ověřené v Play přes MCP) postavené 2026-10-27, čeká na ruční test autora (dřep, bedny, ventilace, útěk)
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -135,5 +135,5 @@ Postup krok za krokem je v [postup-editor.md](postup-editor.md) (úkoly T0 až T
 
 T0–T6 jsou hotové (viz Stav). Zbývá:
 
-1. T7: mimozemšťan jako blueprint bez behavior tree (rozhodnutí 2026-10-27 v postupu). Když nefunguje v úterý 2026-10-27 v 18:00, odevzdává se záložní video.
+1. T7: mimozemšťan je postavený (Zjištění T7 v postupu), zbývá ruční test kroku 10. Když nefunguje v úterý 2026-10-27 v 18:00, odevzdává se záložní video.
 2. T8: finální video, PDF a odevzdání v Labaverse nejpozději v úterý 2026-10-27.
