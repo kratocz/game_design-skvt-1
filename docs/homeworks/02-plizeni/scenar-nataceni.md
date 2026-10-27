@@ -43,7 +43,8 @@ Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sesta
 7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběry 8 a 9 z druhého natáčení.)
 8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
 9. Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš. (Záběry 11 a 12 z druhého natáčení.)
-10. Přiznání použití AI.
+10. Co zatím chybí (zvuky, mimozemšťan hráče po ztrátě z dohledu nehledá).
+11. Přiznání použití AI.
 
 ## Po natáčení
 

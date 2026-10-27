@@ -120,7 +120,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 
 ### Video
 
-- **Titulky bez hlasu**, zhruba 10 titulků a 150 slov, 2 až 2,5 minuty záznamu ze hry. Hlasový komentář se nenahrává: autor záložní video s titulky po zhlédnutí 2026-10-27 schválil („Je to výborné“). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
+- **Titulky bez hlasu**, 11 titulků, 2 až 2,5 minuty záznamu ze hry. Hlasový komentář se nenahrává: autor záložní video s titulky po zhlédnutí 2026-10-27 schválil („Je to výborné“). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
 - **Pracovní znění titulků:**
   1. Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.
   2. Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.
@@ -131,7 +131,8 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
   7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka.
   8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
   9. Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.
-  10. Použití AI: návrh mechanik a levelu vznikl v dialogu s AI (Claude), rozhodnutí a testování ve hře jsou moje. Blueprinty a blockout postavila AI v editoru přes MCP plugin, záběry jsem natočil sám, titulky a střih připravila AI. (Znění schválené se záložním videem 2026-10-27; po T7 doplnit mimozemšťana.)
+  10. Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.
+  11. Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry. (Zkrácené na jeden titulek na přání autora 2026-10-27; plížení je jádro úkolu, proto má v přiznání nejvíc místa.)
 - **Blueprinty ve videu i v PDF** (rozhodnuto 2026-10-24): na konci videa krátký blok s každým klíčovým grafem asi 10 s s titulkem, aby video obstálo samo. K tomu PDF s ostrými screenshoty a krátkým popisem implementace včetně toho, co nefunguje; blueprint ve videu se čte špatně, v PDF si ho lektorka zvětší. PDF se vyrobí přes weasyprint jako u DÚ č. 1. Grafy proto potřebují komentářové bloky, aby se daly číst i bez výkladu.
 - **Záložní video** se natočí hned po povinné části, před reakcí mimozemšťana.
 - **Titulky vypálit do obrazu:** výchozí `ffmpeg` z Homebrew nemá filtry `subtitles` ani `drawtext`, proto je vedle něj nainstalovaný `ffmpeg-full` (keg-only, `/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`), který je má. Titulky jsou ASS s písmem Arial a pevnou mezerou za jednopísmennými předložkami.
