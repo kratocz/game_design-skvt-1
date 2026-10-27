@@ -32,7 +32,7 @@
 
 ## Titulky, ke kterým záběry patří
 
-Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sestavení.
+Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sestavení. Před první záběr přijde úvodní karta (název, kurz, autor, krato.cz), ta záběr nepotřebuje.
 
 1. Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.
 2. Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.

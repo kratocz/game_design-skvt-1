@@ -121,6 +121,8 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 ### Video
 
 - **Titulky bez hlasu**, 11 titulků, 2 až 2,5 minuty záznamu ze hry. Hlasový komentář se nenahrává: autor záložní video s titulky po zhlédnutí 2026-10-27 schválil („Je to výborné“). Na titulek o ~100 znacích je potřeba asi 7 s, záběry proto mechaniku chvíli drží.
+- **Úvodní karta** (5 s, klíč `intro` v JSON pro `tools/build_video.py`; schválená autorem 2026-10-27, aby video obstálo i mimo Labaverse): „Plížení – ukázka herní mechaniky v Unreal Engine 5 / Domácí úkol č. 2 v kurzu Game design pro začátečníky / SKVOT, podzim 2026 / Petr Kratochvíl · krato.cz“. Pořadatel kurzu je podle stránky kurzu SKVOT (ne robot_dreams); Labaverse je jen platforma pro odevzdávání.
+- **Zveřejnění:** do Labaverse jde odkaz na Google Drive, protože tam „Spravovat verze“ zachová odkaz i po opravě. Na YouTube se nahraje až konečná verze, nejdřív ve středu po doladění, protože YouTube výměnu souboru neumožňuje a každá oprava by měla nový odkaz. Viditelnost nejdřív „Neveřejné“. Zvuk do střihu jen vlastní (syntetizovaný v ffmpeg) nebo s ověřenou licencí, kvůli Content ID.
 - **Pracovní znění titulků:**
   1. Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.
   2. Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.

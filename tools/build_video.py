@@ -1,10 +1,11 @@
-"""Sestaví video úkolu: záběry s vypálenými titulky, blok screenshotů blueprintů, závěrečný titulek.
+"""Sestaví video úkolu: úvodní karta, záběry s vypálenými titulky, blok screenshotů blueprintů, závěrečný titulek.
 
 Použití: python3 tools/build_video.py <segmenty.json> <výstup.mp4> [číslo_segmentu]
 
 V JSON jsou adresáře záběrů a screenshotů relativně k JSON souboru (viz
 docs/homeworks/02-plizeni/odevzdani/video-zalozni.json). S číslem segmentu se
-vyrenderuje jen ten (na zkoušku titulků), bez spojení. Potřebuje ffmpeg-full
+vyrenderuje jen ten (na zkoušku titulků), bez spojení; úvodní karta (klíč
+„intro“, nepovinný) je segment 1. Potřebuje ffmpeg-full
 (brew, keg-only), výchozí ffmpeg z Homebrew nemá filtr subtitles.
 """
 import json
@@ -19,7 +20,7 @@ from pathlib import Path
 FF = "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg"
 FP = "/opt/homebrew/opt/ffmpeg-full/bin/ffprobe"
 W, H, FPS = 1920, 1080, 30
-BP_SEC, OUTRO_SEC, TITLE_MAX = 8, 9, 10.0
+INTRO_SEC, BP_SEC, OUTRO_SEC, TITLE_MAX = 5, 8, 9, 10.0
 
 cfg_path = Path(sys.argv[1]).resolve()
 cfg = json.loads(cfg_path.read_text())
@@ -89,6 +90,13 @@ def sub(a):
 
 segs = []
 n = 0
+if "intro" in cfg:
+    n += 1
+    a = work / f"{n:02d}.ass"
+    ass(a, cfg["intro"], "Center", 0.3, INTRO_SEC - 0.3)
+    segs.append((n, ["-f", "lavfi", "-t", str(INTRO_SEC), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
+                 f"fade=t=out:st={INTRO_SEC - 0.5}:d=0.5,{sub(a)}", INTRO_SEC))
+
 for s in cfg["shots"]:
     n += 1
     src = find(cfg["video_dir"], s["file"])

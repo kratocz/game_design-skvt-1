@@ -2,7 +2,7 @@
 
 ## Projekt
 
-Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta; do `origin` se commituje a pushuje bez ptaní (fork je jen studentův, na GitHubu ale veřejný), do `upstream` nikdy. Cvičení z lekcí letošního běhu kurzu jsou ve větvi `upstream/stream10` (dřívější běhy mají `Stream6` až `Stream9`); `upstream/main` se od 2026-09-24 nehýbe.
+Fork repozitáře kurzu [Game Design pro začátečníky](https://skvt.cz/course/122-game-design-pro-zacatecniky) (SKVOT, podzim 2026). Unreal Engine projekt kurzu je v kořeni (`Config/`, `Content/`, `skvt_projekt.uproject`). Remote `upstream` je repozitář kurzu, `origin` je fork studenta; do `origin` se commituje a pushuje bez ptaní (fork je jen studentův, na GitHubu ale veřejný), do `upstream` nikdy. Cvičení z lekcí letošního běhu kurzu jsou ve větvi `upstream/stream10` (dřívější běhy mají `Stream6` až `Stream9`); `upstream/main` se od 2026-09-24 nehýbe.
 
 ## Domácí úkoly
 
