@@ -16,7 +16,7 @@ from pathlib import Path
 
 MCP = str(Path(__file__).with_name("unreal_mcp.py"))
 LEVEL = "/Game/Krato/Maps/UEDPIE_0_L_Plizeni.L_Plizeni:PersistentLevel."
-ALIEN, PLAYER = "BP_KratoAlien_C_1", "BP_KratoCharacter_C_0"
+PLAYER = "BP_KratoCharacter_C_0"
 
 
 def tool(toolset, name, args):
@@ -43,12 +43,15 @@ def props(obj, names):
 
 x, y, yaw, seconds = (float(v) for v in sys.argv[1:5])
 mode = sys.argv[5] if len(sys.argv) > 5 else "PlayMode_InViewPort"
+# Mimozemšťan se po změně komponent v levelu nahrazuje novou instancí, číslo v názvu objektu se proto mění.
+found = json.loads(tool("editor_toolset.toolsets.scene.SceneTools", "find_actors", {"root": None, "name": "Alien", "actor_type": {"refPath": "/Game/Krato/AI/BP_KratoAlien.BP_KratoAlien_C"}, "tag": "", "bounds": None, "collision_channels": []}))["returnValue"]
+ALIEN = found[0]["refPath"].split(".")[-1]
 tool("EditorToolset.EditorAppToolset", "StartPIE", {"options": {"playMode": mode, "warmupSeconds": 1}})
 transform = {"location": {"x": x, "y": y, "z": 92}, "rotation": {"pitch": 0, "yaw": yaw, "roll": 0}, "scale": {"x": 1, "y": 1, "z": 1}}
 tool("editor_toolset.toolsets.actor.ActorTools", "set_actor_transform", {"actor": {"refPath": LEVEL + PLAYER}, "xform": transform, "worldspace": True})
 start = time.time()
 while time.time() - start < seconds:
-    light = props(ALIEN + ".AlertLight", ["LightColor", "Intensity"])
+    light = (props(ALIEN + ".AlertLight", ["Intensity"]), props(ALIEN + ".AlertOrb", ["OverrideMaterials"])[-60:])
     print("%5.1f s  mimozemšťan %s  hráč %s  %s  světlo %s" % (time.time() - start, where(ALIEN), where(PLAYER), props(ALIEN, ["IsChasing", "PatrolIndex"]), light))
     time.sleep(0.3)
 tool("EditorToolset.EditorAppToolset", "StopPIE", {})
