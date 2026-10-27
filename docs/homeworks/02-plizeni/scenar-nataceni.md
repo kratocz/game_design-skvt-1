@@ -40,7 +40,7 @@ Znění je z `README.md`, sekce Video; titulky do videa přidá agent při sesta
 4. Pod nízkým stropem vstát nejde. Hra pokyn zahodí, takže z ventilace nevylezeš nečekaně ve stoje.
 5. Skok v dřepu je nízký poskok: vejde se pod strop a dostane tě do ventilace. Plný skok až po vstání.
 6. V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk.
-7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběr vznikne v T7/T8.)
+7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka. (Záběr vznikne v T8.)
 8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
 9. Přiznání použití AI.
 

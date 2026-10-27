@@ -4,7 +4,7 @@
 - **Deadline:** čtvrtek 2026-10-29 do 23:59
 - **Interní cíl:** odevzdat nejpozději v úterý 2026-10-27; cíl „víceméně hotovo týden předem“ (čtvrtek 2026-10-22) propadl, práce začala v sobotu 2026-10-24
 - **Hodnocení:** nejvýš 20 bodů
-- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; T7 (mimozemšťan jako blueprint, hlídka, detekce a chycení ověřené v Play přes MCP, ocelové mříže ve ventilaci) uzavřené 2026-10-27 01:31; další krok je T8 (finální video, PDF, odevzdání)
+- **Stav:** design schválen 2026-10-24, postup pro editor (`postup-editor.md`) hotový 2026-10-25, T0 a T1 (postava s dřepem na přepínač, testovací level) hotové 2026-10-25, T2 (póza dřepu; rozměry levelu podle chůze v dřepu, viz Zjištění T2 v `postup-editor.md`) hotové 2026-10-26, T3 (nízký poskok v dřepu) hotové 2026-10-26, T4 (kamera při dřepu) a T5 (blockout levelu) hotové 2026-10-26, T6 (komentáře a screenshoty blueprintů, záložní video s titulky) hotové 2026-10-26 ve 23:52; T7 (mimozemšťan jako blueprint, hlídka, detekce a chycení ověřené v Play přes MCP, ocelové mříže ve ventilaci) hotové 2026-10-27 02:44 po třech kolech testu autora; další krok je T8 (finální video, PDF, odevzdání)
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -127,7 +127,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
 - **Blueprinty ve videu i v PDF** (rozhodnuto 2026-10-24): na konci videa krátký blok s každým klíčovým grafem asi 10 s s titulkem, aby video obstálo samo. K tomu PDF s ostrými screenshoty a krátkým popisem implementace včetně toho, co nefunguje; blueprint ve videu se čte špatně, v PDF si ho lektorka zvětší. PDF se vyrobí přes weasyprint jako u DÚ č. 1. Grafy proto potřebují komentářové bloky, aby se daly číst i bez výkladu.
 - **Záložní video** se natočí hned po povinné části, před reakcí mimozemšťana.
 - **Titulky vypálit do obrazu:** výchozí `ffmpeg` z Homebrew nemá filtry `subtitles` ani `drawtext`, proto je vedle něj nainstalovaný `ffmpeg-full` (keg-only, `/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`), který je má. Titulky jsou ASS s písmem Arial a pevnou mezerou za jednopísmennými předložkami.
-- **Záložní video** (`odevzdani/video/Kratochvil-DU2-zalozni.mp4`, mimo git): 1920 × 1080, 30 fps, 3:56. Obsahuje sedm záběrů s titulky 1–6 a 8 (asi 2 min; titulek 7 chybí, protože mimozemšťan zatím není ve hře), 13 screenshotů blueprintů po 8 s a 9 s přiznání AI. Pokud T7 nevyjde, odevzdává se tohle video.
+- **Záložní video** (`odevzdani/video/Kratochvil-DU2-zalozni.mp4`, mimo git): 1920 × 1080, 30 fps, 3:56. Obsahuje sedm záběrů s titulky 1–6 a 8 (asi 2 min; titulek 7 chybí, protože mimozemšťan zatím není ve hře), 13 screenshotů blueprintů po 8 s a 9 s přiznání AI. Pojistka „pokud T7 nevyjde, odevzdává se tohle video“ se nepoužila, T7 je hotové; finální video vznikne v T8.
 
 ## Další kroky
 
