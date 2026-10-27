@@ -131,7 +131,7 @@ Rozměry se odvodí z postavy (výška ve stoje a v dřepu včetně pózy animac
   7. Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka.
   8. Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.
   9. Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.
-  10. Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.
+  10. Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce. (Schválené autorem 2026-10-27.)
   11. Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry. (Zkrácené na jeden titulek na přání autora 2026-10-27; plížení je jádro úkolu, proto má v přiznání nejvíc místa.)
 - **Blueprinty ve videu i v PDF** (rozhodnuto 2026-10-24): na konci videa krátký blok s každým klíčovým grafem asi 10 s s titulkem, aby video obstálo samo. K tomu PDF s ostrými screenshoty a krátkým popisem implementace včetně toho, co nefunguje; blueprint ve videu se čte špatně, v PDF si ho lektorka zvětší. PDF se vyrobí přes weasyprint jako u DÚ č. 1. Grafy proto potřebují komentářové bloky, aby se daly číst i bez výkladu.
 - **Záložní video** se natočí hned po povinné části, před reakcí mimozemšťana.
