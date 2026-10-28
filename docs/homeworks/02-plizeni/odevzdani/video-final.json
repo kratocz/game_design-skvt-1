@@ -15,8 +15,8 @@
     {"file": "2026-10-28_23-03-34.mp4", "t": ""},
     {"file": "2026-10-28_22-44-24.mp4", "t": "Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.", "voice": "titulek-08.mp3"},
     {"file": "2026-10-28_23-04-50.mp4", "t": ""},
-    {"file": "2026-10-28_23-05-59.mp4", "t": "Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.", "voice": "titulek-09.mp3"},
-    {"file": "2026-10-28_23-08-52.mp4", "t": ""}
+    {"file": "2026-10-28_23-08-52.mp4", "t": "Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.", "voice": "titulek-09.mp3"},
+    {"file": "2026-10-28_23-05-59.mp4", "t": ""}
   ],
   "cards": [
     {"t": "Co zatím chybí: mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8, "voice": "titulek-10.mp3"},
