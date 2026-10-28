@@ -38,7 +38,8 @@
   ul { margin: 0 0 2mm 0; padding-left: 5mm; }
   li { margin-bottom: 0.8mm; }
   code { font-family: "Roboto Mono", Menlo, monospace; font-size: 8.8pt; background: #eef1f1; padding: 0 0.6mm; border-radius: 0.6mm; hyphens: none; }
-  .cols { display: flex; gap: 7mm; }
+  .cols { display: flex; gap: 7mm; font-size: 9.2pt; }
+  .cols table { font-size: 8.8pt; }
   .cols > div { flex: 1; }
   .box { background: var(--sand); border-left: 2.5pt solid var(--line); padding: 1.6mm 3mm; margin: 0 0 3mm 0; }
   .todo { color: var(--todo); font-weight: 700; }
@@ -64,7 +65,7 @@
 
 <div class="cols">
 <div>
-  <p><b>Video:</b> <span class="todo">[odkaz na Google Drive doplnit]</span>. Video ukazuje mechaniku ve hře a nejdůležitější blueprinty, tady jsou všechny grafy ostře, aby se daly zvětšit a přečíst. Každý graf má komentářový blok s českým nadpisem, který říká, co dělá.</p>
+  <p><b>Video:</b> <a href="https://drive.google.com/drive/folders/1STUPrAvvukjQ8zBKXBwNUrru7BvA0hcP?usp=sharing">Google Drive, složka s videem Kratochvil-DU2-plizeni.mp4</a> (5:58, 2560 × 1440). Video ukazuje mechaniku ve hře a nejdůležitější blueprinty, tady jsou všechny grafy ostře, aby se daly zvětšit a přečíst. Každý graf má komentářový blok s českým nadpisem, který říká, co dělá.</p>
 
   <h3>Design v kostce</h3>
   <ul>
@@ -82,7 +83,7 @@
   <h3>Kde co je (vlastní assety v <code>Content/Krato/</code>)</h3>
   <table>
     <tr><th>Asset</th><th>Co dělá</th><th>Snímky</th></tr>
-    <tr><td><code>BP_KratoCharacter</code></td><td>postava (potomek postavy z kurzu): dřep, skok v dřepu, kamera, chycení a únik</td><td>1–9, 12–14, 21–22, 34–38</td></tr>
+    <tr><td><code>BP_KratoCharacter</code></td><td>postava (potomek postavy z kurzu): dřep, skok v dřepu, kamera, chycení a únik, kroky</td><td>1–9, 12–14, 21–22, 34–38, 41–42</td></tr>
     <tr><td><code>ABP_KratoCharacter</code></td><td>kopie animačního blueprintu kurzu s pózou dřepu (<code>BS_CrouchMove</code>)</td><td>10–11, 39–40</td></tr>
     <tr><td><code>BP_KratoAlien</code></td><td>mimozemšťan: hlídka, detekce, pronásledování, chycení</td><td>15–20, 23–28</td></tr>
     <tr><td><code>BP_KratoTeleport</code></td><td>teleport s nabíjením</td><td>29–33</td></tr>
@@ -95,7 +96,7 @@
     <li>Zvuky jsou jednoduché a dopad po skoku nemá zvuk.</li>
     <li>Mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.</li>
     <li>AI je pro jednoduchost postavená přímo v blueprintu mimozemšťana: hlídka a pronásledování jako události s <code>AI MoveTo</code>, zrak jako vlastní detekce každých 0,2 s. Standardní cesta v Unrealu by byla AI Controller s Behavior Tree a AI Perception.</li>
-    <li>Ve dvou svislých šachtách nad ventilací problikává osvětlení. Nepomohlo slabší ani žádné světlo, matný materiál, silnější stěny ani odstranění ploch ve stejné rovině; pravděpodobně jde o globální osvětlení Lumen v úzkém prostoru.</li>
+    <li>Ve svislých šachtách nad ventilací problikává osvětlení, nejspíš globální osvětlení Lumen v úzkém prostoru (světlo, materiál, tloušťka stěn ani plochy ve stejné rovině to nejsou).</li>
   </ul>
 
   <div class="box"><b>Použití AI:</b> o návrhu mechaniky jsem rozhodoval v dialogu s AI (Claude). Blueprinty podle něj sestavila AI, stejně jako zvuky, titulky a střih. Hru jsem testoval a ladil sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu a ruční opravy blueprintů. Postavil jsem mříže a teleport, natočil a namluvil všechny záběry.</div>
