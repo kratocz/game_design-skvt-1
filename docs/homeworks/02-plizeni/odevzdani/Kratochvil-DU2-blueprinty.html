@@ -87,17 +87,18 @@
     <tr><td><code>BP_KratoAlien</code></td><td>mimozemšťan: hlídka, detekce, pronásledování, chycení</td><td>15–20, 23–28</td></tr>
     <tr><td><code>BP_KratoTeleport</code></td><td>teleport s nabíjením</td><td>29–33</td></tr>
     <tr><td><code>IA_Crouch</code>, <code>IMC_Krato</code></td><td>vstup dřepu</td><td>1</td></tr>
+    <tr><td><code>Audio/S_Krato_*</code></td><td>zvuky: kroky, zahlédnutí, chycení, nabíjení teleportu a únik, hučení strojovny (vlastní syntéza) a vítr ve ventilaci (ze Starter Content)</td><td>–</td></tr>
   </table>
 
   <h3>Co nefunguje nebo chybí</h3>
   <ul>
-    <li>Hra nemá zvuky (kroky, dopady, chycení).</li>
+    <li>Zvuky jsou jednoduché a nemají dopad po skoku ani kroky mimozemšťana.</li>
     <li>Mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.</li>
     <li>AI je pro jednoduchost postavená přímo v blueprintu mimozemšťana: hlídka a pronásledování jako události s <code>AI MoveTo</code>, zrak jako vlastní detekce každých 0,2 s. Standardní cesta v Unrealu by byla AI Controller s Behavior Tree a AI Perception.</li>
     <li><span class="todo">[doplnit podle testu a natáčení]</span></li>
   </ul>
 
-  <div class="box"><b>Použití AI:</b> návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.</div>
+  <div class="box"><b>Použití AI:</b> návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty, vyrobila zvuky a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.</div>
 </div>
 </div>
 
@@ -179,6 +180,12 @@
   <figure><img src="blueprinty/33-teleport-nabito.png" alt=""><figcaption><b>33</b> Nabito, hráč uniká</figcaption></figure>
   <figure><img src="blueprinty/34-unik-teleportem.png" alt=""><figcaption><b>34</b> Únik: obrazovka zbělá a level začne znovu (postava hráče)</figcaption></figure>
   <figure><img src="blueprinty/35-unik-restart-levelu.png" alt=""><figcaption><b>35</b> Po úniku se znovu otevře level (postava hráče)</figcaption></figure>
+</section>
+
+<section>
+  <h2>Zvuky</h2>
+  <p>Kroky počítá funkce <code>UpdateFootsteps</code> z Event Tick podle ušlé vzdálenosti: krok zazní po 170 cm chůze, v dřepu po 85 cm (stejné tempo jako chůze při poloviční rychlosti), v dřepu tišeji, s mírně náhodnou výškou tónu. Ve vzduchu se kroky nepočítají. Zahlédnutí ohlásí dvojí pípnutí ve chvíli, kdy světlo mimozemšťana zčervená (<code>UpdateAlertLight</code>), chycení klesající tón, nabíjení teleportu stoupající tón (komponenta <code>ChargeSound</code>, sestup z plošiny ho zastaví) a únik šum. Ventilace a strojovna mají smyčku v kvádru přes celou místnost, za jejím okrajem rychle slábne.</p>
+  <p>Po chycení se postava na checkpointu zastaví, uvolní se držené klávesy (<code>FlushPlayerInput</code>) a postava vstane, aby se hráč nevrátil v dřepu ani s „drženou“ chůzí.</p>
 </section>
 
 </body>

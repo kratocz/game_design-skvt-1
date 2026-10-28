@@ -20,7 +20,7 @@
     {"file": "Záznam obrazovky 2026-10-27 v 23.52.24.mov", "ss": 7.0, "to": 18.7, "t": ""}
   ],
   "cards": [
-    {"t": "Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8, "voice": "titulek-10.mp3"}
+    {"t": "Co zatím chybí: mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8, "voice": "titulek-10.mp3"}
   ],
   "blueprints": [
     {"file": "12-priprava-beginplay.png", "t": "Blueprint: příprava při startu (výška kapsle, skoku a kamery, vstup dřepu)"},
@@ -43,7 +43,7 @@
     {"file": "30-teleport-nabijeni.png", "t": "Blueprint: nabíjení teleportu, za 4 s se dokončí"},
     {"file": "34-unik-teleportem.png", "t": "Blueprint: únik, obrazovka zbělá a level začne znovu"}
   ],
-  "outro": "Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.",
+  "outro": "Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty, vyrobila zvuky a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.",
   "outro_sec": 18,
   "outro_voice": "titulek-11.mp3"
 }
