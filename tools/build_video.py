@@ -28,7 +28,7 @@ from PIL import ImageFont
 FF = "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg"
 FP = "/opt/homebrew/opt/ffmpeg-full/bin/ffprobe"
 FPS = 30
-H = int(os.environ.get("VIDEO_H", 1080))  # výška výstupu, např. VIDEO_H=1440 pro verzi na YouTube
+H = int(os.environ.get("VIDEO_H", 1440))  # výška výstupu; 1440p kvůli ostrým blueprintům a kompresi YouTube, VIDEO_H=1080 pro Full HD
 W = H * 16 // 9
 K = H / 1080  # okraje kolem screenshotů jsou navržené pro 1080p; titulky (ASS) se škálují samy podle PlayRes
 INTRO_SEC, BP_SEC, OUTRO_SEC, TITLE_MAX = 5, 8, 9, 10.0
