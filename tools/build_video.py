@@ -125,6 +125,12 @@ def dur(f):
 ENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS),
        "-c:a", "aac", "-b:a", "96k", "-ar", "48000", "-ac", "2", "-shortest", "-movflags", "+faststart"]
 SILENCE = ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo"]
+GAME_DB = -3  # zvuk hry ze záznamu; pod hlasem se ztlumí ještě kompresorem (ducking)
+
+
+def has_audio(f):
+    return bool(subprocess.check_output([FP, "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
+                                         "-of", "csv=p=0", f], stdin=subprocess.DEVNULL).strip())
 
 
 def sub(a):
@@ -156,10 +162,11 @@ def card(text, sec, voice_name, fade_in=True):
     a = work / f"{n:02d}.ass"
     ass(a, text, "Center", 0.3, sec - 0.3)
     vf = ("fade=t=in:d=0.3," if fade_in else "") + f"fade=t=out:st={sec - 0.5}:d=0.5,{sub(a)}"
-    segs.append((n, ["-f", "lavfi", "-t", str(sec), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE, vf, sec))
+    segs.append((n, ["-f", "lavfi", "-t", str(sec), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE, vf, sec, None))
 
 
-segs = []
+segs = []  # (číslo, vstupy, filtr obrazu, délka, filtr zvuku záznamu nebo None)
+game_audio = False
 n = 0
 if "intro" in cfg:
     n += 1
@@ -179,7 +186,11 @@ for s in cfg["shots"]:
         a = work / f"{n:02d}.ass"
         ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, max(TITLE_MAX, VOICE_LEAD + v + 0.3)))
         vf += f",{sub(a)}"
-    segs.append((n, ["-ss", str(ss), "-t", f"{d:.3f}", "-i", src] + SILENCE, vf, d))
+    # záznam se zvukem hry: zvuk ze záznamu s prolínáním jako obraz, jinak ticho
+    af = (f"aformat=sample_rates=48000:channel_layouts=stereo,volume={GAME_DB}dB,"
+          f"afade=t=in:d=0.3,afade=t=out:st={d - 0.35:.2f}:d=0.3") if has_audio(src) else None
+    game_audio = game_audio or af is not None
+    segs.append((n, ["-ss", str(ss), "-t", f"{d:.3f}", "-i", src] + SILENCE, vf, d, af))
 
 for c in cfg.get("cards", []):
     n += 1
@@ -193,18 +204,20 @@ for b in cfg["blueprints"]:
     vf = (f"scale={W - 80}:{H - 150}:force_original_aspect_ratio=decrease:flags=lanczos,"
           f"pad={W}:{H}:(ow-iw)/2:110+({H - 150}-ih)/2:color=0x1e1e1e,fps={FPS},format=yuv420p,"
           f"fade=t=in:d=0.3,fade=t=out:st={BP_SEC - 0.35}:d=0.3,{sub(a)}")
-    segs.append((n, ["-loop", "1", "-t", str(BP_SEC), "-i", src] + SILENCE, vf, BP_SEC))
+    segs.append((n, ["-loop", "1", "-t", str(BP_SEC), "-i", src] + SILENCE, vf, BP_SEC, None))
 
 n += 1
 card(cfg["outro"], cfg.get("outro_sec", OUTRO_SEC), cfg.get("outro_voice"), fade_in=False)
 
 files = []
-for i, inputs, vf, t in segs:
+for i, inputs, vf, t, af in segs:
     o = work / f"{i:02d}.mp4"
     files.append(o)
     if only is not None and i != only:
         continue
-    cmd = [FF, "-nostdin", "-v", "error", "-y"] + inputs + ["-filter_complex", f"[0:v]{vf}[v]", "-map", "[v]", "-map", "1:a"]
+    fc = f"[0:v]{vf}[v]" + (f";[0:a]{af}[a]" if af else "")
+    cmd = [FF, "-nostdin", "-v", "error", "-y"] + inputs + ["-filter_complex", fc, "-map", "[v]",
+                                                            "-map", "[a]" if af else "1:a"]
     if t:
         cmd += ["-t", str(t)]
     subprocess.run(cmd + ENC + [str(o)], check=True)
@@ -232,7 +245,15 @@ if only is None:
             cmd += ["-i", str(o)]
             fc.append(f"[{k}:a]adelay=delays={int(t0 * 1000)}:all=1[a{k}]")
         mix = "".join(f"[a{k}]" for k in range(1, len(placed) + 1))
-        fc.append(f"{mix}amix=inputs={len(placed)}:normalize=0:duration=longest,apad,aformat=channel_layouts=stereo[a]")
+        if game_audio:
+            # zvuk hry se pod hlasem ztlumí (sidechain kompresor řízený hlasem) a pak se s hlasem smíchá
+            fc.append(f"{mix}amix=inputs={len(placed)}:normalize=0:duration=longest,apad,"
+                      f"aformat=sample_rates=48000:channel_layouts=stereo,asplit[vk][vm]")
+            fc.append("[0:a]aformat=sample_rates=48000:channel_layouts=stereo[g];"
+                      "[g][vk]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=500[gd];"
+                      "[gd][vm]amix=inputs=2:normalize=0:duration=first[a]")
+        else:
+            fc.append(f"{mix}amix=inputs={len(placed)}:normalize=0:duration=longest,apad,aformat=channel_layouts=stereo[a]")
         subprocess.run(cmd + ["-filter_complex", ";".join(fc), "-map", "0:v", "-map", "[a]", "-c:v", "copy",
                               "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-t", f"{acc:.3f}", "-movflags", "+faststart",
                               str(out)], check=True)
