@@ -5,7 +5,8 @@ Použití: python3 tools/build_video.py <segmenty.json> <výstup.mp4> [číslo_s
 V JSON jsou adresáře záběrů a screenshotů relativně k JSON souboru (viz
 docs/homeworks/02-plizeni/odevzdani/video-zalozni.json). S číslem segmentu se
 vyrenderuje jen ten (na zkoušku titulků), bez spojení; úvodní karta (klíč
-„intro“, nepovinný) je segment 1. Záběr může mít ořez „ss“/„to“ v sekundách
+„intro“, nepovinný) je segment 1. Záběr může mít ořez „ss“/„to“ v sekundách,
+„hold“ (podržení posledního snímku v sekundách, když se do záběru nevejde hlas)
 a prázdné „t“ (pokračování záběru se stejným titulkem); „cards“ jsou karty
 {"t", "sec"} za záběry, „outro_sec“ délka závěrečného titulku. Hlas: „voice_dir“
 a soubory v „voice“ u záběru či karty, „intro_voice“, „outro_voice“; hlas začíná
@@ -125,7 +126,7 @@ def dur(f):
 ENC = ["-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-r", str(FPS),
        "-c:a", "aac", "-b:a", "96k", "-ar", "48000", "-ac", "2", "-shortest", "-movflags", "+faststart"]
 SILENCE = ["-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo"]
-GAME_DB = -3  # zvuk hry ze záznamu; pod hlasem se ztlumí ještě kompresorem (ducking)
+GAME_DB = 8  # zvuk hry ze záznamu; pod hlasem se ztlumí ještě kompresorem (ducking)
 
 
 def has_audio(f):
@@ -176,21 +177,26 @@ for s in cfg["shots"]:
     n += 1
     src = find(cfg["video_dir"], s["file"])
     ss = s.get("ss", 0)
-    d = s.get("to", dur(src)) - ss
+    src_d = s.get("to", dur(src)) - ss
+    hold = s.get("hold", 0)  # záběr na konci podržet na posledním snímku (aby se do něj vešel hlas)
+    d = src_d + hold
     v = voice(s.get("voice"))
     if VOICE_LEAD + v > d:
         print(f"segment {n}: hlas přesahuje záběr o {VOICE_LEAD + v - d:.1f} s do dalšího", flush=True)
-    # záznam je 2426x1422 (širší než 16:9 o pár řádků): oříznout na 16:9 a zmenšit
-    vf = f"crop=iw:trunc(iw*9/16/2)*2,scale={W}:{H}:flags=lanczos,fps={FPS},fade=t=in:d=0.3,fade=t=out:st={d - 0.35:.2f}:d=0.3"
+    # záznam bývá širší než 16:9 (2426x1422, z OBS 2560x1600): oříznout na 16:9 a zmenšit
+    vf = (f"crop=iw:trunc(iw*9/16/2)*2,scale={W}:{H}:flags=lanczos,fps={FPS},"
+          + (f"tpad=stop_mode=clone:stop_duration={hold}," if hold else "")
+          + f"fade=t=in:d=0.3,fade=t=out:st={d - 0.35:.2f}:d=0.3")
     if s["t"]:
         a = work / f"{n:02d}.ass"
         ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, max(TITLE_MAX, VOICE_LEAD + v + 0.3)))
         vf += f",{sub(a)}"
     # záznam se zvukem hry: zvuk ze záznamu s prolínáním jako obraz, jinak ticho
-    af = (f"aformat=sample_rates=48000:channel_layouts=stereo,volume={GAME_DB}dB,"
-          f"afade=t=in:d=0.3,afade=t=out:st={d - 0.35:.2f}:d=0.3") if has_audio(src) else None
+    af = (f"aformat=sample_rates=48000:channel_layouts=stereo,volume={GAME_DB}dB,alimiter=limit=0.7:level=false,"
+          + (f"apad=pad_dur={hold}," if hold else "")
+          + f"afade=t=in:d=0.3,afade=t=out:st={src_d - 0.35:.2f}:d=0.3") if has_audio(src) else None
     game_audio = game_audio or af is not None
-    segs.append((n, ["-ss", str(ss), "-t", f"{d:.3f}", "-i", src] + SILENCE, vf, d, af))
+    segs.append((n, ["-ss", str(ss), "-t", f"{src_d:.3f}", "-i", src] + SILENCE, vf, d, af))
 
 for c in cfg.get("cards", []):
     n += 1
