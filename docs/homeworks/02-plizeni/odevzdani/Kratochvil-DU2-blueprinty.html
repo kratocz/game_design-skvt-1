@@ -105,7 +105,7 @@
 <section>
   <h2>Dřep a vstávání</h2>
   <p>Při startu si postava uloží výšku kapsle, sílu skoku a výšku kamery ve stoje a zapne vlastní mapování vstupu. Stisk dřepu volá <code>ToggleCrouch</code>: ve vzduchu nic, ve stoje <code>Crouch</code>, v dřepu <code>UnCrouch</code>, ale jen když <code>CanStandUp</code> dovolí. Ta táhne kouli o poloměru kapsle nahoru až nad temeno stojící postavy; musí být aspoň tak přísná jako engine, jinak by se postava pod okrajem stropu později postavila sama.</p>
-  <figure><img src="blueprinty/12-priprava-beginplay.png" alt=""><figcaption><b>12</b> Příprava při startu: výška kapsle, skoku a kamery, vstup dřepu</figcaption></figure>
+  <figure><img src="blueprinty/12-priprava-beginplay.png" alt=""><figcaption><b>12</b> Příprava při startu: výška kapsle, skoku a kamery, vstup dřepu; kamera první osoby se naklání s myší</figcaption></figure>
   <figure><img src="blueprinty/01-prepinac-drepu-vstup.png" alt=""><figcaption><b>1</b> Přepínač dřepu, vstup (C, levý Ctrl, gamepad)</figcaption></figure>
   <figure><img src="blueprinty/02-prepinac-drepu.png" alt=""><figcaption><b>2</b> Přepínač dřepu: pod nízkým stropem postava zůstane v dřepu</figcaption></figure>
   <figure><img src="blueprinty/08-smi-vstat.png" alt=""><figcaption><b>8</b> Smí vstát? Koule nad hlavou otestuje strop</figcaption></figure>
@@ -157,8 +157,8 @@
   <figure><img src="blueprinty/23-pronasledovani-okraj-site.png" alt=""><figcaption><b>23</b> Hráč mimo navigační síť: mimozemšťan dojde na okraj</figcaption></figure>
   <figure><img src="blueprinty/24-pronasledovani-konec.png" alt=""><figcaption><b>24</b> Konec pronásledování, 2 s pauza, zpět na hlídku</figcaption></figure>
   <figure><img src="blueprinty/20-chyceni-kontrola.png" alt=""><figcaption><b>20</b> Chycení do 2 m, pak konec pronásledování</figcaption></figure>
-  <figure><img src="blueprinty/21-chyceni-ztmavnuti.png" alt=""><figcaption><b>21</b> Chycení jen jednou, ztmavnutí a návrat za 0,5 s (postava hráče)</figcaption></figure>
-  <figure><img src="blueprinty/22-chyceni-navrat-na-checkpoint.png" alt=""><figcaption><b>22</b> Návrat na checkpoint i s natočením kamery (postava hráče)</figcaption></figure>
+  <figure><img src="blueprinty/21-chyceni-ztmavnuti.png" alt=""><figcaption><b>21</b> Chycení jen jednou, ztmavnutí a zvuk chycení, návrat za 0,5 s (postava hráče)</figcaption></figure>
+  <figure><img src="blueprinty/22-chyceni-navrat-na-checkpoint.png" alt=""><figcaption><b>22</b> Návrat na checkpoint i s natočením kamery, pak čistý start: zastavit pohyb, zahodit držené klávesy, vstát (postava hráče)</figcaption></figure>
 </section>
 
 <section>
@@ -167,25 +167,27 @@
   <figure><img src="blueprinty/26-hlidka.png" alt=""><figcaption><b>26</b> Hlídka mezi body s čekáním 1,5 s</figcaption></figure>
   <figure><img src="blueprinty/27-hlidka-opakovani-a-start.png" alt=""><figcaption><b>27</b> Opakování hlídky, start a události rodiče</figcaption></figure>
   <figure><img src="blueprinty/28-mimozemstan-init.png" alt=""><figcaption><b>28</b> Start mimozemšťana, detekce každých 0,2 s</figcaption></figure>
-  <figure><img src="blueprinty/25-mimozemstan-svetlo.png" alt=""><figcaption><b>25</b> Světlo nad hlavou, červené při pronásledování</figcaption></figure>
+  <figure><img src="blueprinty/25-mimozemstan-svetlo.png" alt=""><figcaption><b>25</b> Světlo nad hlavou, červené a pípnutí při pronásledování</figcaption></figure>
 </section>
 
 <section>
   <h2>Teleport a únik</h2>
   <p>Když hráč vstoupí na plošinu, začne se teleport nabíjet a jeho světlo sílí. Sestoupení nabíjení zruší. Po 4 s hráč unikne: obrazovka zbělá, mimozemšťan ho přestane vidět a level začne znovu. Když mimozemšťan hráče během nabíjení chytí, platí chycení.</p>
   <figure><img src="blueprinty/29-teleport-plosina.png" alt=""><figcaption><b>29</b> Vstup na plošinu a sestup, světlo každý snímek</figcaption></figure>
-  <figure><img src="blueprinty/30-teleport-nabijeni.png" alt=""><figcaption><b>30</b> Nabíjení teleportu, za 4 s se dokončí</figcaption></figure>
+  <figure><img src="blueprinty/30-teleport-nabijeni.png" alt=""><figcaption><b>30</b> Nabíjení teleportu se zvukem, za 4 s se dokončí</figcaption></figure>
   <figure><img src="blueprinty/31-teleport-svetlo.png" alt=""><figcaption><b>31</b> Světlo plošiny sílí s nabíjením</figcaption></figure>
-  <figure><img src="blueprinty/32-teleport-zruseni.png" alt=""><figcaption><b>32</b> Zrušení nabíjení po sestupu z plošiny</figcaption></figure>
+  <figure><img src="blueprinty/32-teleport-zruseni.png" alt=""><figcaption><b>32</b> Zrušení nabíjení po sestupu z plošiny, zvuk nabíjení se vypne</figcaption></figure>
   <figure><img src="blueprinty/33-teleport-nabito.png" alt=""><figcaption><b>33</b> Nabito, hráč uniká</figcaption></figure>
-  <figure><img src="blueprinty/34-unik-teleportem.png" alt=""><figcaption><b>34</b> Únik: obrazovka zbělá a level začne znovu (postava hráče)</figcaption></figure>
+  <figure><img src="blueprinty/34-unik-teleportem.png" alt=""><figcaption><b>34</b> Únik se zvukem teleportu: obrazovka zbělá a level začne znovu (postava hráče)</figcaption></figure>
   <figure><img src="blueprinty/35-unik-restart-levelu.png" alt=""><figcaption><b>35</b> Po úniku se znovu otevře level (postava hráče)</figcaption></figure>
 </section>
 
 <section>
   <h2>Zvuky</h2>
   <p>Kroky počítá funkce <code>UpdateFootsteps</code> z Event Tick podle ušlé vzdálenosti: krok zazní po 170 cm chůze, v dřepu po 85 cm (stejné tempo jako chůze při poloviční rychlosti), v dřepu tišeji, s mírně náhodnou výškou tónu. Ve vzduchu se kroky nepočítají. Zahlédnutí ohlásí dvojí pípnutí ve chvíli, kdy světlo mimozemšťana zčervená (<code>UpdateAlertLight</code>), chycení klesající tón, nabíjení teleportu stoupající tón (komponenta <code>ChargeSound</code>, sestup z plošiny ho zastaví) a únik šum. Ventilace a strojovna mají smyčku v kvádru přes celou místnost, za jejím okrajem rychle slábne.</p>
-  <p>Po chycení se postava na checkpointu zastaví, uvolní se držené klávesy (<code>FlushPlayerInput</code>) a postava vstane, aby se hráč nevrátil v dřepu ani s „drženou“ chůzí.</p>
+  <p>Po chycení se postava na checkpointu zastaví, uvolní se držené klávesy (<code>FlushPlayerInput</code>) a postava vstane, aby se hráč nevrátil v dřepu ani s „drženou“ chůzí (snímek 22).</p>
+  <figure><img src="blueprinty/41-kroky-updatefootsteps.png" alt=""><figcaption><b>41</b> Kroky podle ušlé vzdálenosti: krok po 170 cm, v dřepu po 85 cm a tišeji (postava hráče)</figcaption></figure>
+  <figure><img src="blueprinty/42-kroky-tick.png" alt=""><figcaption><b>42</b> Kroky se počítají každý snímek (postava hráče)</figcaption></figure>
 </section>
 
 </body>

@@ -23,7 +23,7 @@
     {"t": "Co zatím chybí: mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8, "voice": "titulek-10.mp3"}
   ],
   "blueprints": [
-    {"file": "12-priprava-beginplay.png", "t": "Blueprint: příprava při startu (výška kapsle, skoku a kamery, vstup dřepu)"},
+    {"file": "12-priprava-beginplay.png", "t": "Blueprint: příprava při startu (kapsle, skok, kamera, vstup dřepu), kamera první osoby se naklání s myší"},
     {"file": "01-prepinac-drepu-vstup.png", "t": "Blueprint: přepínač dřepu, vstup (C, levý Ctrl, gamepad)"},
     {"file": "02-prepinac-drepu.png", "t": "Blueprint: přepínač dřepu, pod nízkým stropem zůstane postava v dřepu"},
     {"file": "08-smi-vstat.png", "t": "Blueprint: smí vstát? Koule nad hlavou otestuje strop"},
@@ -40,8 +40,8 @@
     {"file": "14-detekce-cil-pohledu.png", "t": "Blueprint: mimozemšťan míří na temeno hráče, v dřepu je níž"},
     {"file": "19-pronasledovani.png", "t": "Blueprint: pronásledování, rychlost 450 a AI MoveTo na hráče"},
     {"file": "20-chyceni-kontrola.png", "t": "Blueprint: chycení do 2 m, pak konec pronásledování"},
-    {"file": "30-teleport-nabijeni.png", "t": "Blueprint: nabíjení teleportu, za 4 s se dokončí"},
-    {"file": "34-unik-teleportem.png", "t": "Blueprint: únik, obrazovka zbělá a level začne znovu"}
+    {"file": "30-teleport-nabijeni.png", "t": "Blueprint: nabíjení teleportu se zvukem, za 4 s se dokončí"},
+    {"file": "34-unik-teleportem.png", "t": "Blueprint: únik se zvukem teleportu, obrazovka zbělá a level začne znovu"}
   ],
   "outro": "Použití AI: o návrhu mechaniky jsem rozhodoval v dialogu s AI (Claude). Blueprinty podle něj sestavila AI, stejně jako zvuky, titulky a střih. Hru jsem testoval a ladil sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu a ruční opravy blueprintů. Postavil jsem mříže a teleport, natočil a namluvil všechny záběry.",
   "outro_sec": 18,
