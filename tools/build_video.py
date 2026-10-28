@@ -11,8 +11,12 @@ a prázdné „t“ (pokračování záběru se stejným titulkem); „cards“ 
 {"t", "sec"} za záběry, „outro_sec“ délka závěrečného titulku. Hlas: „voice_dir“
 a soubory v „voice“ u záběru či karty, „intro_voice“, „outro_voice“; hlas začíná
 0,4 s po začátku segmentu, karty se podle něj prodlouží, záběr se nemění (hlas
-smí přesáhnout do dalšího segmentu, ne do dalšího hlasu). Potřebuje ffmpeg-full
-(brew, keg-only), výchozí ffmpeg z Homebrew nemá filtr subtitles.
+smí přesáhnout do dalšího segmentu, ne do dalšího hlasu). Zvuk hry se bere ze
+záznamů, které mají zvukovou stopu (hlasitost GAME_DB, pod hlasem ho ztlumí
+kompresor), záznam bez zvuku dostane ticho. Výstup je výchozí 1440p, VIDEO_H=1080
+dá Full HD. Finální konfigurace: docs/homeworks/02-plizeni/odevzdani/video-final.json.
+Potřebuje ffmpeg-full (brew, keg-only), výchozí ffmpeg z Homebrew nemá filtr
+subtitles.
 """
 import json
 import os
@@ -79,7 +83,7 @@ def ts(s):
 
 
 ARIAL = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)  # ASS 46 ≈ em 40 (libass: výška = ascent + descent)
-LINE_MAX = 1440  # 1920 bez okrajů 2 × 220 a podkladu
+LINE_MAX = 1440  # šířka řádku titulku v souřadnicích ASS (PlayRes 1920 × 1080, nezávisí na výstupním rozlišení): 1920 bez okrajů 2 × 220 a podkladu
 SPACER = r"\N{\fs11}\h\N{\fs46}"  # prázdný řádek o čtvrtinu výšky: ASS řádkování nemá
 
 

@@ -52,7 +52,7 @@ Záběry jsou natočené 2026-10-26 23:20–23:41 a použité v záložním vide
 
 ## Druhé natáčení (T8)
 
-Vizuální vylepšení změnila vzhled (panely na stěnách, lampy, ocelové bedny), záběry z prvního natáčení proto nejdou do finálního videa. Nastavení, ovládání a pravidla jsou stejné jako výše.
+Vizuální vylepšení změnila vzhled (panely na stěnách, lampy, ocelové bedny), záběry z prvního natáčení proto nejdou do finálního videa. Ovládání a pravidla jsou stejné jako výše. Druhé natáčení (2026-10-28) proběhlo v OBS se zvukem hry: hra v okně „New Editor Window (PIE)“ 2560 × 1600, zdroj macOS Screen Capture se zachytáváním zvuku, střih ořízne na 16 : 9; výše uvedené nastavení platilo pro první natáčení.
 
 - [x] **1.–6.** Záběry 1 až 6 z prvního natáčení znovu, stejně jako tehdy.
 - [x] **7. Úvodní pohled (titulek 1), asi 8 s.** Jako dřív, teď už s hlídajícím mimozemšťanem v chodbě.
