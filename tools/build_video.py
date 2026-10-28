@@ -27,7 +27,10 @@ from PIL import ImageFont
 
 FF = "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg"
 FP = "/opt/homebrew/opt/ffmpeg-full/bin/ffprobe"
-W, H, FPS = 1920, 1080, 30
+FPS = 30
+H = int(os.environ.get("VIDEO_H", 1080))  # výška výstupu, např. VIDEO_H=1440 pro verzi na YouTube
+W = H * 16 // 9
+K = H / 1080  # okraje kolem screenshotů jsou navržené pro 1080p; titulky (ASS) se škálují samy podle PlayRes
 INTRO_SEC, BP_SEC, OUTRO_SEC, TITLE_MAX = 5, 8, 9, 10.0
 
 cfg_path = Path(sys.argv[1]).resolve()
@@ -207,8 +210,9 @@ for b in cfg["blueprints"]:
     src = find(cfg["bp_dir"], b["file"])
     a = work / f"{n:02d}.ass"
     ass(a, b["t"], "Top", 0.2, BP_SEC - 0.2)
-    vf = (f"scale={W - 80}:{H - 150}:force_original_aspect_ratio=decrease:flags=lanczos,"
-          f"pad={W}:{H}:(ow-iw)/2:110+({H - 150}-ih)/2:color=0x1e1e1e,fps={FPS},format=yuv420p,"
+    bw, bh, top = W - round(80 * K), H - round(150 * K), round(110 * K)
+    vf = (f"scale={bw}:{bh}:force_original_aspect_ratio=decrease:flags=lanczos,"
+          f"pad={W}:{H}:(ow-iw)/2:{top}+({bh}-ih)/2:color=0x1e1e1e,fps={FPS},format=yuv420p,"
           f"fade=t=in:d=0.3,fade=t=out:st={BP_SEC - 0.35}:d=0.3,{sub(a)}")
     segs.append((n, ["-loop", "1", "-t", str(BP_SEC), "-i", src] + SILENCE, vf, BP_SEC, None))
 
