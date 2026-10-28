@@ -43,7 +43,7 @@
     {"file": "30-teleport-nabijeni.png", "t": "Blueprint: nabíjení teleportu, za 4 s se dokončí"},
     {"file": "34-unik-teleportem.png", "t": "Blueprint: únik, obrazovka zbělá a level začne znovu"}
   ],
-  "outro": "Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty, vyrobila zvuky a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže a teleport a natočil jsem všechny záběry.",
+  "outro": "Použití AI: o návrhu mechaniky jsem rozhodoval v dialogu s AI (Claude). Blueprinty podle něj sestavila AI, stejně jako zvuky, titulky a střih. Hru jsem testoval a ladil sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu a ruční opravy blueprintů. Postavil jsem mříže a teleport, natočil a namluvil všechny záběry.",
   "outro_sec": 18,
   "outro_voice": "titulek-11.mp3"
 }
