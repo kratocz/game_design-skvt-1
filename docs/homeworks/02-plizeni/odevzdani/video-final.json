@@ -35,7 +35,13 @@
     {"file": "07-kamera-vychozi-vyska.png", "t": "Blueprint: výchozí výška kamery"},
     {"file": "10-poza-drepu-animgraph.png", "t": "Animační blueprint: póza dřepu v AnimGraphu"},
     {"file": "11-poza-drepu-update.png", "t": "Animační blueprint: stav dřepu a rychlost pro pózu"},
-    {"file": "13-character-movement.png", "t": "Nastavení Character Movement pro dřep"}
+    {"file": "13-character-movement.png", "t": "Nastavení Character Movement pro dřep"},
+    {"file": "17-detekce-podminky-detail.png", "t": "Blueprint: vidí mimozemšťan hráče? Ve stoje do 15 m, v dřepu jen do 5 m, v kuželu ±50°"},
+    {"file": "14-detekce-cil-pohledu.png", "t": "Blueprint: mimozemšťan míří na temeno hráče, v dřepu je níž"},
+    {"file": "19-pronasledovani.png", "t": "Blueprint: pronásledování, rychlost 450 a AI MoveTo na hráče"},
+    {"file": "20-chyceni-kontrola.png", "t": "Blueprint: chycení do 2 m, pak konec pronásledování"},
+    {"file": "30-teleport-nabijeni.png", "t": "Blueprint: nabíjení teleportu, za 4 s se dokončí"},
+    {"file": "34-unik-teleportem.png", "t": "Blueprint: únik, obrazovka zbělá a level začne znovu"}
   ],
   "outro": "Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.",
   "outro_sec": 18,
