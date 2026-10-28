@@ -131,8 +131,8 @@
 
 <section>
   <h2>Animace a nastavení pohybu</h2>
-  <p>Kopie animačního blueprintu kurzu přepíná mezi původní state machine a pózou dřepu přes Blend Poses by bool (0,2 s). Póza dřepu je blend space <code>BS_CrouchMove</code> z animací kurzu <code>Crouch_Idle</code> a <code>Crouch_Walk</code> podle rychlosti. V Character Movement je povolený dřep, rychlost v dřepu 250 a výška kapsle v dřepu 140 cm (polovina 70), odladěná podle výšky hlavy v animaci chůze v dřepu.</p>
-  <figure><img src="blueprinty/10-poza-drepu-animgraph.png" alt=""><figcaption><b>10</b> Animační blueprint: póza dřepu v AnimGraphu</figcaption></figure>
+  <p>Kopie animačního blueprintu kurzu přepíná mezi původní state machine a pózou dřepu přes Blend Poses by bool (0,2 s). Póza dřepu je blend space <code>BS_CrouchMove</code> z animací kurzu <code>Crouch_Idle</code> a <code>Crouch_Walk</code> podle rychlosti. Póza dřepu platí jen na zemi (<code>IsCrouching AND NOT IsJumping</code>): při skoku v dřepu převezme state machine kurzu animaci skoku a pádu, takže postava ve vzduchu nešlape. V Character Movement je povolený dřep, rychlost v dřepu 250 a výška kapsle v dřepu 140 cm (polovina 70), odladěná podle výšky hlavy v animaci chůze v dřepu.</p>
+  <figure><img src="blueprinty/10-poza-drepu-animgraph.png" alt=""><figcaption><b>10</b> Animační blueprint: póza dřepu jen na zemi, ve vzduchu animace skoku z kurzu</figcaption></figure>
   <figure><img src="blueprinty/11-poza-drepu-update.png" alt=""><figcaption><b>11</b> Animační blueprint: stav dřepu a rychlost pro pózu</figcaption></figure>
   <figure><img src="blueprinty/39-animace-update-cely.png" alt=""><figcaption><b>39</b> Animační blueprint: celé Update Animation (rychlost, skok a pád z kurzu, póza dřepu)</figcaption></figure>
   <figure><img src="blueprinty/40-animace-inicializace.png" alt=""><figcaption><b>40</b> Animační blueprint: inicializace, odkaz na postavu</figcaption></figure>

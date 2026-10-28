@@ -33,7 +33,7 @@
     {"file": "05-kamera-vstani.png", "t": "Blueprint: kamera při vstání"},
     {"file": "06-kamera-prubeh.png", "t": "Blueprint: průběh přechodu kamery (smoothstep)"},
     {"file": "07-kamera-vychozi-vyska.png", "t": "Blueprint: výchozí výška kamery"},
-    {"file": "10-poza-drepu-animgraph.png", "t": "Animační blueprint: póza dřepu v AnimGraphu"},
+    {"file": "10-poza-drepu-animgraph.png", "t": "Animační blueprint: póza dřepu jen na zemi, ve vzduchu animace skoku z kurzu"},
     {"file": "11-poza-drepu-update.png", "t": "Animační blueprint: stav dřepu a rychlost pro pózu"},
     {"file": "13-character-movement.png", "t": "Nastavení Character Movement pro dřep"},
     {"file": "17-detekce-podminky-detail.png", "t": "Blueprint: vidí mimozemšťan hráče? Ve stoje do 15 m, v dřepu jen do 5 m, v kuželu ±50°"},
