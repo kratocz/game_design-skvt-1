@@ -7,7 +7,10 @@ docs/homeworks/02-plizeni/odevzdani/video-zalozni.json). S číslem segmentu se
 vyrenderuje jen ten (na zkoušku titulků), bez spojení; úvodní karta (klíč
 „intro“, nepovinný) je segment 1. Záběr může mít ořez „ss“/„to“ v sekundách
 a prázdné „t“ (pokračování záběru se stejným titulkem); „cards“ jsou karty
-{"t", "sec"} za záběry, „outro_sec“ délka závěrečného titulku. Potřebuje ffmpeg-full
+{"t", "sec"} za záběry, „outro_sec“ délka závěrečného titulku. Hlas: „voice_dir“
+a soubory v „voice“ u záběru či karty, „intro_voice“, „outro_voice“; hlas začíná
+0,4 s po začátku segmentu, karty se podle něj prodlouží, záběr se nemění (hlas
+smí přesáhnout do dalšího segmentu, ne do dalšího hlasu). Potřebuje ffmpeg-full
 (brew, keg-only), výchozí ffmpeg z Homebrew nemá filtr subtitles.
 """
 import json
@@ -128,34 +131,59 @@ def sub(a):
     return f"subtitles='{a}':fontsdir=/System/Library/Fonts/Supplemental"
 
 
+VOICE_LEAD = 0.4  # hlas začíná 0,4 s po začátku segmentu
+voices = []  # (číslo segmentu, soubor, délka)
+
+
+def voice(name):
+    # ticho na krajích pryč (zůstane 0,1 s), hučení pod 80 Hz pryč, hlasitost na −16 LUFS (web)
+    if not name:
+        return 0
+    o = work / f"voice-{Path(name).stem}.wav"
+    af = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.1,areverse,"
+          "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.1,areverse,"
+          "highpass=f=80,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000")
+    subprocess.run([FF, "-nostdin", "-v", "error", "-y", "-i", find(cfg["voice_dir"], name), "-af", af, "-ac", "1", str(o)],
+                   check=True)
+    v = dur(str(o))
+    voices.append((n, o, v))
+    return v
+
+
+def card(text, sec, voice_name, fade_in=True):
+    # karta na tmavém pozadí; s hlasem trvá aspoň do jeho konce + 0,8 s
+    sec = max(sec, VOICE_LEAD + voice(voice_name) + 0.8)
+    a = work / f"{n:02d}.ass"
+    ass(a, text, "Center", 0.3, sec - 0.3)
+    vf = ("fade=t=in:d=0.3," if fade_in else "") + f"fade=t=out:st={sec - 0.5}:d=0.5,{sub(a)}"
+    segs.append((n, ["-f", "lavfi", "-t", str(sec), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE, vf, sec))
+
+
 segs = []
 n = 0
 if "intro" in cfg:
     n += 1
-    a = work / f"{n:02d}.ass"
-    ass(a, cfg["intro"], "Center", 0.3, INTRO_SEC - 0.3)
-    segs.append((n, ["-f", "lavfi", "-t", str(INTRO_SEC), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
-                 f"fade=t=out:st={INTRO_SEC - 0.5}:d=0.5,{sub(a)}", INTRO_SEC))
+    card(cfg["intro"], INTRO_SEC, cfg.get("intro_voice"), fade_in=False)
 
 for s in cfg["shots"]:
     n += 1
     src = find(cfg["video_dir"], s["file"])
     ss = s.get("ss", 0)
     d = s.get("to", dur(src)) - ss
+    v = voice(s.get("voice"))
+    if VOICE_LEAD + v > d:
+        print(f"segment {n}: hlas přesahuje záběr o {VOICE_LEAD + v - d:.1f} s do dalšího", flush=True)
     # záznam je 2426x1422 (širší než 16:9 o pár řádků): oříznout na 16:9 a zmenšit
     vf = f"crop=iw:trunc(iw*9/16/2)*2,scale={W}:{H}:flags=lanczos,fps={FPS},fade=t=in:d=0.3,fade=t=out:st={d - 0.35:.2f}:d=0.3"
     if s["t"]:
         a = work / f"{n:02d}.ass"
-        ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, TITLE_MAX))
+        ass(a, s["t"], "Bottom", 0.4, min(d - 0.3, max(TITLE_MAX, VOICE_LEAD + v + 0.3)))
         vf += f",{sub(a)}"
     segs.append((n, ["-ss", str(ss), "-t", f"{d:.3f}", "-i", src] + SILENCE, vf, d))
 
 for c in cfg.get("cards", []):
     n += 1
-    a = work / f"{n:02d}.ass"
-    ass(a, c["t"], "Center", 0.3, c["sec"] - 0.3)
-    segs.append((n, ["-f", "lavfi", "-t", str(c["sec"]), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
-                 f"fade=t=in:d=0.3,fade=t=out:st={c['sec'] - 0.5}:d=0.5,{sub(a)}", c["sec"]))
+    card(c["t"], c["sec"], c.get("voice"))
 
 for b in cfg["blueprints"]:
     n += 1
@@ -168,11 +196,7 @@ for b in cfg["blueprints"]:
     segs.append((n, ["-loop", "1", "-t", str(BP_SEC), "-i", src] + SILENCE, vf, BP_SEC))
 
 n += 1
-OUTRO_SEC = cfg.get("outro_sec", OUTRO_SEC)
-a = work / f"{n:02d}.ass"
-ass(a, cfg["outro"], "Center", 0.3, OUTRO_SEC - 0.3)
-segs.append((n, ["-f", "lavfi", "-t", str(OUTRO_SEC), "-i", f"color=c=0x101010:s={W}x{H}:r={FPS}"] + SILENCE,
-             f"fade=t=out:st={OUTRO_SEC - 0.5}:d=0.5,{sub(a)}", OUTRO_SEC))
+card(cfg["outro"], cfg.get("outro_sec", OUTRO_SEC), cfg.get("outro_voice"), fade_in=False)
 
 files = []
 for i, inputs, vf, t in segs:
@@ -189,6 +213,27 @@ for i, inputs, vf, t in segs:
 if only is None:
     lst = work / "list.txt"
     lst.write_text("".join(f"file '{f}'\n" for f in files))
+    joined = work / "joined.mp4" if voices else out
     subprocess.run([FF, "-nostdin", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy",
-                    "-movflags", "+faststart", str(out)], check=True)
+                    "-movflags", "+faststart", str(joined)], check=True)
+    if voices:
+        # hlas na časové ose: začátek segmentu podle skutečné délky vyrenderovaných souborů
+        starts, acc = {}, 0.0
+        for (i, *_), f in zip(segs, files):
+            starts[i] = acc
+            acc += dur(str(f))
+        placed = sorted((starts[i] + VOICE_LEAD, o, v) for i, o, v in voices)
+        for (t0, o0, v0), (t1, o1, _) in zip(placed, placed[1:]):
+            if t0 + v0 > t1:
+                raise SystemExit(f"hlas {o0.name} zasahuje do {o1.name} o {t0 + v0 - t1:.1f} s")
+        cmd = [FF, "-nostdin", "-v", "error", "-y", "-i", str(joined)]
+        fc = []
+        for k, (t0, o, _) in enumerate(placed, 1):
+            cmd += ["-i", str(o)]
+            fc.append(f"[{k}:a]adelay=delays={int(t0 * 1000)}:all=1[a{k}]")
+        mix = "".join(f"[a{k}]" for k in range(1, len(placed) + 1))
+        fc.append(f"{mix}amix=inputs={len(placed)}:normalize=0:duration=longest,apad,aformat=channel_layouts=stereo[a]")
+        subprocess.run(cmd + ["-filter_complex", ";".join(fc), "-map", "0:v", "-map", "[a]", "-c:v", "copy",
+                              "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-t", f"{acc:.3f}", "-movflags", "+faststart",
+                              str(out)], check=True)
     print("výstup", out, dur(str(out)))

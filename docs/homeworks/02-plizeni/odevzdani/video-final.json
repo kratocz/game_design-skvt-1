@@ -1,24 +1,26 @@
 {
   "video_dir": "video",
   "bp_dir": "blueprinty",
+  "voice_dir": "video/hlas",
   "intro": "{\\fs72\\b1}Plížení{\\fs50\\b0}\\Nukázka herní mechaniky v Unreal Engine 5\\N\\N{\\fs42}Domácí úkol č. 2 v kurzu Game design pro začátečníky\\NSKVOT, podzim 2026\\N\\NPetr Kratochvíl · krato.cz",
+  "intro_voice": "titulek-00.mp3",
   "shots": [
-    {"file": "Záznam obrazovky 2026-10-27 v 23.38.47.mov", "ss": 3.5, "to": 10.3, "t": "Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací."},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.23.31.mov", "t": "Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo."},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.24.40.mov", "t": "Kamera se v dřepu plynule přiblíží a sníží. Ve ventilaci by do stropu narazila sama; takhle hráč pozná, že se plíží."},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.25.50.mov", "t": "Pod nízkým stropem vstát nejde. Hra pokyn zahodí, takže z ventilace nevylezeš nečekaně ve stoje."},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.32.20.mov", "t": "Skok v dřepu je nízký poskok: vejde se pod strop a dostane tě do ventilace. Plný skok až po vstání."},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.35.22.mov", "to": 10.8, "t": "V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk."},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.38.47.mov", "ss": 2.0, "to": 10.3, "t": "Plížení: útěk z vesmírné lodi. Chodbu hlídá mimozemšťan, druhá cesta vede ventilací.", "voice": "titulek-01.mp3"},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.23.31.mov", "t": "Dřep se zapíná a vypíná. Ventilací se leze dlouho a držet klávesu by unavovalo.", "voice": "titulek-02.mp3"},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.24.40.mov", "t": "Kamera se v dřepu plynule přiblíží a sníží. Ve ventilaci by do stropu narazila sama; takhle hráč pozná, že se plíží.", "voice": "titulek-03.mp3"},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.25.50.mov", "t": "Pod nízkým stropem vstát nejde. Hra pokyn zahodí, takže z ventilace nevylezeš nečekaně ve stoje.", "voice": "titulek-04.mp3"},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.32.20.mov", "t": "Skok v dřepu je nízký poskok: vejde se pod strop a dostane tě do ventilace. Plný skok až po vstání.", "voice": "titulek-05.mp3"},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.35.22.mov", "to": 10.8, "t": "V dřepu je postava pomalejší. Plížení je opatrnost, ne útěk.", "voice": "titulek-06.mp3"},
     {"file": "Záznam obrazovky 2026-10-27 v 23.35.22.mov", "ss": 14.5, "to": 23.0, "t": ""},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.42.02.mov", "to": 11.15, "t": "Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka."},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.42.02.mov", "to": 11.15, "t": "Ve stoje tě mimozemšťan zahlédne zdálky, v dřepu až zblízka.", "voice": "titulek-07.mp3"},
     {"file": "Záznam obrazovky 2026-10-27 v 23.44.31.mov", "ss": 10.0, "to": 20.6, "t": ""},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.28.11.mov", "t": "Chodba je rychlá a riskantní, ventilace pomalá a bezpečná."},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.28.11.mov", "t": "Chodba je rychlá a riskantní, ventilace pomalá a bezpečná.", "voice": "titulek-08.mp3"},
     {"file": "Záznam obrazovky 2026-10-27 v 23.46.27.mov", "t": ""},
-    {"file": "Záznam obrazovky 2026-10-27 v 23.47.53.mov", "ss": 8.7, "to": 17.4, "t": "Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš."},
+    {"file": "Záznam obrazovky 2026-10-27 v 23.47.53.mov", "ss": 8.5, "to": 17.5, "t": "Cílem je teleport ve strojovně. Nabíjí se 4 s, takže s mimozemšťanem v zádech to nestihneš.", "voice": "titulek-09.mp3"},
     {"file": "Záznam obrazovky 2026-10-27 v 23.52.24.mov", "ss": 7.0, "to": 18.7, "t": ""}
   ],
   "cards": [
-    {"t": "Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8}
+    {"t": "Co zatím chybí: hra nemá zvuky a mimozemšťan hráče, kterého ztratí z dohledu, nehledá, jen se vrátí k hlídce.", "sec": 8, "voice": "titulek-10.mp3"}
   ],
   "blueprints": [
     {"file": "12-priprava-beginplay.png", "t": "Blueprint: příprava při startu (výška kapsle, skoku a kamery, vstup dřepu)"},
@@ -36,5 +38,6 @@
     {"file": "13-character-movement.png", "t": "Nastavení Character Movement pro dřep"}
   ],
   "outro": "Použití AI: návrh vznikl v dialogu s AI (Claude), ta postavila blueprinty a připravila titulky a střih. Plížení jsem ladil a testoval sám: výšku kapsle v dřepu, rozměry levelu podle chůze v dřepu, ruční opravy blueprintů. Moje jsou i mříže, teleport a stroje a natočil jsem všechny záběry.",
-  "outro_sec": 18
+  "outro_sec": 18,
+  "outro_voice": "titulek-11.mp3"
 }
