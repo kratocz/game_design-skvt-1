@@ -82,8 +82,8 @@
   <h3>Kde co je (vlastní assety v <code>Content/Krato/</code>)</h3>
   <table>
     <tr><th>Asset</th><th>Co dělá</th><th>Snímky</th></tr>
-    <tr><td><code>BP_KratoCharacter</code></td><td>postava (potomek postavy z kurzu): dřep, skok v dřepu, kamera, chycení a únik</td><td>1–9, 12–14, 21–22, 34–35</td></tr>
-    <tr><td><code>ABP_KratoCharacter</code></td><td>kopie animačního blueprintu kurzu s pózou dřepu (<code>BS_CrouchMove</code>)</td><td>10–11</td></tr>
+    <tr><td><code>BP_KratoCharacter</code></td><td>postava (potomek postavy z kurzu): dřep, skok v dřepu, kamera, chycení a únik</td><td>1–9, 12–14, 21–22, 34–38</td></tr>
+    <tr><td><code>ABP_KratoCharacter</code></td><td>kopie animačního blueprintu kurzu s pózou dřepu (<code>BS_CrouchMove</code>)</td><td>10–11, 39–40</td></tr>
     <tr><td><code>BP_KratoAlien</code></td><td>mimozemšťan: hlídka, detekce, pronásledování, chycení</td><td>15–20, 23–28</td></tr>
     <tr><td><code>BP_KratoTeleport</code></td><td>teleport s nabíjením</td><td>29–33</td></tr>
     <tr><td><code>IA_Crouch</code>, <code>IMC_Krato</code></td><td>vstup dřepu</td><td>1</td></tr>
@@ -108,6 +108,7 @@
   <figure><img src="blueprinty/01-prepinac-drepu-vstup.png" alt=""><figcaption><b>1</b> Přepínač dřepu, vstup (C, levý Ctrl, gamepad)</figcaption></figure>
   <figure><img src="blueprinty/02-prepinac-drepu.png" alt=""><figcaption><b>2</b> Přepínač dřepu: pod nízkým stropem postava zůstane v dřepu</figcaption></figure>
   <figure><img src="blueprinty/08-smi-vstat.png" alt=""><figcaption><b>8</b> Smí vstát? Koule nad hlavou otestuje strop</figcaption></figure>
+  <figure><img src="blueprinty/36-smi-vstat-cely.png" alt=""><figcaption><b>36</b> Smí vstát? Celá funkce včetně výpočtu výšky temene stojící postavy</figcaption></figure>
 </section>
 
 <section>
@@ -123,6 +124,8 @@
   <figure><img src="blueprinty/04-kamera-drep.png" alt=""><figcaption><b>4</b> Kamera při začátku dřepu</figcaption></figure>
   <figure><img src="blueprinty/05-kamera-vstani.png" alt=""><figcaption><b>5</b> Kamera při vstání</figcaption></figure>
   <figure><img src="blueprinty/06-kamera-prubeh.png" alt=""><figcaption><b>6</b> Průběh přechodu kamery (smoothstep)</figcaption></figure>
+  <figure><img src="blueprinty/37-kamera-prubeh-alpha-a-rameno.png" alt=""><figcaption><b>37</b> Průběh přechodu kamery: Alpha a délka ramene</figcaption></figure>
+  <figure><img src="blueprinty/38-kamera-prubeh-vyska.png" alt=""><figcaption><b>38</b> Průběh přechodu kamery: výška ramene ve třetí osobě a výška kamery v první osobě</figcaption></figure>
   <figure><img src="blueprinty/07-kamera-vychozi-vyska.png" alt=""><figcaption><b>7</b> Výchozí výška kamery</figcaption></figure>
 </section>
 
@@ -131,6 +134,8 @@
   <p>Kopie animačního blueprintu kurzu přepíná mezi původní state machine a pózou dřepu přes Blend Poses by bool (0,2 s). Póza dřepu je blend space <code>BS_CrouchMove</code> z animací kurzu <code>Crouch_Idle</code> a <code>Crouch_Walk</code> podle rychlosti. V Character Movement je povolený dřep, rychlost v dřepu 250 a výška kapsle v dřepu 140 cm (polovina 70), odladěná podle výšky hlavy v animaci chůze v dřepu.</p>
   <figure><img src="blueprinty/10-poza-drepu-animgraph.png" alt=""><figcaption><b>10</b> Animační blueprint: póza dřepu v AnimGraphu</figcaption></figure>
   <figure><img src="blueprinty/11-poza-drepu-update.png" alt=""><figcaption><b>11</b> Animační blueprint: stav dřepu a rychlost pro pózu</figcaption></figure>
+  <figure><img src="blueprinty/39-animace-update-cely.png" alt=""><figcaption><b>39</b> Animační blueprint: celé Update Animation (rychlost, skok a pád z kurzu, póza dřepu)</figcaption></figure>
+  <figure><img src="blueprinty/40-animace-inicializace.png" alt=""><figcaption><b>40</b> Animační blueprint: inicializace, odkaz na postavu</figcaption></figure>
   <figure><img src="blueprinty/13-character-movement.png" alt=""><figcaption><b>13</b> Nastavení Character Movement pro dřep</figcaption></figure>
 </section>
 
