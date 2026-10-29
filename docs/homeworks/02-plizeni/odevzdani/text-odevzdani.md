@@ -19,4 +19,4 @@ Celý projekt je v mém forku repozitáře kurzu na GitHubu, větev student-krat
 
 ## Volitelný odstavec (jen pokud bude na Drive i hratelná verze pro macOS)
 
-Ve složce na Google Drive je navíc hratelná verze pro macOS (Plizeni-macOS.zip, jen Apple Silicon). Aplikace není podepsaná, takže ji macOS při prvním spuštění zablokuje; otevřít jde přes Nastavení systému → Soukromí a zabezpečení → Přesto otevřít. Ovládání: WASD a myš, dřep C nebo levý Ctrl, skok mezerník, ukončení Esc.
+Ve složce na Google Drive je navíc hratelná verze pro macOS (Plizeni-macOS.zip, jen Apple Silicon). Aplikace není podepsaná, takže ji macOS při prvním spuštění zablokuje; otevřít jde přes Nastavení systému → Soukromí a zabezpečení → Přesto otevřít. Ovládání: WASD a myš, dřep C nebo levý Ctrl, skok mezerník, ukončení Esc. Pro hratelnou verzi jsem doplnil ukončení klávesou Esc a srovnání kamery na startu; tyto dvě drobnosti v PDF nejsou, jsou v repozitáři.
