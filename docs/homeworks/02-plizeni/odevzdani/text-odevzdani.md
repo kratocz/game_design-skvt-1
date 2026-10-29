@@ -17,6 +17,6 @@ Video je i na YouTube s kapitolami: https://youtu.be/VnrnaBxlFDY
 
 Celý projekt je v mém forku repozitáře kurzu na GitHubu, větev student-krato-homeworks: https://github.com/kratocz/game_design-skvt-1/tree/student-krato-homeworks
 
-## Volitelný odstavec (jen pokud bude na Drive i hratelná verze pro macOS)
+## Hratelná verze pro macOS (zip je na Drive, odstavec patří do textu)
 
 Ve složce na Google Drive je navíc hratelná verze pro macOS (Plizeni-macOS.zip, Apple Silicon i Intel, macOS 14 a novější; na Intelu netestováno). Aplikace není podepsaná, takže ji macOS při prvním spuštění zablokuje; otevřít jde přes Nastavení systému → Soukromí a zabezpečení → Přesto otevřít. Ovládání: WASD a myš, dřep C nebo levý Ctrl, skok mezerník, ukončení Esc. Pro hratelnou verzi jsem doplnil ukončení klávesou Esc a srovnání kamery na startu; jejich blueprinty v PDF nejsou, jsou v repozitáři.
