@@ -6,7 +6,9 @@
 #   nohup bash tools/package_mac.sh > ~/Desktop/plizeni-package.log 2>&1 &
 #   tail -f ~/Desktop/plizeni-package.log
 # Výstup: <cílová složka, 1. argument>/Plizeni.app a archiv $ZIP (výchozí ~/Desktop/Plizeni-macOS a Plizeni-macOS.zip).
-# Architektura: výchozí ARCH=arm64+x64 (univerzální), ARCH=arm64 jen Apple Silicon (menší zip). Bez parametru
+# Architektura: výchozí ARCH=arm64+x64 (univerzální), ARCH=arm64 jen Apple Silicon (menší zip). Na Intel Macu ale hra
+# z UE 5.8 neběží ani univerzální: Metal RHI vyžaduje GPUFamilyApple7 (M1+) a skončí hláškou „Rendering support for
+# Intel based Mac has been removed“ (MetalRHI/Private/MetalDevice.cpp; ověřeno na MacBooku s Intelem 2026-10-29). Bez parametru
 # -clientarchitecture by UBT přeložil jen architekturu Macu, na kterém se balí (DefaultArchitecture=MacTargetArchitectureHost
 # v BaseEngine.ini).
 # Ověření (2026-10-29): open -n <cílová složka>/Plizeni.app a série screencapture -x. Nová aplikace je při prvním
