@@ -58,6 +58,7 @@ Po merge `upstream/stream10` (2026-10-24). Odvozeno ze jmen v assetech přes `st
 - **Pod nízkým stropem vstát nejde:** hra pokus zahodí a postava zůstane v dřepu, dokud hráč nezkusí vstát znovu na volném místě. Kdyby vstala sama, jakmile je nad ní místo, mohla by se na výstupu z ventilace nečekaně napřímit před mimozemšťanem.
 - **Ve vzduchu se dřep nepřepíná** (doplněno 2026-10-24 po kontrole postupu): stisk ve vzduchu se ignoruje. Jinak by se do ventilace dalo dostat i skokem ve stoje a dřepnutím ve vzduchu, protože kapsle se ve vzduchu zmenšuje kolem středu a nohy vyskočí výš, a kamera by při přechodu ve vzduchu škubala.
 - **Klávesy:** C a levý Ctrl, na gamepadu pravé tlačítko (B / kolečko). C, levý Ctrl ani to tlačítko gamepadu kurz nepoužívá (ověřeno v T0).
+- **Esc ukončí hru** (doplněno 2026-10-29 kvůli hratelné verzi pro macOS): akce `IA_Quit` v `IMC_Krato` volá Quit Game. Kurz má na Escape v `IMC_SkvtInput` akci `IA_OpenMenu`; `IMC_Krato` má vyšší prioritu a vstup spotřebuje, takže by Esc menu kurzu otevřít neměl (*ověřit*). Že Esc hru ukončí, je ověřené v zabalené hře 2026-10-29.
 
 ### Pohyb v dřepu
 
