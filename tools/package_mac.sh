@@ -1,11 +1,13 @@
 #!/bin/bash
-# Zabalí hratelnou verzi pro macOS (Shipping, Apple Silicon) se startovní mapou L_Plizeni.
+# Zabalí hratelnou verzi pro macOS (Shipping, výchozí jen Apple Silicon) se startovní mapou L_Plizeni.
 # Výchozí herní mapa projektu je mapa kurzu (Config/DefaultEngine.ini, soubor kurzu), proto ji skript
 # na dobu zabalení přepne na L_Plizeni a po skončení (i po chybě nebo Ctrl+C) soubor vrátí.
 # Pouštět ve vlastním terminálu s logem (poprvé desítky minut, pak pár minut):
 #   nohup bash tools/package_mac.sh > ~/Desktop/plizeni-package.log 2>&1 &
 #   tail -f ~/Desktop/plizeni-package.log
 # Výstup: <cílová složka>/Plizeni.app a Plizeni-macOS.zip (výchozí ~/Desktop/Plizeni-macOS).
+# Univerzální build pro Apple Silicon i Intel (výchozí je jen architektura Macu, na kterém se balí):
+#   ARCH=arm64+x64 ZIP=Plizeni-macOS-universal.zip bash tools/package_mac.sh ~/Desktop/Plizeni-macOS-universal
 #
 # Pasti UE 5.8 na tomhle projektu (2026-10-29):
 # - UBT po překladu volá xcodebuild „PostBuildSync“ a ten při volání z UAT padá („Failed to finalize the .app
@@ -23,6 +25,10 @@ OUT="${1:-$HOME/Desktop/Plizeni-macOS}"
 INI="$ROOT/Config/DefaultEngine.ini"
 MAP="/Game/Krato/Maps/L_Plizeni"
 STAGED="$ROOT/Saved/StagedBuilds/Mac/skvt_projekt-Mac-Shipping.app"
+ZIP="${ZIP:-Plizeni-macOS.zip}"
+# prázdné pole by v bash 3.2 macOS se set -u spadlo na „unbound variable“, proto ${…+…}
+ARCH_ARGS=()
+if [ -n "${ARCH:-}" ]; then ARCH_ARGS=(-clientarchitecture="$ARCH"); fi
 export UE_BUILD_FROM_XCODE=1
 
 cp "$INI" "$INI.package-backup"
@@ -34,14 +40,15 @@ date '+start %Y-%m-%d %H:%M:%S'
 "$UE/Engine/Build/BatchFiles/RunUAT.sh" BuildCookRun \
   -project="$ROOT/skvt_projekt.uproject" -noP4 -utf8output \
   -platform=Mac -clientconfig=Shipping \
-  -build -cook -map="$MAP" -stage -pak -IgnoreCookErrors
+  -build -cook -map="$MAP" -stage -pak -IgnoreCookErrors ${ARCH_ARGS[@]+"${ARCH_ARGS[@]}"}
 
 # aplikace musí obsahovat uvařená data, jinak se nespustí
 ls "$STAGED/Contents/UE/skvt_projekt/Content/Paks/"*.pak > /dev/null
 mkdir -p "$OUT"
-rm -rf "${OUT:?}/Plizeni.app" "${OUT:?}/Plizeni-macOS.zip"
+rm -rf "${OUT:?}/Plizeni.app" "${OUT:?}/$ZIP"
 ditto "$STAGED" "$OUT/Plizeni.app"
 codesign -v "$OUT/Plizeni.app"
-(cd "$OUT" && ditto -c -k --keepParent Plizeni.app Plizeni-macOS.zip)
+lipo -info "$OUT/Plizeni.app/Contents/MacOS/skvt_projekt-Mac-Shipping"
+(cd "$OUT" && ditto -c -k --keepParent Plizeni.app "$ZIP")
 date '+konec %Y-%m-%d %H:%M:%S'
 ls -la "$OUT"
