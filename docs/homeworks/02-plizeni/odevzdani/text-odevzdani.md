@@ -9,7 +9,7 @@ Odevzdávám vypracování DÚ č. 2 – mechaniku plížení v Unreal Engine 5.
 
 Přikládám video (5:58), ve kterém je mechanika ukázaná ve hře: útěk z vesmírné lodi, kde chodbu hlídá mimozemšťan a druhá cesta vede ventilací. Video ukazuje dřep jako přepínač, přiblížení kamery v dřepu, nemožnost vstát pod nízkým stropem, nízký poskok do ventilace, pomalejší pohyb v dřepu, zahlédnutí mimozemšťanem ve stoje zdálky a v dřepu až zblízka, volbu mezi chodbou a ventilací a únik teleportem. Hra má vlastní zvuky včetně kroků hráče i mimozemšťana, titulky jsou namluvené. Po ukázce ze hry video uvádí, co zatím chybí a jak jsem použil AI, a na závěr ukazuje 19 nejdůležitějších blueprintů.
 
-Dále přikládám PDF Kratochvil-DU2-blueprinty.pdf (32 stran) se všemi blueprinty v plném rozlišení. Každý graf má komentář s českým nadpisem a každá sekce krátký popis implementace. Na první straně je design v kostce, přehled vlastních assetů, co nefunguje nebo chybí, a přiznání použití AI.
+Dále přikládám PDF Kratochvil-DU2-blueprinty.pdf (32 stran) se všemi blueprinty v plném rozlišení. Každý graf má komentář s českým nadpisem a každá sekce krátký popis implementace. Na první straně je design v kostce, přehled vlastních assetů, seznam toho, co nefunguje nebo chybí, a přiznání použití AI.
 
 Obojí je také na Google Drive: https://drive.google.com/drive/folders/1STUPrAvvukjQ8zBKXBwNUrru7BvA0hcP?usp=sharing
 
