@@ -38,9 +38,12 @@ Lektorka na Discordu poslala vzorovou práci z dřívějšího běhu: dokument n
 
 Lektorka popisovala práci living world designéra na rozmisťování událostí v open worldu: každé místo si projde ze všech úhlů a „režíruje“ ho, aby to, co tam NPC dělají, dávalo smysl (banditi, kteří mají být schovaní, jsou v houští). Bandité, kteří si spolu povídají, musí stát blízko u sebe. Inteligenci NPC hráč pozná z drobností, například z hlášek (barků), kterými NPC komentují dění a hráči tím dávají informace.
 
+## Rozhodnutí (2026-11-02)
+
+- **Level se staví v novém soukromém repu [`kratocz/bandit-camp`](https://github.com/kratocz/bandit-camp)** (`~/IdeaProjects/github.com/kratocz/bandit-camp`, projekt `BanditCamp` na šabloně Third Person), ne v tomhle forku. Z levelu může vzniknout samostatná hra a fork kurzu licenčně čistý být nemůže: obsah kurzu bez licence v něm zůstane i v historii, výchozí mapa projektu je mapa kurzu, zabalená hra obsah kurzu obsahuje a assety z Fabu pod Standard License nesmí do veřejného repa. Dokumentace a odevzdání úkolu zůstávají tady. Dřep z DÚ č. 2 visí na postavě kurzu, v novém projektu se případně postaví znovu na postavě šablony.
+
 ## Otevřená rozhodnutí
 
-- **Kde level stavět.** Doporučuji novou mapu v tomto projektu v `Content/Krato/`, postavenou jen z vlastního greyboxu, obsahu šablon Epicu a CC0, bez assetů kurzu. Kdyby z levelu vznikala samostatná hra, šla by z projektu vytáhnout bez licenčního problému (viz Licence obsahu v `AGENTS.md`). Postava pro průchod: buď `BP_KratoCharacter` s dřepem z DÚ č. 2 (potomek postavy kurzu, jen pro kurz), nebo postava ze šablony Third Person. Rozhodne autor.
 - **Svět a žánr.** Klasický les ze zadání, svět z DÚ č. 1 (Descenders), nebo jiný; lektorka nechává volné.
 - **Grafika.** Greybox stačí; assety z Fabu jen ty s licencí CC0 nebo CC BY, které smí do veřejného repa (CC BY s uvedením autora), placené a ostatní z Fabu do repa nepatří.
 - **Video průchodu s komentářem** je volitelné, rozhodnout podle času.
