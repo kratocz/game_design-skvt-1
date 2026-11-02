@@ -80,7 +80,10 @@ DerivedDataCache/*
 # Studijní materiály kurzu (zadání, vzorové práce) držet jen lokálně,
 # repo je veřejné. Vlastní výstupy úkolů jsou v podsložkách.
 docs/homeworks/*.pdf
-docs/homeworks/*.pptx
+
+# Lokální podklady (studijní materiály kurzu, stažené přílohy z Discordu),
+# které do veřejného repa nepatří.
+docs.local/
 
 # Originály ilustrací z ChatGPT (PNG, ~3 MB kus); v gitu jsou jen JPEGy,
 # ze kterých se skládá příloha.
