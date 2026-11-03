@@ -1,9 +1,9 @@
 # Domácí úkol č. 3 – tábor banditů (living world a level design)
 
-- **Zadání:** slajdy z lekce 2026-11-02 (screenshoty od autora) a prezentace `Domaci_ukol_c._3.pptx` z Discordu kurzu, uložená lokálně v `docs.local/hw03-tabor-banditu/` mimo git; v Labaverse zatím úkol není (stav 2026-11-02). Doslovné znění sem nedáváme, repo je veřejné.
-- **Deadline:** zatím neznámý. Na lekci zaznělo „minimálně tři týdny, možná měsíc“ s tím, že ho lektorka napíše na Discord; závazný bude termín na stránce úkolu v Labaverse. Odhad: kolem 2026-11-23 až 2026-11-30.
-- **Interní cíl:** stanovit, až bude termín v Labaverse (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
-- **Hodnocení:** zatím neznámé.
+- **Zadání:** slajdy z lekce 2026-11-02 (screenshoty od autora) a prezentace `Domaci_ukol_c._3.pptx` z Discordu kurzu, uložená lokálně v `docs.local/hw03-tabor-banditu/` mimo git; 2026-11-03 už byl úkol i v Labaverse. Hlavní kopie všech materiálů (včetně textu zadání z Labaverse) je od 2026-11-03 v soukromém repu projektu, `bandit-camp/docs/kurz-du3/`. Doslovné znění sem nedáváme, repo je veřejné.
+- **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
+- **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
+- **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
 - **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa, design dokument nezačal.
 - **Branch:** `student-krato-homeworks`
 
