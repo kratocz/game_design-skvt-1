@@ -4,7 +4,7 @@
 - **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
 - **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
 - **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
-- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa, design dokument nezačal.
+- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Projekt Unrealu ještě nezaložený.
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -48,13 +48,17 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 - **Pro úkol stačí z námětu odstavec premisy** (proč tu tábor je, kdo jsou bandité a jejich role); stopy, dilema a víc zakončení patří do případné hry, zadání chce max. dvě normostrany a nic z questové logiky.
 - **Házení kamínků** (hráč odláká hlídku zvukem) se v úkolu navrhne, ne implementuje: šablona Combat nemá sluch NPC. Do plánku se zakreslí místa, kam se vyplatí hodit (kotlík, dřevo, plechová bouda), a reakce hlídek se popíšou v textu.
 
+## Rozhodnutí (2026-11-05)
+
+- **Zdroj design dokumentu je v soukromém repu `bandit-camp`** (`docs/du3-dokument/Kratochvil-DU3-tabor-banditu.html`, PDF přes weasyprint), vedle generátoru plánku a pracovních poznámek k levelu (`docs/navrh-levelu/README.md`). Sem do `odevzdani/` přijde při odevzdání hotové PDF. Důvod: dokument, mapa i projekt Unrealu se mění spolu a soukromé repo nemusí hlídat, co smí být veřejné.
+- **Layout:** útes na západě přes celou mapu, řeka s lanem pod hladinou (past na lodě), skalnatá pláž na tišině s ohništěm, jeskyně se spaním a truhlou, zalesněná plošina nad jeskyní s okruhem hlídky a komínem (volitelný vstup shora), strážní ostroh kápa na jihu, oka na stezce zvěře na severu jako cíl kamínků, lovec se psem (návrat v 11 a 15) jako časový tlak. Hráč přistává lodí za ostrohem a lodí i uniká. Tři cesty: A přes plošinu, B za zády kápa po okraji pláže, C od severu během siesty. Cennost: podpisový token (varianta A v truhle, B na krku spícího kápa).
+
 ## Další kroky
 
-Námět vůči zadání zatím nepokrývá:
-
-- **obě varianty cennosti:** kdy ji kápo nosí u sebe, kdy leží v truhle ve stanu, a jak se podle toho mění cesta hráče;
-- **rozvrh hlídek:** kdo kde hlídkuje a jak dlouho; námět má jediného hlídače, pět lidí potřebuje střídání (např. hlídač s průzkumníkem);
-- **layout tábora:** stany, ohniště, generátor, přístupové cesty a krytí.
+- Založit projekt Unrealu a postavit greybox podle plánku (postup v `AGENTS.md` repa `bandit-camp`): útes, řeka, pláž, jeskyně s plošinou a komínem, ostroh, úzká pláž, les jako krytí.
+- Do dokumentu doplnit screenshoty z greyboxu s cestami a dopsat přiznání AI podle toho, jak greybox vznikal.
+- Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
+- Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
 
 ## Otevřená rozhodnutí
 
