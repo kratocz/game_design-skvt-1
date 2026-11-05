@@ -51,7 +51,7 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 ## Rozhodnutí (2026-11-05)
 
 - **Zdroj design dokumentu je v soukromém repu `bandit-camp`** (`docs/du3-dokument/Kratochvil-DU3-tabor-banditu.html`, PDF přes weasyprint), vedle generátoru plánku a pracovních poznámek k levelu (`docs/navrh-levelu/README.md`). Sem do `odevzdani/` přijde při odevzdání hotové PDF. Důvod: dokument, mapa i projekt Unrealu se mění spolu a soukromé repo nemusí hlídat, co smí být veřejné.
-- **Layout:** útes na západě přes celou mapu, řeka s lanem pod hladinou (past na lodě), skalnatá pláž na tišině s ohništěm, jeskyně se spaním a truhlou, zalesněná plošina nad jeskyní s okruhem hlídky a komínem (volitelný vstup shora), strážní ostroh kápa na jihu, oka na stezce zvěře na severu jako cíl kamínků, lovec se psem (návrat v 11 a 15) jako časový tlak. Hráč přistává lodí za ostrohem a lodí i uniká. Tři cesty: A přes plošinu, B za zády kápa po okraji pláže, C od severu během siesty. Cennost: podpisový token (varianta A v truhle, B na krku spícího kápa).
+- **Layout:** útes na západě přes celou mapu, řeka s lanem pod hladinou (past na lodě), skalnatá pláž u tůně s ohništěm, jeskyně se spaním a truhlou, zalesněná plošina nad jeskyní s okruhem hlídky a komínem (volitelný vstup shora), strážní ostroh kápa na jihu, oka na stezce zvěře na severu jako cíl kamínků, lovec se psem (návrat v 11 a 15) jako časový tlak. Hráč přistává lodí za ostrohem a lodí i uniká. Tři cesty: A přes plošinu, B za zády kápa po okraji pláže, C od severu během siesty. Cennost: podpisový token (varianta A v truhle, B na krku spícího kápa).
 
 ## Další kroky
 
