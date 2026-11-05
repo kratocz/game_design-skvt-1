@@ -4,7 +4,7 @@
 - **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
 - **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
 - **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
-- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Projekt Unrealu ještě nezaložený.
+- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766), greybox zatím nezačal.
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
