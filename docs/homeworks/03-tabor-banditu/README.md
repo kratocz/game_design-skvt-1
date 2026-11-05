@@ -4,7 +4,7 @@
 - **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
 - **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
 - **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
-- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766), greybox zatím nezačal.
+- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766) a hotový terén greyboxu (level `L_TaborNaTisine`), ověřený v Play.
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -55,7 +55,8 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 
 ## Další kroky
 
-- Založit projekt Unrealu a postavit greybox podle plánku (postup v `AGENTS.md` repa `bandit-camp`): útes, řeka, pláž, jeskyně s plošinou a komínem, ostroh, úzká pláž, les jako krytí.
+- Dostavět greybox (seznam v sekci Stav v `AGENTS.md` repa `bandit-camp`): rekvizity tábora, pět banditů jako panáci, neviditelné zdi na okrajích mapy. Terén (útes, řeka, pláž, ostroh, úzká pláž, plošina s jeskyní a komínem, les, balvany) je hotový od 2026-11-05.
+- Pro přiznání AI: terén greyboxu vygeneroval agent (Claude) skriptem z polygonů plánku a naimportoval ho do editoru přes MCP; layout a cesty jsou autorovy.
 - Do dokumentu doplnit screenshoty z greyboxu s cestami a dopsat přiznání AI podle toho, jak greybox vznikal.
 - Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
 - Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
