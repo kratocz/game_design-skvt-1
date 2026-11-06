@@ -4,7 +4,7 @@
 - **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
 - **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
 - **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
-- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766) a hotový terén greyboxu (level `L_TaborNaTisine`), ověřený v Play. Ještě týž večer hotový celý greybox: rekvizity tábora, pět banditů jako panáci bez AI (kápo obou variant), neviditelné hranice mapy a Player Start u lodi; autor level prošel v Play bez připomínek. Snímek greyboxu shora s dokreslenými cestami A, B, C a okruhem hlídky je v dokumentu jako čtvrtá strana (příloha) a přiznání AI ke greyboxu je dopsané; dokument má 4 strany, LW část 1,91 normostrany. 2026-11-05 večer proběhla oponentura dokumentu proti zadání (22 nálezů, z toho 6 kritických); 2026-11-06 autor o kritických rozhodl a jsou zapracované v textu, plánku i greyboxu (LW část 1,94 normostrany).
+- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766) a hotový terén greyboxu (level `L_TaborNaTisine`), ověřený v Play. Ještě týž večer hotový celý greybox: rekvizity tábora, pět banditů jako panáci bez AI (kápo obou variant), neviditelné hranice mapy a Player Start u lodi; autor level prošel v Play bez připomínek. Snímek greyboxu shora s dokreslenými cestami A, B, C a okruhem hlídky je v dokumentu jako čtvrtá strana (příloha) a přiznání AI ke greyboxu je dopsané; dokument má 4 strany, LW část 1,91 normostrany. 2026-11-05 večer proběhla oponentura dokumentu proti zadání (22 nálezů, z toho 6 kritických); 2026-11-06 autor o kritických rozhodl a jsou zapracované v textu, plánku i greyboxu (LW část 1,94 normostrany). Týž večer autor prošel Play test od lodi bez nálezů a přečetl celé PDF bez připomínek.
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -59,8 +59,7 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 
 ## Další kroky
 
-- Projít level v Play od nového startu u lodi (všechny nálezy oponentury jsou od 2026-11-06 zapracované, přehled v hlavičce zprávy v `bandit-camp/docs/du3-dokument/oponentura-2026-11-05.md`).
-- Den nechat dokument uležet a přečíst celé PDF očima.
+- Play test od startu u lodi prošel 2026-11-06 (všech sedm míst trasy v pořádku) a autor týž den přečetl celé PDF bez připomínek; zbývá rozhodnout o volitelném videu průchodu a odevzdat.
 - Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
 - Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
 
