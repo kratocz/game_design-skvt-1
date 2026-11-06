@@ -4,7 +4,7 @@
 - **Deadline:** úterý 2026-11-24 23:59 (stránka úkolu v Labaverse, zjištěno 2026-11-03).
 - **Interní cíl:** hotovo do úterý 2026-11-17, odevzdat nejpozději v neděli 2026-11-22 (pravidlo: víceméně hotovo týden předem, odevzdat nejpozději dva dny předem).
 - **Hodnocení:** maximálně 30 bodů. Lektorka nehodnotí správnost blueprintů, ale design tábora, jeho uvěřitelnost, level design a průchod levelem.
-- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766) a hotový terén greyboxu (level `L_TaborNaTisine`), ověřený v Play. Ještě týž večer hotový celý greybox: rekvizity tábora, pět banditů jako panáci bez AI (kápo obou variant), neviditelné hranice mapy a Player Start u lodi; autor level prošel v Play bez připomínek. Snímek greyboxu shora s dokreslenými cestami A, B, C a okruhem hlídky je v dokumentu jako čtvrtá strana (příloha) a přiznání AI ke greyboxu je dopsané; dokument má 4 strany, LW část 1,91 normostrany.
+- **Stav:** zadání zapsané 2026-11-02; 2026-11-03 rozhodnuté prostředí (les) a pracovní námět světa; 2026-11-05 layout tábora (útes, řeka s lanem, pláž, jeskyně s lesem na stropě) a plánek v2 se třemi cestami hráče, první verze design dokumentu (3 strany PDF, LW část 1,9 normostrany) hotová v soukromém repu `bandit-camp` (`docs/du3-dokument/`, plánek `docs/navrh-levelu/`). Týž večer založený projekt Unrealu (šablona Third Person, varianta Combat, s MCP na portu 8766) a hotový terén greyboxu (level `L_TaborNaTisine`), ověřený v Play. Ještě týž večer hotový celý greybox: rekvizity tábora, pět banditů jako panáci bez AI (kápo obou variant), neviditelné hranice mapy a Player Start u lodi; autor level prošel v Play bez připomínek. Snímek greyboxu shora s dokreslenými cestami A, B, C a okruhem hlídky je v dokumentu jako čtvrtá strana (příloha) a přiznání AI ke greyboxu je dopsané; dokument má 4 strany, LW část 1,91 normostrany. 2026-11-05 večer proběhla oponentura dokumentu proti zadání (22 nálezů, z toho 6 kritických); 2026-11-06 autor o kritických rozhodl a jsou zapracované v textu, plánku i greyboxu (LW část 1,94 normostrany).
 - **Branch:** `student-krato-homeworks`
 
 ## Co zadání chce
@@ -51,11 +51,15 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 ## Rozhodnutí (2026-11-05)
 
 - **Zdroj design dokumentu je v soukromém repu `bandit-camp`** (`docs/du3-dokument/Kratochvil-DU3-tabor-banditu.html`, PDF přes weasyprint), vedle generátoru plánku a pracovních poznámek k levelu (`docs/navrh-levelu/README.md`). Sem do `odevzdani/` přijde při odevzdání hotové PDF. Důvod: dokument, mapa i projekt Unrealu se mění spolu a soukromé repo nemusí hlídat, co smí být veřejné.
-- **Layout:** útes na západě přes celou mapu, řeka s lanem pod hladinou (past na lodě), skalnatá pláž u tůně s ohništěm, jeskyně se spaním a truhlou, zalesněná plošina nad jeskyní s okruhem hlídky a komínem (volitelný vstup shora), strážní ostroh kápa na jihu, oka na stezce zvěře na severu jako cíl kamínků, lovec se psem (návrat v 11 a 15) jako časový tlak. Hráč přistává lodí za ostrohem a lodí i uniká. Tři cesty: A přes plošinu, B za zády kápa po okraji pláže, C od severu během siesty. Cennost: podpisový token (varianta A v truhle, B na krku spícího kápa).
+- **Layout:** útes na západě přes celou mapu, řeka s lanem pod hladinou (past na lodě), skalnatá pláž u tůně s ohništěm, jeskyně se spaním a truhlou, zalesněná plošina nad jeskyní s okruhem hlídky a komínem (volitelný vstup shora), strážní ostroh kápa na jihu, oka na stezce zvěře na severu jako cíl kamínků, lovec se psem (návrat v 11 a 15) jako časový tlak. Hráč přistává lodí za ostrohem a lodí i uniká (od 2026-11-06 jinak: loď je za ohybem mimo mapu a hráč přichází i odchází lesem, viz Rozhodnutí 2026-11-06). Tři cesty: A přes plošinu, B za zády kápa po okraji pláže, C od severu během siesty. Cennost: podpisový token (varianta A v truhle, B na krku spícího kápa).
+
+## Rozhodnutí (2026-11-06)
+
+- **Kritické nálezy oponentury:** hráč nechává loď za ohybem řeky mimo mapu a do tábora přichází i odchází lesem, protože řeku hlídá kápo. Návrat po krádeži otevírá druhý kamínek do křoví u komínu (cesta zpět po jižním okraji pláže). Okno varianty A je 8–11, oběd oknem není. Na šustot u ok jde vždy ten, kdo je na okruhu, a hráč hází za balvanem. Kuchař v 8–11 udí maso u udírny zády k jeskyni. Podrobně v `bandit-camp/docs/navrh-levelu/README.md` (Úpravy po oponentuře).
 
 ## Další kroky
 
-- Oponentura dokumentu proti zadání (subagent v čistém kontextu), potvrzené nálezy zapracovat.
+- Zbylé nálezy oponentury (střední a nízké, seznam v hlavičce zprávy v `bandit-camp/docs/du3-dokument/oponentura-2026-11-05.md`) projít a rozhodnout.
 - Den nechat dokument uležet a přečíst celé PDF očima.
 - Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
 - Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
