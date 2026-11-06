@@ -59,7 +59,7 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 
 ## Další kroky
 
-- Zbylé nálezy oponentury (střední a nízké, seznam v hlavičce zprávy v `bandit-camp/docs/du3-dokument/oponentura-2026-11-05.md`) projít a rozhodnout.
+- Projít level v Play od nového startu u lodi (všechny nálezy oponentury jsou od 2026-11-06 zapracované, přehled v hlavičce zprávy v `bandit-camp/docs/du3-dokument/oponentura-2026-11-05.md`).
 - Den nechat dokument uležet a přečíst celé PDF očima.
 - Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
 - Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
