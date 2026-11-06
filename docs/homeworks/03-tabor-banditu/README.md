@@ -59,7 +59,8 @@ Lektorka popisovala práci living world designéra na rozmisťování událostí
 
 ## Další kroky
 
-- Play test od startu u lodi prošel 2026-11-06 (všech sedm míst trasy v pořádku) a autor týž den přečetl celé PDF bez připomínek; zbývá rozhodnout o volitelném videu průchodu a odevzdat.
+- Play test od startu u lodi prošel 2026-11-06 (všech sedm míst trasy v pořádku) a autor týž den přečetl celé PDF bez připomínek.
+- Plán autora (2026-11-06): do úterý 2026-11-17 hratelná smyčka plížení a finální video průchodu s komentářem, feature freeze v neděli 2026-11-15; záložní video hned 2026-11-07 až 08, aby šlo kdykoli odevzdat aspoň PDF s videem. Kroky a termíny v `bandit-camp/BACKLOG.md`. Odevzdání nejpozději v neděli 2026-11-22.
 - Zvážit plánek bez vestavěné legendy (legenda do textu), aby byl na straně větší a čitelnější v tisku.
 - Před odevzdáním: PDF do `odevzdani/`, text odevzdání, kontrola Discordu kurzu.
 
