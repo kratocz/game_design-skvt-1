@@ -14,6 +14,11 @@
 # C:\Users\krato\Plizeni-Linux. Prereqs (Visual C++) se pro Linux nepřidávají. Hra pro Linux potřebuje grafiku
 # s Vulkanem. Zip z tar.exe na Windows nemá spustitelný bit, proto po rozbalení na Linuxu
 # chmod +x skvt_projekt.sh skvt_projekt/Binaries/Linux/skvt_projekt-Linux-Shipping.
+# První balení 2026-11-16 (odevzdaný stav 5c70038): překlad 41 s (zkouška STEPS=-build předtím 2 min 17 s), cook
+# 1 h 48 min (shadery Vulkan; bandit-camp bez mezipaměti 3 h 53 min, globální shadery enginu ze sdílené mezipaměti
+# Zen v LOCALAPPDATA se zřejmě použily znovu), stage 63 s; zip 888 MB, rozbalená hra 2,61 GB (staging přibalí
+# i .debug a .sym binárky), volné místo na C: kleslo z 13,46 na 11,15 GB. Chyby v logu jen známé GameFeatureData.
+# Hru pro Linux zatím nikdo nespustil.
 param([string]$Out = (Join-Path $env:USERPROFILE "Plizeni-Linux"))
 $ErrorActionPreference = "Stop"
 
