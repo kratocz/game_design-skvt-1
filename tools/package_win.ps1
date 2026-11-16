@@ -29,6 +29,12 @@
 # Hra je nepodepsaná: SmartScreen ji pustí přes „Další informace“ a „Přesto spustit“. -prereqs přibalí instalátor
 # knihoven Visual C++, který hra při prvním spuštění sama nabídne, když knihovny chybějí.
 #
+# Vzdálené příkazy na Windows (kontrola průběhu, hlídání konce) psát do souboru .ps1, přenést scp a spouštět
+# `ssh … 'powershell -NoProfile -ExecutionPolicy Bypass -File C:\Users\krato\x.ps1'`, ne jako -Command přímo v ssh:
+# výchozí shell SSH na Windows je cmd a svislá čára nebo vnořené uvozovky příkaz rozbijí (2026-11-15 tak Select-String
+# s uvozovkami ve vzoru skončil hláškou tar.exe). Chyby vzdáleného příkazu nepotlačovat, z výstupu ssh filtrovat jen
+# varování o post-quantum výměně klíčů.
+#
 # PowerShell 5.1 čte .ps1 bez BOM v kódování systému (cp1250), diakritika proto smí jen do komentářů, kód je v ASCII.
 param([string]$Out = (Join-Path $env:USERPROFILE "Plizeni-Windows"))
 $ErrorActionPreference = "Stop"
