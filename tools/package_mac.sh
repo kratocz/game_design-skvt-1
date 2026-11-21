@@ -11,6 +11,10 @@
 # Intel based Mac has been removed“ (MetalRHI/Private/MetalDevice.cpp; ověřeno na MacBooku s Intelem 2026-10-29). Bez parametru
 # -clientarchitecture by UBT přeložil jen architekturu Macu, na kterém se balí (DefaultArchitecture=MacTargetArchitectureHost
 # v BaseEngine.ini).
+# Podpis Developer ID a notarizace (od 2026-11-21): skript dává jen ad hoc podpis, Gatekeeper ho u staženého ZIPu odmítne.
+# Hotovou aplikaci podepíše a notarizuje bash ~/IdeaProjects/github.com/kratocz/bandit-camp/tools/sign_mac.sh <cesta>/Plizeni.app
+# (mimo synchronizovanou plochu, jinak codesign --strict hlásí „detritus“), pak ditto -c -k --keepParent do ZIPu
+# a kontrola sign_mac.sh --verify-zip <ZIP> („source=Notarized Developer ID“). Postup v docs/podpis-porty.md repa bandit-camp.
 # Ověření (2026-10-29): open -n <cílová složka>/Plizeni.app a série screencapture -x. Nová aplikace je při prvním
 # spuštění asi 20 s černá, další starty vykreslí první snímek do 3 s. Klávesy (Esc) musí stisknout člověk: osascript
 # přes System Events nemá oprávnění posílat stisky kláves (chyba 1002). Hra běží přes celou obrazovku, bez člověka
